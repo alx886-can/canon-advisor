@@ -39,6 +39,35 @@
         }
         .fade-in { animation: fadeIn 0.5s ease-out forwards; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        
+        /* Custom Checkbox Style */
+        .canon-checkbox {
+            appearance: none;
+            width: 1.25rem;
+            height: 1.25rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 0.375rem;
+            background-color: white;
+            display: inline-block;
+            vertical-align: middle;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .canon-checkbox:checked {
+            background-color: var(--canon-red);
+            border-color: var(--canon-red);
+        }
+        .canon-checkbox:checked::after {
+            content: '✓';
+            color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body class="min-h-screen flex flex-col">
@@ -57,10 +86,10 @@
         </div>
     </header>
 
-    <main class="w-full max-w-7xl px-6 py-10 mx-auto flex-grow">
+    <main class="w-full max-w-7xl px-6 py-10 mx-auto flex-grow text-left">
         
         <!-- Intro -->
-        <div class="mb-10 fade-in text-left">
+        <div class="mb-10 fade-in">
             <h1 class="text-3xl md:text-5xl font-black text-gray-900 tracking-tighter mb-4 uppercase">
                 Efficiency <span class="text-[#ED1C24]">Calculator</span>
             </h1>
@@ -72,49 +101,71 @@
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 fade-in" style="animation-delay: 0.1s;">
             
             <!-- Side 1: Volume to Suggestion -->
-            <div class="glass-panel p-8 md:p-10 rounded-[3rem] shadow-xl flex flex-col h-full text-left">
+            <div class="glass-panel p-8 md:p-10 rounded-[3rem] shadow-xl flex flex-col h-full">
                 <div class="mb-8">
                     <h2 class="text-2xl font-black text-gray-900 mb-2 uppercase tracking-tight">Efficiency Proposal</h2>
-                    <p class="text-gray-400 text-sm font-medium">Enter your daily scanning volume to see tiered recommendations.</p>
+                    <p class="text-gray-400 text-sm font-medium">Get hardware recommendations tailored to your specific job requirements.</p>
                 </div>
 
-                <div class="flex gap-3 mb-10">
-                    <div class="flex-grow">
+                <div class="space-y-6 mb-10">
+                    <div>
                         <label class="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2 ml-1">Est. Daily Volume (Pages)</label>
                         <input type="number" id="proposalVol" placeholder="e.g. 5000" class="w-full bg-white border border-gray-200 rounded-2xl p-4 text-sm font-bold focus:ring-2 focus:ring-red-500 outline-none transition-all shadow-sm">
                     </div>
-                    <button onclick="calculateEfficiency()" class="bg-red-600 text-white px-8 rounded-2xl font-bold text-sm hover:bg-black transition-all self-end h-[54px] shadow-lg shadow-red-100">Go</button>
+
+                    <div class="flex flex-wrap gap-6 px-1">
+                        <label class="flex items-center gap-3 cursor-pointer group">
+                            <input type="checkbox" id="proposalCheque" class="canon-checkbox">
+                            <span class="text-xs font-bold text-gray-600 group-hover:text-red-600 transition-colors">Scanning Cheques</span>
+                        </label>
+                        <label class="flex items-center gap-3 cursor-pointer group">
+                            <input type="checkbox" id="proposalA3" class="canon-checkbox">
+                            <span class="text-xs font-bold text-gray-600 group-hover:text-red-600 transition-colors">Needs A3 Support</span>
+                        </label>
+                    </div>
+
+                    <button onclick="calculateEfficiency()" class="w-full bg-red-600 text-white p-4 rounded-2xl font-bold text-sm hover:bg-black transition-all shadow-lg shadow-red-100 uppercase tracking-widest">Generate Proposal</button>
                 </div>
 
                 <div id="proposalResults" class="space-y-4 flex-grow min-h-[300px]">
                     <div class="h-full flex flex-col items-center justify-center border-2 border-dashed border-gray-100 rounded-[2rem] p-8 text-center">
-                        <p class="text-gray-300 font-bold italic">Enter a volume above to see recommendations.</p>
+                        <p class="text-gray-300 font-bold italic">Enter criteria above to see matching solutions.</p>
                     </div>
                 </div>
             </div>
 
             <!-- Side 2: Suitability Checker -->
-            <div class="glass-panel p-8 md:p-10 rounded-[3rem] shadow-xl flex flex-col h-full text-left">
+            <div class="glass-panel p-8 md:p-10 rounded-[3rem] shadow-xl flex flex-col h-full">
                 <div class="mb-8">
                     <h2 class="text-2xl font-black text-gray-900 mb-2 uppercase tracking-tight">Pick Your Own</h2>
                     <p class="text-gray-400 text-sm font-medium">Evaluate if a specific scanner is suitable for your workload.</p>
                 </div>
 
                 <div class="space-y-6 flex-grow">
+                    <div class="flex flex-wrap gap-6 px-1 mb-2">
+                        <label class="flex items-center gap-3 cursor-pointer group">
+                            <input type="checkbox" id="evalCheque" class="canon-checkbox" onchange="populateSelect()">
+                            <span class="text-xs font-bold text-gray-600 group-hover:text-red-600 transition-colors">Cheques</span>
+                        </label>
+                        <label class="flex items-center gap-3 cursor-pointer group">
+                            <input type="checkbox" id="evalA3" class="canon-checkbox" onchange="populateSelect()">
+                            <span class="text-xs font-bold text-gray-600 group-hover:text-red-600 transition-colors">A3 Support</span>
+                        </label>
+                    </div>
+
                     <div>
                         <label class="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2 ml-1">Select Scanner</label>
                         <select id="evalScanner" class="w-full bg-white border border-gray-200 rounded-2xl p-4 text-sm font-bold focus:ring-2 focus:ring-red-500 outline-none transition-all cursor-pointer shadow-sm">
                             <option value="">-- Choose Hardware --</option>
-                            <!-- JS Injected -->
                         </select>
                     </div>
 
                     <div>
-                        <label class="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2 ml-1">Current Job Volume (Pages)</label>
+                        <label class="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2 ml-1">Current Job Volume (Items)</label>
                         <input type="number" id="evalVol" placeholder="e.g. 2500" class="w-full bg-white border border-gray-200 rounded-2xl p-4 text-sm font-bold focus:ring-2 focus:ring-red-500 outline-none transition-all shadow-sm">
                     </div>
 
-                    <button onclick="evaluateSuitability()" class="w-full bg-gray-900 text-white p-4 rounded-2xl font-bold text-sm hover:bg-black transition-all shadow-lg">Evaluate Suitability</button>
+                    <button onclick="evaluateSuitability()" class="w-full bg-gray-900 text-white p-4 rounded-2xl font-bold text-sm hover:bg-black transition-all shadow-lg uppercase tracking-widest">Evaluate Suitability</button>
 
                     <div id="evalFeedback" class="hidden space-y-4 mt-6 animate-in fade-in slide-in-from-top-2">
                         <!-- JS Injected Result Box -->
@@ -149,8 +200,7 @@
             try {
                 const response = await fetch('advisor.json');
                 const data = await response.json();
-                allProducts = data.products.filter(p => p.series !== 'Accessory'); // Exclude flatbeds for calc
-                
+                allProducts = data.products.filter(p => p.category !== 'Accessory');
                 populateSelect();
             } catch (error) {
                 console.error("Database load error:", error);
@@ -159,8 +209,18 @@
 
         function populateSelect() {
             const select = document.getElementById('evalScanner');
-            const sorted = allProducts.sort((a,b) => a.model.localeCompare(b.model));
-            sorted.forEach(p => {
+            const isCheque = document.getElementById('evalCheque').checked;
+            const isA3 = document.getElementById('evalA3').checked;
+
+            select.innerHTML = '<option value="">-- Choose Hardware --</option>';
+
+            const filtered = allProducts.filter(p => {
+                if (isCheque) return p.category === 'Cheque';
+                if (isA3) return p.specs.max_size === 'A3';
+                return p.category === 'Document' && p.specs.max_size === 'A4';
+            }).sort((a,b) => a.model.localeCompare(b.model));
+
+            filtered.forEach(p => {
                 const opt = document.createElement('option');
                 opt.value = p.sku;
                 opt.textContent = p.model;
@@ -168,32 +228,63 @@
             });
         }
 
+        function getNumericSpeed(speedStr) {
+            // Priority: ipm (images) > ppm (pages) > cpm (cheques)
+            const ipm = speedStr.match(/(\d+)\s*ipm/);
+            if (ipm) return parseInt(ipm[1]);
+            const ppm = speedStr.match(/(\d+)\s*ppm/);
+            if (ppm) return parseInt(ppm[1]);
+            const cpm = speedStr.match(/(\d+)\s*cpm/);
+            if (cpm) return parseInt(cpm[1]);
+            const digit = speedStr.match(/(\d+)/);
+            return digit ? parseInt(digit[1]) : 1;
+        }
+
         function calculateEfficiency() {
             const vol = parseInt(document.getElementById('proposalVol').value);
+            const isCheque = document.getElementById('proposalCheque').checked;
+            const isA3 = document.getElementById('proposalA3').checked;
             const container = document.getElementById('proposalResults');
             
             if (!vol || isNaN(vol)) return;
 
-            let res = { good: null, better: null, best: null };
+            let pool = allProducts.filter(p => {
+                if (isCheque) return p.category === 'Cheque';
+                if (isA3) return p.specs.max_size === 'A3';
+                return p.category === 'Document' && p.specs.max_size === 'A4';
+            });
 
-            if (vol < 1000) {
-                res = { good: "P-208II", better: "P-215II", best: "DR-C225II" };
-            } else if (vol >= 1000 && vol <= 8000) {
-                res = { good: "DR-C225II", better: "DR-C340", best: "DR-S250N" };
-            } else if (vol > 8000 && vol <= 20000) {
-                res = { good: "DR-M260", better: "DR-M1060II", best: "DR-G2090" };
-            } else {
-                res = { good: "DR-G2090", better: "DR-G2110", best: "DR-G2140" };
+            // Sort pool by speed/volume capability
+            pool.sort((a, b) => a.specs.daily_volume - b.specs.daily_volume || getNumericSpeed(a.specs.speed) - getNumericSpeed(b.specs.speed));
+
+            // Select Good/Better/Best from sorted pool based on volume entry
+            // This logic picks 3 tiers from the applicable hardware list
+            let res = { good: null, better: null, best: null };
+            
+            if (pool.length >= 3) {
+                // Determine starting index based on volume entry relative to pool average
+                let targetIdx = pool.findIndex(p => p.specs.daily_volume >= vol);
+                if (targetIdx === -1) targetIdx = pool.length - 3;
+                if (targetIdx > pool.length - 3) targetIdx = pool.length - 3;
+                if (targetIdx < 0) targetIdx = 0;
+
+                res.good = pool[targetIdx];
+                res.better = pool[targetIdx + 1];
+                res.best = pool[targetIdx + 2];
+            } else if (pool.length > 0) {
+                res.good = pool[0];
+                res.better = pool[1] || pool[0];
+                res.best = pool[pool.length-1];
             }
 
             container.innerHTML = `
                 <div class="space-y-4">
                     ${['good', 'better', 'best'].map(tier => {
-                        const modelName = res[tier];
-                        const product = allProducts.find(p => p.model.replace(/\s/g, '').toLowerCase() === modelName.replace(/\s/g, '').toLowerCase()) 
-                                     || allProducts.find(p => p.model.includes(modelName));
-                        
+                        const product = res[tier];
                         if (!product) return '';
+
+                        const speedVal = getNumericSpeed(product.specs.speed);
+                        const estMinutes = Math.ceil(vol / speedVal);
 
                         const colors = {
                             good: 'text-gray-400 bg-gray-50 border-gray-100',
@@ -211,8 +302,12 @@
                                     <h4 class="text-lg font-black text-gray-900 leading-none">${product.model}</h4>
                                     <p class="text-[10px] text-gray-400 font-bold mt-1 uppercase tracking-tighter">${product.specs.speed}</p>
                                 </div>
+                                <div class="text-right shrink-0">
+                                    <p class="text-[9px] font-black text-gray-400 uppercase tracking-widest mb-1">Time To Scan</p>
+                                    <p class="text-lg font-black text-gray-900">~${estMinutes}<span class="text-[10px] ml-1">min</span></p>
+                                </div>
                                 <div class="text-gray-300">
-                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg>
                                 </div>
                             </div>
                         `;
@@ -230,10 +325,7 @@
 
             const p = allProducts.find(x => x.sku === sku);
             const limit = p.specs.daily_volume;
-            
-            // Extract numeric speed (assume ipm for double-sided efficiency)
-            const speedMatch = p.specs.speed.match(/(\d+)\s*ipm/);
-            const speed = speedMatch ? parseInt(speedMatch[1]) : parseInt(p.specs.speed.match(/(\d+)/)[1]);
+            const speed = getNumericSpeed(p.specs.speed);
             const estMinutes = Math.ceil(vol / speed);
 
             let status = "Great Match";
@@ -273,7 +365,7 @@
                             <span class="text-sm font-bold">Time to complete scan:</span>
                             <span class="text-2xl font-black text-gray-900">~${estMinutes} <span class="text-xs font-bold text-gray-400 uppercase">Mins</span></span>
                         </div>
-                        <p class="text-[9px] font-bold text-gray-400 mt-2 italic">* Based on rated ${speed} images per minute.</p>
+                        <p class="text-[9px] font-bold text-gray-400 mt-2 italic">* Based on rated ${speed} units per minute.</p>
                     </div>
                 </div>
             `;
@@ -295,11 +387,11 @@
                         <div class="grid grid-cols-2 gap-3 mt-8">
                             <div class="bg-red-50 p-4 rounded-2xl">
                                 <p class="text-[9px] font-bold text-gray-400 uppercase tracking-tighter">Speed</p>
-                                <p class="text-xs font-black text-red-600 leading-none mt-1">${p.specs.speed}</p>
+                                <p class="text-xs font-black text-red-600 leading-none mt-1 text-center">${p.specs.speed}</p>
                             </div>
                             <div class="bg-red-50 p-4 rounded-2xl">
                                 <p class="text-[9px] font-bold text-gray-400 uppercase tracking-tighter">Daily Vol</p>
-                                <p class="text-xs font-black text-red-600 leading-none mt-1">${p.specs.daily_volume.toLocaleString()}</p>
+                                <p class="text-xs font-black text-red-600 leading-none mt-1 text-center">${p.specs.daily_volume.toLocaleString()}</p>
                             </div>
                         </div>
                     </div>

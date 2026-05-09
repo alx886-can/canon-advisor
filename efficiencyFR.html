@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canon | Calculateur d'efficacité</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --canon-red: #ED1C24;
+            --canon-dark: #1a1a1a;
+            --canon-gray: #f8f9fa;
+        }
+        body {
+            background-color: var(--canon-gray);
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            color: var(--canon-dark);
+            margin: 0;
+            background-image: radial-gradient(#d1d5db 0.5px, transparent 0.5px);
+            background-size: 24px 24px;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+        }
+        .suggestion-card {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .suggestion-card:hover {
+            transform: scale(1.02);
+            border-color: var(--canon-red);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        .modal-overlay {
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(4px);
+        }
+        .fade-in { animation: fadeIn 0.5s ease-out forwards; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        
+        /* Style de case à cocher personnalisé */
+        .canon-checkbox {
+            appearance: none;
+            width: 1.25rem;
+            height: 1.25rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 0.375rem;
+            background-color: white;
+            display: inline-block;
+            vertical-align: middle;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .canon-checkbox:checked {
+            background-color: var(--canon-red);
+            border-color: var(--canon-red);
+        }
+        .canon-checkbox:checked::after {
+            content: '✓';
+            color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <!-- En-tête -->
+    <header class="w-full py-6 flex justify-center items-center bg-white border-b border-gray-100 shadow-sm sticky top-0 z-50">
+        <div class="w-full max-w-7xl px-6 flex justify-between items-center">
+            <div class="flex items-center gap-8 text-left">
+                <a href="index.html"><img src="https://i.ibb.co/YBMsYnYj/Canon-Logo-2.png" alt="Canon" class="h-8 w-auto"></a>
+                <a href="selectorFR.html" class="hidden md:flex items-center text-xs font-bold text-gray-400 uppercase tracking-widest hover:text-red-600 transition-colors">
+                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M15 19l-7-7 7-7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"></path></svg>
+                    Retour au centre
+                </a>
+            </div>
+
+            <div class="flex items-center gap-4 md:gap-10">
+                <img src="https://i.ibb.co/svcfqT91/image-FORMULA2.png" alt="imageFORMULA" class="hidden sm:block h-6 md:h-8 w-auto opacity-80">
+                
+                <!-- Sélecteur de langue -->
+                <div class="flex items-center gap-3 text-[10px] font-black uppercase tracking-[0.2em] border-l border-gray-200 pl-4 md:pl-10 text-right">
+                    <span class="text-gray-400">Langue :</span>
+                    <div class="flex items-center gap-2">
+                        <a href="efficiencyEN.html" class="text-gray-400 hover:text-red-600 transition-colors">EN</a>
+                        <span class="text-gray-300">|</span>
+                        <span class="text-red-600">FR</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="w-full max-w-7xl px-6 py-10 mx-auto flex-grow text-left">
+        
+        <!-- Introduction -->
+        <div class="mb-10 fade-in">
+            <h1 class="text-3xl md:text-5xl font-black text-gray-900 tracking-tighter mb-4 uppercase">
+                Calculateur <span class="text-[#ED1C24]">d'efficacité</span>
+            </h1>
+            <p class="text-gray-500 font-medium text-lg max-w-2xl">
+                Adaptez votre volume de numérisation au matériel idéal et estimez les temps de traitement des tâches.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 fade-in" style="animation-delay: 0.1s;">
+            
+            <!-- Côté 1 : Volume vers Proposition -->
+            <div class="glass-panel p-8 md:p-10 rounded-[3rem] shadow-xl flex flex-col h-full">
+                <div class="mb-8">
+                    <h2 class="text-2xl font-black text-gray-900 mb-2 uppercase tracking-tight">Proposition d'efficacité</h2>
+                    <p class="text-gray-400 text-sm font-medium">Obtenez des recommandations de matériel adaptées à vos besoins spécifiques.</p>
+                </div>
+
+                <div class="space-y-6 mb-10">
+                    <div>
+                        <label class="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2 ml-1">Volume quotidien est. (Pages)</label>
+                        <input type="number" id="proposalVol" placeholder="ex. 5000" class="w-full bg-white border border-gray-200 rounded-2xl p-4 text-sm font-bold focus:ring-2 focus:ring-red-500 outline-none transition-all shadow-sm">
+                    </div>
+
+                    <div class="flex flex-wrap gap-6 px-1">
+                        <label class="flex items-center gap-3 cursor-pointer group">
+                            <input type="checkbox" id="proposalCheque" class="canon-checkbox">
+                            <span class="text-xs font-bold text-gray-600 group-hover:text-red-600 transition-colors">Numérisation de chèques</span>
+                        </label>
+                        <label class="flex items-center gap-3 cursor-pointer group">
+                            <input type="checkbox" id="proposalA3" class="canon-checkbox">
+                            <span class="text-xs font-bold text-gray-600 group-hover:text-red-600 transition-colors">Besoin du support A3</span>
+                        </label>
+                    </div>
+
+                    <button onclick="calculateEfficiency()" class="w-full bg-red-600 text-white p-4 rounded-2xl font-bold text-sm hover:bg-black transition-all shadow-lg shadow-red-100 uppercase tracking-widest">Générer la proposition</button>
+                </div>
+
+                <div id="proposalResults" class="space-y-4 flex-grow min-h-[300px]">
+                    <div class="h-full flex flex-col items-center justify-center border-2 border-dashed border-gray-100 rounded-[2rem] p-8 text-center text-left">
+                        <p class="text-gray-300 font-bold italic">Saisissez les critères ci-dessus pour voir les solutions correspondantes.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Côté 2 : Vérificateur de pertinence -->
+            <div class="glass-panel p-8 md:p-10 rounded-[3rem] shadow-xl flex flex-col h-full">
+                <div class="mb-8">
+                    <h2 class="text-2xl font-black text-gray-900 mb-2 uppercase tracking-tight">Choix personnalisé</h2>
+                    <p class="text-gray-400 text-sm font-medium">Évaluez si un numériseur spécifique convient à votre charge de travail.</p>
+                </div>
+
+                <div class="space-y-6 flex-grow">
+                    <div class="flex flex-wrap gap-6 px-1 mb-2">
+                        <label class="flex items-center gap-3 cursor-pointer group">
+                            <input type="checkbox" id="evalCheque" class="canon-checkbox" onchange="populateSelect()">
+                            <span class="text-xs font-bold text-gray-600 group-hover:text-red-600 transition-colors">Chèques</span>
+                        </label>
+                        <label class="flex items-center gap-3 cursor-pointer group">
+                            <input type="checkbox" id="evalA3" class="canon-checkbox" onchange="populateSelect()">
+                            <span class="text-xs font-bold text-gray-600 group-hover:text-red-600 transition-colors">Support A3</span>
+                        </label>
+                    </div>
+
+                    <div>
+                        <label class="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2 ml-1">Sélectionner un numériseur</label>
+                        <select id="evalScanner" class="w-full bg-white border border-gray-200 rounded-2xl p-4 text-sm font-bold focus:ring-2 focus:ring-red-500 outline-none transition-all cursor-pointer shadow-sm">
+                            <option value="">-- Choisir le matériel --</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2 ml-1">Volume de la tâche (Articles)</label>
+                        <input type="number" id="evalVol" placeholder="ex. 2500" class="w-full bg-white border border-gray-200 rounded-2xl p-4 text-sm font-bold focus:ring-2 focus:ring-red-500 outline-none transition-all shadow-sm">
+                    </div>
+
+                    <button onclick="evaluateSuitability()" class="w-full bg-gray-900 text-white p-4 rounded-2xl font-bold text-sm hover:bg-black transition-all shadow-lg uppercase tracking-widest">Évaluer la pertinence</button>
+
+                    <div id="evalFeedback" class="hidden space-y-4 mt-6 animate-in fade-in slide-in-from-top-2">
+                        <!-- Résultat injecté ici -->
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Modal de détails du produit -->
+    <div id="productModal" class="modal-overlay fixed inset-0 z-[100] hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-[2.5rem] shadow-2xl max-w-4xl w-full p-8 md:p-12 relative overflow-y-auto max-h-[90vh]">
+            <button onclick="closeModal()" class="absolute top-6 right-6 text-gray-400 hover:text-gray-800 transition-colors focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <footer class="w-full py-10 bg-white border-t border-gray-100 flex flex-col items-center justify-center mt-auto">
+        <p class="text-[9px] text-gray-400 font-bold uppercase tracking-[0.3em]">
+            &copy; 2026 Canon Canada Inc. Tous droits réservés.
+        </p>
+    </footer>
+
+    <script>
+        let allProducts = [];
+
+        async function init() {
+            try {
+                const response = await fetch('advisor.json');
+                const data = await response.json();
+                allProducts = data.products.filter(p => p.category !== 'Accessory');
+                populateSelect();
+            } catch (error) {
+                console.error("Erreur de chargement de la base de données:", error);
+            }
+        }
+
+        function populateSelect() {
+            const select = document.getElementById('evalScanner');
+            const isCheque = document.getElementById('evalCheque').checked;
+            const isA3 = document.getElementById('evalA3').checked;
+
+            select.innerHTML = '<option value="">-- Choisir le matériel --</option>';
+
+            const filtered = allProducts.filter(p => {
+                if (isCheque) return p.category === 'Cheque';
+                if (isA3) return p.specs.max_size === 'A3';
+                return p.category === 'Document' && p.specs.max_size === 'A4';
+            }).sort((a,b) => a.model.localeCompare(b.model));
+
+            filtered.forEach(p => {
+                const opt = document.createElement('option');
+                opt.value = p.sku;
+                opt.textContent = p.model;
+                select.appendChild(opt);
+            });
+        }
+
+        function getNumericSpeed(speedStr) {
+            const ipm = speedStr.match(/(\d+)\s*ipm/);
+            if (ipm) return parseInt(ipm[1]);
+            const ppm = speedStr.match(/(\d+)\s*ppm/);
+            if (ppm) return parseInt(ppm[1]);
+            const cpm = speedStr.match(/(\d+)\s*cpm/);
+            if (cpm) return parseInt(cpm[1]);
+            const digit = speedStr.match(/(\d+)/);
+            return digit ? parseInt(digit[1]) : 1;
+        }
+
+        function calculateEfficiency() {
+            const vol = parseInt(document.getElementById('proposalVol').value);
+            const isCheque = document.getElementById('proposalCheque').checked;
+            const isA3 = document.getElementById('proposalA3').checked;
+            const container = document.getElementById('proposalResults');
+            
+            if (!vol || isNaN(vol)) return;
+
+            let pool = allProducts.filter(p => {
+                if (isCheque) return p.category === 'Cheque';
+                if (isA3) return p.specs.max_size === 'A3';
+                return p.category === 'Document' && p.specs.max_size === 'A4';
+            });
+
+            pool.sort((a, b) => a.specs.daily_volume - b.specs.daily_volume || getNumericSpeed(a.specs.speed) - getNumericSpeed(b.specs.speed));
+
+            let res = { good: null, better: null, best: null };
+            
+            if (pool.length >= 3) {
+                let targetIdx = pool.findIndex(p => p.specs.daily_volume >= vol);
+                if (targetIdx === -1) targetIdx = pool.length - 3;
+                if (targetIdx > pool.length - 3) targetIdx = pool.length - 3;
+                if (targetIdx < 0) targetIdx = 0;
+
+                res.good = pool[targetIdx];
+                res.better = pool[targetIdx + 1];
+                res.best = pool[targetIdx + 2];
+            } else if (pool.length > 0) {
+                res.good = pool[0];
+                res.better = pool[1] || pool[0];
+                res.best = pool[pool.length-1];
+            }
+
+            const tierLabels = { good: 'Bon', better: 'Meilleur', best: 'Idéal' };
+
+            container.innerHTML = `
+                <div class="space-y-4">
+                    ${['good', 'better', 'best'].map(tier => {
+                        const product = res[tier];
+                        if (!product) return '';
+
+                        const speedVal = getNumericSpeed(product.specs.speed);
+                        const estMinutes = Math.ceil(vol / speedVal);
+
+                        const colors = {
+                            good: 'text-gray-400 bg-gray-50 border-gray-100',
+                            better: 'text-blue-600 bg-blue-50 border-blue-100',
+                            best: 'text-red-600 bg-red-50 border-red-100'
+                        };
+
+                        return `
+                            <div onclick="openModal('${product.sku}')" class="suggestion-card bg-white p-5 rounded-[2rem] border-2 border-gray-50 flex items-center gap-6 shadow-sm text-left">
+                                <div class="w-16 h-16 shrink-0 flex items-center justify-center">
+                                    <img src="${product.assets.image}" class="max-h-full max-w-full object-contain">
+                                </div>
+                                <div class="flex-grow">
+                                    <span class="text-[9px] font-black uppercase tracking-widest ${colors[tier].split(' ')[0]} mb-1 block">Proposition : ${tierLabels[tier]}</span>
+                                    <h4 class="text-lg font-black text-gray-900 leading-none">${product.model}</h4>
+                                    <p class="text-[10px] text-gray-400 font-bold mt-1 uppercase tracking-tighter">${product.specs.speed}</p>
+                                </div>
+                                <div class="text-right shrink-0">
+                                    <p class="text-[9px] font-black text-gray-400 uppercase tracking-widest mb-1">Temps estimé</p>
+                                    <p class="text-lg font-black text-gray-900">~${estMinutes}<span class="text-[10px] ml-1">min</span></p>
+                                </div>
+                                <div class="text-gray-300">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                                </div>
+                            </div>
+                        `;
+                    }).join('')}
+                </div>
+            `;
+        }
+
+        function evaluateSuitability() {
+            const sku = document.getElementById('evalScanner').value;
+            const vol = parseInt(document.getElementById('evalVol').value);
+            const feedback = document.getElementById('evalFeedback');
+
+            if (!sku || !vol) return;
+
+            const p = allProducts.find(x => x.sku === sku);
+            const limit = p.specs.daily_volume;
+            const speed = getNumericSpeed(p.specs.speed);
+            const estMinutes = Math.ceil(vol / speed);
+
+            let status = "Excellente correspondance";
+            let color = "green";
+            let icon = "✅";
+            let desc = "Ce numériseur est parfaitement équilibré pour cette charge de travail.";
+
+            if (vol > limit) {
+                status = "Sous-dimensionné";
+                color = "red";
+                icon = "⚠️";
+                desc = `Votre volume de ${vol.toLocaleString('fr-CA')} dépasse la limite suggérée de ${limit.toLocaleString('fr-CA')} pages par jour.`;
+            } else if (vol < (limit * 0.15) && limit > 10000) {
+                status = "Surdimensionné";
+                color = "amber";
+                icon = "⚙️";
+                desc = `Ce modèle est conçu pour ${limit.toLocaleString('fr-CA')} pages. Un appareil plus petit pourrait être plus rentable.`;
+            }
+
+            const bgColors = {
+                green: "bg-green-50 border-green-100 text-green-900",
+                red: "bg-red-50 border-red-100 text-red-900",
+                amber: "bg-amber-50 border-yellow-100 text-amber-900"
+            };
+
+            feedback.innerHTML = `
+                <div class="p-6 rounded-[2rem] border-2 ${bgColors[color]} shadow-sm text-left">
+                    <div class="flex items-center gap-3 mb-3">
+                        <span class="text-xl">${icon}</span>
+                        <h3 class="text-lg font-black uppercase tracking-tight">${status}</h3>
+                    </div>
+                    <p class="text-sm font-medium leading-relaxed opacity-80 mb-6">${desc}</p>
+                    
+                    <div class="bg-white/60 rounded-2xl p-5 border border-white">
+                        <p class="text-[10px] font-black uppercase text-gray-400 tracking-widest mb-1">Estimation de la tâche</p>
+                        <div class="flex justify-between items-end">
+                            <span class="text-sm font-bold">Temps pour numériser :</span>
+                            <span class="text-2xl font-black text-gray-900">~${estMinutes} <span class="text-xs font-bold text-gray-400 uppercase">Mins</span></span>
+                        </div>
+                        <p class="text-[9px] font-bold text-gray-400 mt-2 italic">* Basé sur la vitesse nominale de ${speed} unités par minute.</p>
+                    </div>
+                </div>
+            `;
+            feedback.classList.remove('hidden');
+        }
+
+        function openModal(sku) {
+            const p = allProducts.find(x => x.sku === sku);
+            if (!p) return;
+            const modal = document.getElementById('productModal');
+            const content = document.getElementById('modalContent');
+
+            content.innerHTML = `
+                <div class="flex flex-col lg:flex-row gap-12 items-center lg:items-start text-left">
+                    <div class="w-full lg:w-2/5 text-center">
+                        <div class="bg-gray-50 rounded-3xl p-8 flex items-center justify-center border border-gray-100">
+                            <img src="${p.assets.image}" class="w-full h-auto object-contain max-h-72" alt="${p.model}">
+                        </div>
+                        <div class="grid grid-cols-2 gap-3 mt-8">
+                            <div class="bg-red-50 p-4 rounded-2xl">
+                                <p class="text-[9px] font-bold text-gray-400 uppercase tracking-tighter">Vitesse</p>
+                                <p class="text-xs font-black text-red-600 leading-none mt-1 text-center">${p.specs.speed}</p>
+                            </div>
+                            <div class="bg-red-50 p-4 rounded-2xl">
+                                <p class="text-[9px] font-bold text-gray-400 uppercase tracking-tighter">Vol. quotidien</p>
+                                <p class="text-xs font-black text-red-600 leading-none mt-1 text-center">${p.specs.daily_volume.toLocaleString('fr-CA')}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-3/5">
+                        <h2 class="text-4xl font-black text-gray-900 mb-1 leading-tight">${p.model}</h2>
+                        <p class="text-red-600 font-bold text-xs tracking-[0.3em] uppercase mb-6">SKU : ${p.sku}</p>
+                        
+                        <div class="bg-gray-50/50 rounded-2xl p-6 mb-8 border-l-4 border-red-600 text-sm">
+                            <p class="text-gray-600 font-medium italic leading-relaxed">${p.content.fr.why}</p>
+                        </div>
+
+                        <h4 class="text-[10px] font-black text-gray-900 uppercase tracking-[0.2em] mb-4">Avantages clés :</h4>
+                        <ul class="space-y-3 mb-10">
+                            ${p.content.fr.features.map(f => `
+                                <li class="flex items-start gap-3 text-sm text-gray-700 font-medium">
+                                    <svg class="w-5 h-5 text-red-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                    ${f}
+                                </li>
+                            `).join('')}
+                        </ul>
+
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            ${p.assets.brochure ? `<a href="${p.assets.brochure}" target="_blank" class="flex-1 bg-red-600 text-white text-center py-4 rounded-2xl font-bold text-sm hover:bg-black transition-all shadow-lg shadow-red-100">Brochure (PDF)</a>` : ''}
+                            ${p.assets.video ? `
+                                <a href="${p.assets.video}" target="_blank" class="flex-1 border-2 border-gray-200 text-gray-600 text-center py-4 rounded-2xl font-bold text-sm hover:bg-gray-50 flex items-center justify-center gap-2 transition-all">
+                                    <svg class="w-4 h-4 text-red-600" fill="currentColor" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 4-8 4z"/></svg>
+                                    Voir la vidéo
+                                </a>` : ''}
+                        </div>
+                    </div>
+                </div>
+            `;
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            document.getElementById('productModal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        window.addEventListener('keydown', (e) => { if(e.key === 'Escape') closeModal(); });
+        document.getElementById('productModal').addEventListener('click', (e) => { if(e.target.id === 'productModal') closeModal(); });
+
+        init();
+    </script>
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conseiller en numérisation Canon | Outils français</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --canon-red: #ED1C24;
+            --canon-dark: #1a1a1a;
+            --canon-gray: #f8f9fa;
+        }
+        body {
+            background-color: var(--canon-gray);
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            color: var(--canon-dark);
+            margin: 0;
+            background-image: radial-gradient(#d1d5db 0.5px, transparent 0.5px);
+            background-size: 24px 24px;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+        }
+        .tool-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            height: 100%;
+        }
+        .tool-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--canon-red);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .icon-box {
+            background: white;
+            transition: all 0.3s ease;
+        }
+        .tool-card:hover .icon-box {
+            background: var(--canon-red);
+            color: white;
+            transform: scale(1.1) rotate(5deg);
+        }
+        .fade-in {
+            animation: fadeIn 0.6s ease-out forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center">
+
+    <!-- Barre de marque supérieure -->
+    <header class="w-full py-6 flex justify-center items-center bg-white border-b border-gray-100 shadow-sm sticky top-0 z-50">
+        <div class="w-full max-w-7xl px-6 flex justify-between items-center">
+            <a href="index.html" class="transition-opacity hover:opacity-80">
+                <img src="https://i.ibb.co/YBMsYnYj/Canon-Logo-2.png" alt="Canon" class="h-8 md:h-10 w-auto">
+            </a>
+            
+            <div class="flex items-center gap-4 md:gap-10">
+                <img src="https://i.ibb.co/svcfqT91/image-FORMULA2.png" alt="imageFORMULA" class="hidden sm:block h-6 md:h-8 w-auto opacity-80">
+                
+                <!-- Sélecteur de langue -->
+                <div class="flex items-center gap-3 text-[10px] font-black uppercase tracking-[0.2em] border-l border-gray-200 pl-4 md:pl-10">
+                    <span class="text-gray-400">Langue :</span>
+                    <div class="flex items-center gap-2">
+                        <a href="selectorEN.html" class="text-gray-400 hover:text-red-600 transition-colors">EN</a>
+                        <span class="text-gray-300">|</span>
+                        <span class="text-red-600">FR</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="w-full max-w-7xl px-6 py-12 md:py-20 flex flex-col items-center text-center">
+        
+        <div class="mb-16 fade-in">
+            <p class="text-[10px] font-black uppercase tracking-[0.4em] text-red-600 mb-2">Centre imageFORMULA</p>
+            <h1 class="text-4xl md:text-5xl font-black text-gray-900 tracking-tighter mb-4">
+                Outils <span class="text-[#ED1C24]">spécialisés</span>
+            </h1>
+            <p class="text-gray-500 font-medium text-lg max-w-2xl mx-auto">
+                Sélectionnez l'application qui correspond le mieux à vos besoins de capture de documents.
+            </p>
+        </div>
+
+        <!-- Grille de sélection des outils -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full fade-in" style="animation-delay: 0.1s;">
+            
+            <!-- 1. Explorateur vertical -->
+            <a href="verticalexFR.html" class="tool-card glass-panel p-8 rounded-[2.5rem] flex flex-col border-2 border-transparent group text-left">
+                <div class="icon-box w-14 h-14 rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-sm border border-gray-100">
+                    🏢
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-gray-900 leading-tight">Explorateur vertical</h3>
+                <p class="text-gray-500 text-sm leading-relaxed mb-6">
+                    Identifiez les produits en fonction du secteur d'activité et du domaine d'application spécifique au sein de cette industrie.
+                </p>
+                <div class="mt-auto flex items-center text-[10px] font-black uppercase tracking-widest text-gray-400 group-hover:text-red-600 transition-colors">
+                    Explorer les secteurs 
+                    <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </div>
+            </a>
+
+            <!-- 2. Sélecteur de numériseur -->
+            <a href="scanselectFR.html" class="tool-card glass-panel p-8 rounded-[2.5rem] flex flex-col border-2 border-transparent group text-left">
+                <div class="icon-box w-14 h-14 rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-sm border border-gray-100">
+                    🔍
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-gray-900 leading-tight">Sélecteur de numériseur</h3>
+                <p class="text-gray-500 text-sm leading-relaxed mb-6">
+                    Parcourez tous nos produits et effectuez une sélection basée sur des critères tels que le type de connexion, les formats de papier, et plus encore.
+                </p>
+                <div class="mt-auto flex items-center text-[10px] font-black uppercase tracking-widest text-gray-400 group-hover:text-red-600 transition-colors">
+                    Filtrer le catalogue
+                    <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </div>
+            </a>
+
+            <!-- 3. Calculateur d'efficacité -->
+            <a href="efficiencyFR.html" class="tool-card glass-panel p-8 rounded-[2.5rem] flex flex-col border-2 border-transparent group text-left">
+                <div class="icon-box w-14 h-14 rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-sm border border-gray-100">
+                    ⏱️
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-gray-900 leading-tight">Calculateur d'efficacité</h3>
+                <p class="text-gray-500 text-sm leading-relaxed mb-6">
+                    Calculez le temps requis pour terminer une tâche en fonction de sa taille et de la vitesse du numériseur choisi.
+                </p>
+                <div class="mt-auto flex items-center text-[10px] font-black uppercase tracking-widest text-gray-400 group-hover:text-red-600 transition-colors">
+                    Calculer le temps
+                    <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </div>
+            </a>
+
+            <!-- 4. Conseiller numérisation -->
+            <a href="scanadvisorFR.html" class="tool-card glass-panel p-8 rounded-[2.5rem] flex flex-col border-2 border-transparent group text-left">
+                <div class="icon-box w-14 h-14 rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-sm border border-gray-100">
+                    💡
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-gray-900 leading-tight">Conseiller numérisation</h3>
+                <p class="text-gray-500 text-sm leading-relaxed mb-6">
+                    Une interface guidée où vous pouvez sélectionner différentes options pour affiner vos choix et trouver le bon numériseur.
+                </p>
+                <div class="mt-auto flex items-center text-[10px] font-black uppercase tracking-widest text-gray-400 group-hover:text-red-600 transition-colors">
+                    Démarrer l'assistant
+                    <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </div>
+            </a>
+
+        </div>
+
+    </main>
+
+    <!-- Pied de page global -->
+    <footer class="w-full py-10 bg-white border-t border-gray-100 flex flex-col items-center justify-center mt-auto">
+        <p class="text-[9px] text-gray-400 font-bold uppercase tracking-[0.3em]">
+            &copy; 2026 Canon Canada Inc. Tous droits réservés.
+        </p>
+    </footer>
+
+</body>
+</html>

@@ -82,7 +82,20 @@
                     Back to Hub
                 </a>
             </div>
-            <img src="https://i.ibb.co/svcfqT91/image-FORMULA2.png" alt="imageFORMULA" class="h-6 w-auto opacity-70">
+
+            <div class="flex items-center gap-4 md:gap-10">
+                <img src="https://i.ibb.co/svcfqT91/image-FORMULA2.png" alt="imageFORMULA" class="hidden sm:block h-6 md:h-8 w-auto opacity-80">
+                
+                <!-- Language Switcher -->
+                <div class="flex items-center gap-3 text-[10px] font-black uppercase tracking-[0.2em] border-l border-gray-200 pl-4 md:pl-10">
+                    <span class="text-gray-400">Language:</span>
+                    <div class="flex items-center gap-2">
+                        <span class="text-red-600">EN</span>
+                        <span class="text-gray-300">|</span>
+                        <a href="efficiencyFR.html" class="text-gray-400 hover:text-red-600 transition-colors">FR</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -258,11 +271,9 @@
             pool.sort((a, b) => a.specs.daily_volume - b.specs.daily_volume || getNumericSpeed(a.specs.speed) - getNumericSpeed(b.specs.speed));
 
             // Select Good/Better/Best from sorted pool based on volume entry
-            // This logic picks 3 tiers from the applicable hardware list
             let res = { good: null, better: null, best: null };
             
             if (pool.length >= 3) {
-                // Determine starting index based on volume entry relative to pool average
                 let targetIdx = pool.findIndex(p => p.specs.daily_volume >= vol);
                 if (targetIdx === -1) targetIdx = pool.length - 3;
                 if (targetIdx > pool.length - 3) targetIdx = pool.length - 3;

@@ -1,0 +1,1033 @@
+{
+  "last_updated": "2026-05-09",
+  "version": "1.0",
+  "config": {
+    "currency": "CAD",
+    "region": "Canada",
+    "volume_tiers": {
+      "occasional": 1000,
+      "regular": 8000,
+      "high": 20000,
+      "mission_critical": 20001
+    }
+  },
+  "products": [
+    {
+      "sku": "9704B007",
+      "model": "P-208II",
+      "series": "Personal",
+      "category": "Document",
+      "specs": {
+        "speed": "8 ppm / 16 ipm",
+        "daily_volume": 250,
+        "max_size": "A4",
+        "connectivity": ["USB 2.0"],
+        "flatbed_compatible": false,
+        "duplex": true
+      },
+      "assets": {
+        "image": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Personal---Workgroup/P-208II/Canon_iF-P208II_Thumbnail_230x230.png",
+        "brochure": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Personal---Workgroup/P-208II/ImageFORMULA-P-208-II-Product-Brochure--EN--CA-.pdf",
+        "video": "https://www.youtube.com/watch?v=rqqgkQ_f2aY"
+      },
+      "verticals": {
+        "Government": ["On Field / Mobile"],
+        "Financial": ["On Field / Mobile"],
+        "Legal": ["On Field / Mobile"],
+        "Logistics": ["On Field / Mobile"]
+      },
+      "content": {
+        "en": {
+          "why": "Ultra-compact and USB-powered, making it the perfect choice for mobile professionals and investigators.",
+          "features": [
+            "Ultra-Compact & Lightweight",
+            "USB-Powered Convenience",
+            "True Duplex Scanning",
+            "Support for Mixed Media",
+            "Plug-and-Scan Simplicity"
+          ]
+        },
+        "fr": {
+          "why": "Ultra-compact et alimenté par USB, le choix parfait pour les professionnels mobiles.",
+          "features": [
+            "Ultra-compact et léger",
+            "Alimenté par USB",
+            "Numérisation recto-verso",
+            "Support pour supports mixtes",
+            "Simplicité Plug-and-Scan"
+          ]
+        }
+      }
+    },
+    {
+      "sku": "9705B007",
+      "model": "P-215II",
+      "series": "Personal",
+      "category": "Document",
+      "specs": {
+        "speed": "15 ppm / 30 ipm",
+        "daily_volume": 700,
+        "max_size": "A4",
+        "connectivity": ["USB 2.0", "USB 3.0"],
+        "flatbed_compatible": false,
+        "duplex": true
+      },
+      "assets": {
+        "image": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Personal---Workgroup/DR-P215II/Canon_iF-P215II_Thumbnail_230x230.png",
+        "brochure": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Personal---Workgroup/DR-P215II/ImageFORMULA-P-215-II-Product-Brochure--EN--CA-.pdf",
+        "video": "https://www.youtube.com/watch?v=mYwJ1_h0iKU"
+      },
+      "verticals": {
+        "Government": ["On Field / Mobile"],
+        "Financial": ["On Field / Mobile"],
+        "Legal": ["On Field / Mobile"],
+        "Logistics": ["On Field / Mobile"]
+      },
+      "content": {
+        "en": {
+          "why": "The mobile workhorse for field professionals. Features a dedicated card scanner and high-speed duplexing.",
+          "features": [
+            "Integrated Card Scanner",
+            "Fast Duplex Performance",
+            "No Software Install Required",
+            "Bus Powered (USB 3.0)",
+            "High-Quality OCR Output"
+          ]
+        },
+        "fr": {
+          "why": "Le cheval de bataille mobile pour les professionnels de terrain.",
+          "features": [
+            "Scanner de cartes intégré",
+            "Performance recto-verso rapide",
+            "Aucune installation de logiciel requise",
+            "Alimenté par bus (USB 3.0)",
+            "Sortie OCR de haute qualité"
+          ]
+        }
+      }
+    },
+    {
+      "sku": "3258C002",
+      "model": "DR-C225II",
+      "series": "Workgroup",
+      "category": "Document",
+      "specs": {
+        "speed": "25 ppm / 50 ipm",
+        "daily_volume": 2500,
+        "max_size": "A4",
+        "connectivity": ["USB 2.0"],
+        "flatbed_compatible": true,
+        "duplex": true
+      },
+      "assets": {
+        "image": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Personal---Workgroup/DR-C225-II/Canon_iF-DR-C225-II_Side_V3_580x580.png",
+        "brochure": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Personal---Workgroup/DR-C225-II/BROCHURE_DRC225II_01_EN.pdf",
+        "video": "https://www.youtube.com/watch?v=Ia90Khl0JMM"
+      },
+      "verticals": {
+        "Government": ["Office"],
+        "Healthcare": ["Office"],
+        "Financial": ["Office / Administration"],
+        "Legal": ["Office"],
+        "Logistics": ["Office / Depot"]
+      },
+      "content": {
+        "en": {
+          "why": "Unique upright design frees up desk space while providing professional office performance.",
+          "features": [
+            "Unique Vertical U-Turn Path",
+            "Compact Desktop Footprint",
+            "Fast 25ppm Capture",
+            "Handles Embossed Cards",
+            "Included Software Suite"
+          ]
+        },
+        "fr": {
+          "why": "La conception verticale unique libère de l'espace sur le bureau.",
+          "features": [
+            "Chemin vertical unique en U",
+            "Encombrement réduit",
+            "Capture rapide de 25 ppm",
+            "Gère les cartes gaufrées",
+            "Suite logicielle incluse"
+          ]
+        }
+      }
+    },
+    {
+      "sku": "7291C002",
+      "model": "DR-C340",
+      "series": "Workgroup",
+      "category": "Document",
+      "specs": {
+        "speed": "40 ppm / 80 ipm",
+        "daily_volume": 7000,
+        "max_size": "A4",
+        "connectivity": ["USB 2.0"],
+        "flatbed_compatible": true,
+        "duplex": true
+      },
+      "assets": {
+        "image": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Personal---Workgroup/DR-C340/CB_001.png",
+        "brochure": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Personal---Workgroup/DR-C340/imageFORMULA-DR-C340-Office-Document-Scanner-Brochure-FINAL.pdf",
+        "video": "https://www.youtube.com/watch?v=klkKoFVfSzg"
+      },
+      "verticals": {
+        "Government": ["Office"],
+        "Healthcare": ["Office"],
+        "Financial": ["Office / Administration"],
+        "Legal": ["Office"],
+        "Logistics": ["Office / Depot"]
+      },
+      "content": {
+        "en": {
+          "why": "Reliable batch scanner for intake forms and financial documentation in professional environments.",
+          "features": [
+            "100-Sheet ADF Capacity",
+            "High 40ppm Speed",
+            "Durable Daily Duty Cycle",
+            "Smooth Document Feeding",
+            "Tailored for Batch Jobs"
+          ]
+        },
+        "fr": {
+          "why": "Scanner de lots fiable pour les formulaires d'admission et la documentation financière.",
+          "features": [
+            "Capacité du CAD de 100 feuilles",
+            "Vitesse élevée de 40 ppm",
+            "Cycle de travail quotidien durable",
+            "Alimentation fluide des documents",
+            "Adapté aux travaux par lots"
+          ]
+        }
+      }
+    },
+    {
+      "sku": "7290C002",
+      "model": "DR-C350",
+      "series": "Workgroup",
+      "category": "Document",
+      "specs": {
+        "speed": "50 ppm / 100 ipm",
+        "daily_volume": 8000,
+        "max_size": "A4",
+        "connectivity": ["USB 2.0"],
+        "flatbed_compatible": true,
+        "duplex": true
+      },
+      "assets": {
+        "image": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Personal---Workgroup/DR-C350/CA_001.png",
+        "brochure": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Personal---Workgroup/DR-C350/imageFORMULA-DR-C350-Office-Document-Scanner-Brochure-FINAL.pdf",
+        "video": "https://www.youtube.com/watch?v=klkKoFVfSzg"
+      },
+      "verticals": {
+        "Government": ["Office"],
+        "Healthcare": ["Office"],
+        "Financial": ["Office / Administration"],
+        "Legal": ["Office"],
+        "Logistics": ["Office / Depot"]
+      },
+      "content": {
+        "en": {
+          "why": "High-speed document capture with enterprise features for high-traffic office intake.",
+          "features": [
+            "Blazing 50ppm Capture",
+            "100-Sheet Document Feeder",
+            "EPEAT Gold Certified",
+            "Superior Image Processing",
+            "Intake Form Optimization"
+          ]
+        },
+        "fr": {
+          "why": "Capture de documents haute vitesse avec des fonctions d'entreprise.",
+          "features": [
+            "Capture ultra-rapide de 50 ppm",
+            "Chargeur de documents de 100 feuilles",
+            "Certifié EPEAT Or",
+            "Traitement d'image supérieur",
+            "Optimisation des formulaires d'entrée"
+          ]
+        }
+      }
+    },
+    {
+      "sku": "6383C002",
+      "model": "DR-S250N",
+      "series": "Workgroup",
+      "category": "Document",
+      "specs": {
+        "speed": "50 ppm / 100 ipm",
+        "daily_volume": 6000,
+        "max_size": "A4",
+        "connectivity": ["USB 3.2", "Ethernet"],
+        "flatbed_compatible": true,
+        "duplex": true
+      },
+      "assets": {
+        "image": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Personal---Workgroup/DR-S250N/DR-S250N-Front-V2.png",
+        "brochure": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Personal---Workgroup/DR-S250N/Canon---imageFORMULA_Scanner_DRS250N_EN.pdf",
+        "video": "https://www.youtube.com/watch?v=QUdwawjg8KU"
+      },
+      "verticals": {
+        "Government": ["Reception"],
+        "Healthcare": ["Reception"],
+        "Legal": ["Reception"],
+        "Logistics": ["Office / Depot"]
+      },
+      "content": {
+        "en": {
+          "why": "Built for reception efficiency. Allows scanning directly to email or network folders without a PC.",
+          "features": [
+            "Direct Scan (PC-Free)",
+            "Wired & Wireless Ready",
+            "Passport/ID Card Support",
+            "Intuitive Color LCD",
+            "Centralized Management"
+          ]
+        },
+        "fr": {
+          "why": "Conçu pour l'efficacité de la réception. Permet de numériser directement vers courriel ou dossier.",
+          "features": [
+            "Numérisation directe (sans PC)",
+            "Prêt pour réseau filaire/sans fil",
+            "Support passeport/carte d'identité",
+            "Écran LCD couleur intuitif",
+            "Gestion centralisée"
+          ]
+        }
+      }
+    },
+    {
+      "sku": "6897C002",
+      "model": "DR-S350NW",
+      "series": "Workgroup",
+      "category": "Document",
+      "specs": {
+        "speed": "50 ppm / 100 ipm",
+        "daily_volume": 6000,
+        "max_size": "A4",
+        "connectivity": ["USB 3.2", "Ethernet", "WIFI"],
+        "flatbed_compatible": true,
+        "duplex": true
+      },
+      "assets": {
+        "image": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ITCG/Scanners/imageFORMULA-DR-S350NW/imageFORMULA-DR-S350NW-1.png",
+        "brochure": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ITCG/Scanners/imageFORMULA-DR-S350NW/EN-imageFORMULA-DR-S350NW-Brochure.pdf",
+        "video": "https://www.youtube.com/watch?v=tiI1DbR9YUw"
+      },
+      "verticals": {
+        "Government": ["Reception"],
+        "Healthcare": ["Reception"],
+        "Legal": ["Reception"],
+        "Logistics": ["Office / Depot"]
+      },
+      "content": {
+        "en": {
+          "why": "Ultimate network flexibility with Wi-Fi and Ethernet. Large touchscreen for easy shared intake.",
+          "features": [
+            "Built-In Wi-Fi & Ethernet",
+            "Large 4.3\" Touchscreen",
+            "User PIN Security",
+            "Dual-Band Connectivity",
+            "High-Volume Shared Scan"
+          ]
+        },
+        "fr": {
+          "why": "Flexibilité réseau ultime avec Wi-Fi et Ethernet.",
+          "features": [
+            "Wi-Fi et Ethernet intégrés",
+            "Grand écran tactile de 4,3 po",
+            "Sécurité par code PIN",
+            "Connectivité bibande",
+            "Numérisation partagée"
+          ]
+        }
+      }
+    },
+    {
+      "sku": "6050C002",
+      "model": "DR-M140II",
+      "series": "Departmental",
+      "category": "Document",
+      "specs": {
+        "speed": "40 ppm / 80 ipm",
+        "daily_volume": 8500,
+        "max_size": "A4",
+        "connectivity": ["USB 2.0"],
+        "flatbed_compatible": true,
+        "duplex": true
+      },
+      "assets": {
+        "image": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/DR-M140II/DR-M140II-front.png",
+        "brochure": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/DR-M140II/Canon---imageFORMULA_Scanner_DRM140II_FA.pdf",
+        "video": "https://www.youtube.com/watch?v=0FOok_lQQaI"
+      },
+      "verticals": {
+        "Government": ["Office"],
+        "Healthcare": ["Office"],
+        "Financial": ["Office / Administration"],
+        "Legal": ["Office"],
+        "Logistics": ["Office / Depot"]
+      },
+      "content": {
+        "en": {
+          "why": "Compact power with a dual paper path (U-turn/Straight) to handle delicate or thick media.",
+          "features": [
+            "Dual Paper Path Flexibility",
+            "80-Sheet High-Capacity ADF",
+            "Reliable Feeding Control",
+            "Compact Desk-Friendly Size",
+            "Professional Image Cleanup"
+          ]
+        },
+        "fr": {
+          "why": "Puissance compacte avec un double chemin de papier.",
+          "features": [
+            "Flexibilité du double chemin",
+            "CAD haute capacité de 80 feuilles",
+            "Contrôle d'alimentation fiable",
+            "Taille compacte pour bureau",
+            "Nettoyage d'image professionnel"
+          ]
+        }
+      }
+    },
+    {
+      "sku": "2405C002",
+      "model": "DR-M260",
+      "series": "Departmental",
+      "category": "Document",
+      "specs": {
+        "speed": "60 ppm / 120 ipm",
+        "daily_volume": 13000,
+        "max_size": "A4",
+        "connectivity": ["USB 3.1"],
+        "flatbed_compatible": true,
+        "duplex": true
+      },
+      "assets": {
+        "image": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/DR-M260/Canon_iF-DR-M260-Thumbnail_580X580.png",
+        "brochure": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/DR-M260/ImageFORMULA-DR-M260-Product-Brochure--EN--CA-.pdf",
+        "video": "https://www.youtube.com/watch?v=YUz8sjjYJyA"
+      },
+      "verticals": {
+        "Government": ["Office"],
+        "Healthcare": ["Office"],
+        "Financial": ["Office / Administration"],
+        "Legal": ["Office"],
+        "Logistics": ["Office / Depot"]
+      },
+      "content": {
+        "en": {
+          "why": "Features an onboard processing chip to deliver fast, high-quality scans for heavy workloads.",
+          "features": [
+            "Integrated Processing CPU",
+            "Superb Image Precision",
+            "Heavy-Duty 90-Sheet Feeder",
+            "USB 3.1 High-Speed Sync",
+            "Advanced Security Features"
+          ]
+        },
+        "fr": {
+          "why": "Dispose d'une puce de traitement intégrée pour une numérisation rapide.",
+          "features": [
+            "CPU de traitement intégré",
+            "Superbe précision d'image",
+            "Chargeur robuste de 90 feuilles",
+            "USB 3.1 haute vitesse",
+            "Fonctions de sécurité avancées"
+          ]
+        }
+      }
+    },
+    {
+      "sku": "6049C002",
+      "model": "DR-M1060II",
+      "series": "Departmental",
+      "category": "Document",
+      "specs": {
+        "speed": "60 ppm / 120 ipm",
+        "daily_volume": 13000,
+        "max_size": "A3",
+        "connectivity": ["USB 2.0"],
+        "flatbed_compatible": true,
+        "duplex": true
+      },
+      "assets": {
+        "image": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/DR-M1060II/DR-M1060II-front.png",
+        "brochure": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/DR-M1060II/Canon---imageFORMULA_Scanner_DRM1060II_FA.pdf",
+        "video": "https://www.youtube.com/watch?v=5PSaOmwCwmo"
+      },
+      "verticals": {
+        "Government": ["Office"],
+        "Healthcare": ["Office"],
+        "Financial": ["Office / Administration"],
+        "Legal": ["Office"],
+        "Logistics": ["Office / Depot"]
+      },
+      "content": {
+        "en": {
+          "why": "Versatile A3 scanning in a compact desktop footprint. Ideal for records and legal documents.",
+          "features": [
+            "Front-Feeding A3 Support",
+            "Compact Ledger Scanning",
+            "Mixed Document Handling",
+            "U-Turn/Straight Paper Path",
+            "Ideal for oversized records"
+          ]
+        },
+        "fr": {
+          "why": "Numérisation A3 polyvalente dans un format de bureau compact.",
+          "features": [
+            "Support A3 à alimentation frontale",
+            "Format registre compact",
+            "Gestion des documents mixtes",
+            "Chemin de papier polyvalent",
+            "Idéal pour les dossiers grand format"
+          ]
+        }
+      }
+    },
+    {
+      "sku": "1255C002",
+      "model": "SCANFRONT 400",
+      "series": "Workgroup",
+      "category": "Document",
+      "specs": {
+        "speed": "45 ppm / 90 ipm",
+        "daily_volume": 8500,
+        "max_size": "A4",
+        "connectivity": ["Ethernet"],
+        "flatbed_compatible": true,
+        "duplex": true
+      },
+      "assets": {
+        "image": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Personal---Workgroup/Scanfront-400/Canon_iF-ScanFront400_Thumbnail_580x580.png",
+        "brochure": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Personal---Workgroup/Scanfront-400/BROCHURE_SCANFRONT400_01_EN.pdf",
+        "video": "https://www.youtube.com/watch?v=qUU3w7sv2R4"
+      },
+      "verticals": {
+        "Government": ["Reception"],
+        "Healthcare": ["Reception"],
+        "Financial": ["Teller / Reception"],
+        "Legal": ["Reception"],
+        "Logistics": ["Office / Depot"]
+      },
+      "content": {
+        "en": {
+          "why": "A standalone network scanner with a large 10.1\" screen. No PC required for document routing.",
+          "features": [
+            "Large 10.1\" Touchscreen",
+            "PC-Free Network Routing",
+            "Secure User Profiles/PIN",
+            "LDAP Directory Support",
+            "uniFLOW Platform Ready"
+          ]
+        },
+        "fr": {
+          "why": "Un scanner réseau autonome avec un grand écran de 10,1 po.",
+          "features": [
+            "Grand écran tactile 10,1 po",
+            "Routage réseau sans PC",
+            "Profils utilisateur sécurisés",
+            "Support d'annuaire LDAP",
+            "Prêt pour la plateforme uniFLOW"
+          ]
+        }
+      }
+    },
+    {
+      "sku": "3151C002",
+      "model": "DR-G2090",
+      "series": "Production",
+      "category": "Document",
+      "specs": {
+        "speed": "90 ppm / 180 ipm",
+        "daily_volume": 55000,
+        "max_size": "A3",
+        "connectivity": ["USB 3.1"],
+        "flatbed_compatible": true,
+        "duplex": true
+      },
+      "assets": {
+        "image": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/DR-G2110/Canon_iF-DR-G2110_Thumbnail_580x580.png",
+        "brochure": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/DR-G2090/ImageFORMULA-DR-G2090-USB-Product-Brochure--EN--CA-.pdf.pdf",
+        "video": "https://www.youtube.com/watch?v=PxwRVly8_2A"
+      },
+      "verticals": {
+        "Government": ["Back-Office"],
+        "Healthcare": ["Back-Office"],
+        "Financial": ["Back-Office"],
+        "Legal": ["Back-Office"],
+        "Logistics": ["Back-Office"]
+      },
+      "content": {
+        "en": {
+          "why": "Reliable production scanning for back-office environments with high-throughput demands.",
+          "features": [
+            "High-Throughput Feeder",
+            "300-Sheet ADF Load",
+            "Reliable Roller Mechanism",
+            "Precision Skew Correction",
+            "Cost-Effective Production"
+          ]
+        },
+        "fr": {
+          "why": "Numérisation de production fiable pour les environnements de back-office.",
+          "features": [
+            "Chargeur à haut débit",
+            "CAD de 300 feuilles",
+            "Mécanisme de rouleau fiable",
+            "Correction de désalignement",
+            "Production rentable"
+          ]
+        }
+      }
+    },
+    {
+      "sku": "3150C002",
+      "model": "DR-G2110",
+      "series": "Production",
+      "category": "Document",
+      "specs": {
+        "speed": "110 ppm / 220 ipm",
+        "daily_volume": 100000,
+        "max_size": "A3",
+        "connectivity": ["USB 3.1", "Ethernet"],
+        "flatbed_compatible": true,
+        "duplex": true
+      },
+      "assets": {
+        "image": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/DR-G2110/Canon_iF-DR-G2110_Thumbnail_580x580.png",
+        "brochure": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/DR-G2110/ImageFORMULA-DR-G2110-Product-Brochure--EN--CA-.pdf",
+        "video": "https://www.youtube.com/watch?v=PxwRVly8_2A"
+      },
+      "verticals": {
+        "Government": ["Back-Office"],
+        "Healthcare": ["Back-Office"],
+        "Financial": ["Back-Office"],
+        "Legal": ["Back-Office"],
+        "Logistics": ["Back-Office"]
+      },
+      "content": {
+        "en": {
+          "why": "Enterprise-grade production scanner with robust performance and network connectivity.",
+          "features": [
+            "Shared Network Resource",
+            "500-Sheet ADF Capacity",
+            "600dpi Precision CIS",
+            "Centralized Back-Office Power",
+            "Barcode/Batch Separation"
+          ]
+        },
+        "fr": {
+          "why": "Scanner de production de classe entreprise avec réseau.",
+          "features": [
+            "Ressource réseau partagée",
+            "Capacité CAD de 500 feuilles",
+            "CIS de précision 600 ppp",
+            "Puissance centralisée",
+            "Séparation par code-barres"
+          ]
+        }
+      }
+    },
+    {
+      "sku": "3149C002",
+      "model": "DR-G2140",
+      "series": "Production",
+      "category": "Document",
+      "specs": {
+        "speed": "140 ppm / 280 ipm",
+        "daily_volume": 150000,
+        "max_size": "A3",
+        "connectivity": ["USB 3.1", "Ethernet"],
+        "flatbed_compatible": true,
+        "duplex": true
+      },
+      "assets": {
+        "image": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/DR-G2110/Canon_iF-DR-G2110_Thumbnail_580x580.png",
+        "brochure": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/DR-G2140/ImageFORMULA-DR-G2140-Product-Brochure--EN--CA-.pdf",
+        "video": "https://www.youtube.com/watch?v=yEu4-nByNsk"
+      },
+      "verticals": {
+        "Government": ["Back-Office"],
+        "Healthcare": ["Back-Office"],
+        "Financial": ["Back-Office"],
+        "Legal": ["Back-Office"],
+        "Logistics": ["Back-Office"]
+      },
+      "content": {
+        "en": {
+          "why": "Canon's fastest production scanner, built for massive backfile digitization and conversion projects.",
+          "features": [
+            "Industrial 140ppm Speed",
+            "Massive 500-Sheet ADF",
+            "Production-Class Durability",
+            "Gigabit Ethernet Onboard",
+            "Ultrasonic Multifeed Detection"
+          ]
+        },
+        "fr": {
+          "why": "Le scanner le plus rapide de Canon, conçu pour la numérisation massive.",
+          "features": [
+            "Vitesse industrielle 140 ppm",
+            "CAD massif de 500 feuilles",
+            "Durabilité de classe production",
+            "Ethernet Gigabit intégré",
+            "Détection d'alimentation multiple"
+          ]
+        }
+      }
+    },
+    {
+      "sku": "2260C001",
+      "model": "DR-X10CII",
+      "series": "Production",
+      "category": "Document",
+      "specs": {
+        "speed": "130 ppm / 260 ipm",
+        "daily_volume": 60000,
+        "max_size": "A3",
+        "connectivity": ["USB 2.0"],
+        "flatbed_compatible": true,
+        "duplex": true
+      },
+      "assets": {
+        "image": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/DR-X10CII/Canon_iF-DR-X10C-II_Thumbnail_230x230.png",
+        "brochure": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/DR-X10CII/ImageFORMULA-DR-X10C-II-Product-Brochure--EN--CA-.pdf",
+        "video": ""
+      },
+      "verticals": {
+        "Government": ["Back-Office"],
+        "Healthcare": ["Back-Office"]
+      },
+      "content": {
+        "en": {
+          "why": "Archival-grade production scanner with 600 dpi resolution for the highest precision capture.",
+          "features": [
+            "True 600dpi Optical Res",
+            "High-Volume Production",
+            "Active Threshold Logic",
+            "Skew Detection Onboard",
+            "Legacy Capture Quality"
+          ]
+        },
+        "fr": {
+          "why": "Scanner de production de qualité archivistique avec résolution 600 ppp.",
+          "features": [
+            "Résolution optique 600 ppp",
+            "Production gros volume",
+            "Logique de seuil actif",
+            "Détection de désalignement",
+            "Qualité de capture héritée"
+          ]
+        }
+      }
+    },
+    {
+      "sku": "3595C002",
+      "model": "CR-L1",
+      "series": "Cheque",
+      "category": "Cheque",
+      "specs": {
+        "speed": "45 cpm",
+        "daily_volume": 2000,
+        "max_size": "Cheque",
+        "connectivity": ["USB 2.0"],
+        "flatbed_compatible": false,
+        "duplex": true
+      },
+      "assets": {
+        "image": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Cheque/CR-L1/Canon_iF-CR-L1_Side_580x580.png",
+        "brochure": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Cheque/CR-L1/ImageFORMULA-CR-L1-Product-Brochure--EN--CA-.pdf",
+        "video": "https://www.youtube.com/watch?v=yiyVvf-OVR8"
+      },
+      "verticals": {
+        "Financial": ["Teller / Reception"]
+      },
+      "content": {
+        "en": {
+          "why": "Reliable entry-level cheque scanner for retail and low-volume teller environments.",
+          "features": [
+            "Precision MICR Recognition",
+            "Ultra-Compact Footprint",
+            "Easy Maintenance Access",
+            "High-Resolution Scanning",
+            "Bank Software Ready"
+          ]
+        },
+        "fr": {
+          "why": "Scanner de chèques d'entrée de gamme fiable.",
+          "features": [
+            "Reconnaissance MICR de précision",
+            "Encombrement ultra-compact",
+            "Accès facile pour l'entretien",
+            "Numérisation haute résolution",
+            "Prêt pour les logiciels bancaires"
+          ]
+        }
+      }
+    },
+    {
+      "sku": "1722C001",
+      "model": "CR-120",
+      "series": "Cheque",
+      "category": "Cheque",
+      "specs": {
+        "speed": "120 cpm",
+        "daily_volume": 12000,
+        "max_size": "Cheque",
+        "connectivity": ["USB 2.0"],
+        "flatbed_compatible": false,
+        "duplex": true
+      },
+      "assets": {
+        "image": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Cheque/CR-120-CR-150/Canon_iF-CR-120-CR-150_Side_580x580.png",
+        "brochure": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Cheque/CR-120-CR-150/ImageFORMULA-CR-120-Product-Brochure--EN--CA-.pdf",
+        "video": ""
+      },
+      "verticals": {
+        "Financial": ["Teller / Reception"]
+      },
+      "content": {
+        "en": {
+          "why": "Fast and reliable mid-volume cheque scanning for financial front-lines.",
+          "features": [
+            "120 Cheques Per Minute",
+            "100-Item Auto Feeder",
+            "High MICR Read Rate",
+            "Compact Desktop Design",
+            "Wired Connectivity"
+          ]
+        },
+        "fr": {
+          "why": "Numérisation de chèques rapide et fiable pour le secteur financier.",
+          "features": [
+            "120 chèques par minute",
+            "Chargeur auto de 100 articles",
+            "Taux de lecture MICR élevé",
+            "Format de bureau compact",
+            "Connectivité filaire"
+          ]
+        }
+      }
+    },
+    {
+      "sku": "2693C001",
+      "model": "CR-120N",
+      "series": "Cheque",
+      "category": "Cheque",
+      "specs": {
+        "speed": "120 cpm",
+        "daily_volume": 12000,
+        "max_size": "Cheque",
+        "connectivity": ["USB 2.0", "Ethernet"],
+        "flatbed_compatible": false,
+        "duplex": true
+      },
+      "assets": {
+        "image": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Cheque/CR-120-CR-150/Canon_iF-CR-120-CR-150_Side_580x580.png",
+        "brochure": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ITCG/Scanners/CR-120N/ImageFORMULA-CR-120N-Product-Brochure--EN--CA----Copy.pdf",
+        "video": ""
+      },
+      "verticals": {
+        "Financial": ["Teller / Reception"]
+      },
+      "content": {
+        "en": {
+          "why": "Network-attached cheque reader for seamless branch transformation and shared use.",
+          "features": [
+            "Direct Network Connectivity",
+            "Built-In MSR reader",
+            "Accurate Data Capture",
+            "Shared Resource Capability",
+            "Secure Transmission"
+          ]
+        },
+        "fr": {
+          "why": "Lecteur de chèques relié au réseau pour une utilisation partagée.",
+          "features": [
+            "Connectivité réseau directe",
+            "Lecteur MSR intégré",
+            "Capture de données précise",
+            "Capacité de ressource partagée",
+            "Transmission sécurisée"
+          ]
+        }
+      }
+    },
+    {
+      "sku": "1721C001",
+      "model": "CR-150",
+      "series": "Cheque",
+      "category": "Cheque",
+      "specs": {
+        "speed": "150 cpm",
+        "daily_volume": 12000,
+        "max_size": "Cheque",
+        "connectivity": ["USB 2.0"],
+        "flatbed_compatible": false,
+        "duplex": true
+      },
+      "assets": {
+        "image": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Cheque/CR-120-CR-150/Canon_iF-CR-120-CR-150_Side_580x580.png",
+        "brochure": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Cheque/CR-120-CR-150/ImageFORMULA-CR-150-Product-Brochure--EN--CA-.pdf.pdf",
+        "video": ""
+      },
+      "verticals": {
+        "Financial": ["Teller / Reception"]
+      },
+      "content": {
+        "en": {
+          "why": "Precision high-speed cheque capture with accurate MICR reading for financial institutions.",
+          "features": [
+            "150-Cheque ADF Feeder",
+            "Advanced MICR + OCR",
+            "Built-In Imprinter Options",
+            "UV Scanning Support",
+            "MSR Tracking Ready"
+          ]
+        },
+        "fr": {
+          "why": "Capture de chèques haute vitesse de précision.",
+          "features": [
+            "Chargeur CAD de 150 chèques",
+            "MICR + OCR avancés",
+            "Options d'imprimante intégrée",
+            "Support de numérisation UV",
+            "Prêt pour le suivi MSR"
+          ]
+        }
+      }
+    },
+    {
+      "sku": "1009C002",
+      "model": "CR-190i II",
+      "series": "Cheque",
+      "category": "Cheque",
+      "specs": {
+        "speed": "190 cpm",
+        "daily_volume": 24000,
+        "max_size": "Cheque",
+        "connectivity": ["USB 2.0"],
+        "flatbed_compatible": false,
+        "duplex": true
+      },
+      "assets": {
+        "image": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Cheque/CR-190i-II/Canon_iF-CR-190i-II_Thumbnail_230x230.png",
+        "brochure": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Cheque/CR-190i-II/imageFORMULA-CR-190i-II---Product-Brochure--EN--CA----V2.pdf",
+        "video": ""
+      },
+      "verticals": {
+        "Financial": ["Back-Office"]
+      },
+      "content": {
+        "en": {
+          "why": "Highest volume cheque scanner for centralized lockbox and payment processing.",
+          "features": [
+            "190 Cheques Per Minute",
+            "Huge 250-Item Feeder",
+            "2-Pocket Sorting",
+            "8-Line Built-In Endorser",
+            "Production-Class Reliability"
+          ]
+        },
+        "fr": {
+          "why": "Scanner de chèques à volume élevé pour le traitement centralisé.",
+          "features": [
+            "190 chèques par minute",
+            "Chargeur massif de 250 articles",
+            "Tri à 2 poches",
+            "Endosseur 8 lignes intégré",
+            "Fiabilité de classe production"
+          ]
+        }
+      }
+    },
+    {
+      "sku": "2152C002",
+      "model": "Flatbed 102",
+      "series": "Accessory",
+      "category": "Accessory",
+      "specs": {
+        "speed": "7 seconds / page",
+        "daily_volume": 0,
+        "max_size": "A4",
+        "connectivity": ["USB 2.0"],
+        "flatbed_compatible": false,
+        "duplex": false
+      },
+      "assets": {
+        "image": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/FSU-102-Accessory/imageFORMULA-FSU-102-1.png",
+        "brochure": "",
+        "video": ""
+      },
+      "verticals": {},
+      "content": {
+        "en": {
+          "why": "Optional accessory for scanning bound and fragile documents up to A4 size.",
+          "features": [
+            "Seamless Integration",
+            "High-Resolution Capture",
+            "Bound Document Support",
+            "Compact Flatbed Design",
+            "Versatile Media Handling"
+          ]
+        },
+        "fr": {
+          "why": "Accessoire optionnel pour la numérisation de documents reliés.",
+          "features": [
+            "Intégration transparente",
+            "Capture haute résolution",
+            "Support de documents reliés",
+            "Conception de platine compacte",
+            "Gestion polyvalente des supports"
+          ]
+        }
+      }
+    },
+    {
+      "sku": "5031C002AA",
+      "model": "Flatbed 202",
+      "series": "Accessory",
+      "category": "Accessory",
+      "specs": {
+        "speed": "3 seconds / page",
+        "daily_volume": 0,
+        "max_size": "A3",
+        "connectivity": ["USB 2.0"],
+        "flatbed_compatible": false,
+        "duplex": false
+      },
+      "assets": {
+        "image": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/FSU-202-Accessory/hero--1-.png",
+        "brochure": "",
+        "video": ""
+      },
+      "verticals": {},
+      "content": {
+        "en": {
+          "why": "High-speed flatbed accessory for oversized or delicate media up to Ledger size.",
+          "features": [
+            "A3 Large Format Capture",
+            "Extreme 3s Scan Speed",
+            "Cover-Open Detection",
+            "Superior Image Detail",
+            "One-Step Integration"
+          ]
+        },
+        "fr": {
+          "why": "Accessoire de platine haute vitesse pour supports grand format.",
+          "features": [
+            "Capture grand format A3",
+            "Vitesse de numérisation de 3 s",
+            "Détection de couvercle ouvert",
+            "Détail d'image supérieur",
+            "Intégration en une étape"
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -53,9 +53,9 @@
     <header class="w-full py-6 flex justify-center items-center bg-white border-b border-gray-100 shadow-sm sticky top-0 z-50">
         <div class="w-full max-w-6xl px-6 flex justify-between items-center text-left">
             <div class="flex items-center gap-8">
-                <a href="index.html"><img src="https://i.ibb.co/YBMsYnYj/Canon-Logo-2.png" alt="Canon" class="h-8 w-auto"></a>
-                <a href="selectorEN.html" class="hidden md:flex items-center text-xs font-bold text-gray-400 uppercase tracking-widest hover:text-red-600 transition-colors">
-                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M15 19l-7-7 7-7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                <a href="index.html"><img src="https://i.ibb.co/YBMsYnYj/Canon-Logo-2.png" alt="Canon" class="h-8 md:h-10 w-auto"></a>
+                <a href="selectorEN.html" class="hidden md:flex items-center text-xs font-bold text-gray-400 uppercase tracking-widest hover:text-red-600 transition-colors text-left">
+                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M15 19l-7-7 7-7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"></path></svg>
                     Back to Hub
                 </a>
             </div>
@@ -64,12 +64,12 @@
                 <img src="https://i.ibb.co/svcfqT91/image-FORMULA2.png" alt="imageFORMULA" class="hidden sm:block h-6 md:h-8 w-auto opacity-80">
                 
                 <!-- Language Switcher -->
-                <div class="flex items-center gap-3 text-[10px] font-black uppercase tracking-[0.2em] border-l border-gray-200 pl-4 md:pl-10 text-right">
-                    <span class="text-gray-400">Language:</span>
-                    <div class="flex items-center gap-2">
-                        <span class="text-red-600">EN</span>
-                        <span class="text-gray-300">|</span>
-                        <a href="verticalexFR.html" class="text-gray-400 hover:text-red-600 transition-colors">FR</a>
+                <div class="flex items-center gap-3 text-[10px] font-black uppercase tracking-[0.2em] border-l border-gray-200 pl-4 md:pl-10 text-right text-left">
+                    <span class="text-gray-400 text-left">Language:</span>
+                    <div class="flex items-center gap-2 text-left">
+                        <span class="text-red-600 text-left font-black">EN</span>
+                        <span class="text-gray-300 text-left">|</span>
+                        <a href="verticalexFR.html" class="text-gray-400 hover:text-red-600 transition-colors text-left">FR</a>
                     </div>
                 </div>
             </div>
@@ -80,7 +80,7 @@
         
         <!-- Intro -->
         <div class="mb-12 fade-in">
-            <h1 class="text-3xl md:text-5xl font-black text-gray-900 tracking-tighter mb-4 uppercase">
+            <h1 class="text-3xl md:text-5xl font-black text-gray-900 tracking-tighter mb-4 uppercase text-left">
                 Vertical <span class="text-[#ED1C24]">Explorer</span>
             </h1>
             <p class="text-gray-500 font-medium text-lg max-w-2xl text-left">
@@ -89,9 +89,9 @@
         </div>
 
         <!-- Filter Controls -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16 fade-in" style="animation-delay: 0.1s;">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16 fade-in text-left" style="animation-delay: 0.1s;">
             <div class="flex flex-col text-left">
-                <label class="text-[10px] font-black text-gray-400 uppercase tracking-[0.2em] mb-3 ml-1">1. Select Industry Vertical</label>
+                <label class="text-[10px] font-black text-gray-400 uppercase tracking-[0.2em] mb-3 ml-1 text-left">1. Select Industry Vertical</label>
                 <select id="verticalSelect" class="custom-select w-full bg-white border border-gray-200 rounded-2xl p-4 text-sm font-bold focus:ring-2 focus:ring-red-500 outline-none shadow-sm transition-all cursor-pointer">
                     <option value="">-- Choose Vertical --</option>
                     <option value="Government">Government</option>
@@ -105,11 +105,11 @@
                 </select>
             </div>
             <div class="flex flex-col text-left">
-                <label class="text-[10px] font-black text-gray-400 uppercase tracking-[0.2em] mb-3 ml-1">2. Select Application Area</label>
+                <label class="text-[10px] font-black text-gray-400 uppercase tracking-[0.2em] mb-3 ml-1 text-left">2. Select Application Area</label>
                 <select id="areaSelect" class="custom-select w-full bg-white border border-gray-200 rounded-2xl p-4 text-sm font-bold focus:ring-2 focus:ring-red-500 outline-none shadow-sm transition-all cursor-pointer">
                     <option value="">-- Choose Application --</option>
                     <option value="Mobile">Field Workers / Mobile</option>
-                    <option value="Reception">Reception (Central / Decentral)</option>
+                    <option value="Reception">Reception / Front Counter</option>
                     <option value="Office">Standard Office Use</option>
                     <option value="Back">High Volume Back Office</option>
                 </select>
@@ -118,7 +118,7 @@
 
         <!-- Results Grid -->
         <div id="resultsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-20 fade-in" style="animation-delay: 0.2s;">
-            <div class="col-span-full text-center py-20 bg-white/40 rounded-[3rem] border-2 border-dashed border-gray-200">
+            <div class="col-span-full text-center py-20 bg-white/40 rounded-[3rem] border-2 border-dashed border-gray-200 text-left">
                 <p class="text-gray-400 font-bold italic tracking-wide text-left px-8">Please select both vertical and application area to view matching solutions.</p>
             </div>
         </div>
@@ -126,7 +126,7 @@
     </main>
 
     <!-- Modal -->
-    <div id="productModal" class="modal-overlay fixed inset-0 z-[100] hidden flex items-center justify-center p-4" onclick="closeModal()">
+    <div id="productModal" class="modal-overlay fixed inset-0 z-[100] hidden flex items-center justify-center p-4 text-left" onclick="closeModal()">
         <div class="bg-white rounded-[2.5rem] shadow-2xl max-w-4xl w-full p-8 md:p-12 relative overflow-y-auto max-h-[90vh]" onclick="event.stopPropagation()">
             <button onclick="closeModal()" class="absolute top-6 right-6 text-gray-400 hover:text-gray-800 transition-colors">
                 <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
@@ -137,7 +137,7 @@
 
     <!-- Footer -->
     <footer class="w-full py-10 bg-white border-t border-gray-100 flex flex-col items-center justify-center text-center">
-        <p class="text-[9px] text-gray-400 font-bold uppercase tracking-[0.3em]">
+        <p class="text-[9px] text-gray-400 font-bold uppercase tracking-[0.3em] text-center">
             &copy; 2026 Canon Canada Inc. All Rights Reserved.
         </p>
     </footer>
@@ -170,26 +170,49 @@
 
             let filtered = [];
 
-            // Logic Override: Field Workers / Mobile always shows P-series
+            // 1. Logic Override: Field Workers / Mobile always shows P-series
             if (area === "Mobile") {
                 filtered = allProducts.filter(p => p.model === "P-208II" || p.model === "P-215II");
-            } else {
+            } 
+            // 2. Logic Override: BPO / Outsourcing specific mapping
+            else if (vertical === "BPO") {
+                if (area === "Reception") {
+                    filtered = allProducts.filter(p => p.model === "DR-S250N" || p.model === "DR-S350NW" || p.model === "Scanfront 400");
+                } else if (area === "Back") {
+                    filtered = allProducts.filter(p => p.model.includes("G2140") || p.model.includes("G2110") || p.model.includes("G2090") || p.model === "DR-X10C II" || p.model === "CR-190i II");
+                } else if (area === "Office") {
+                    filtered = allProducts.filter(p => p.model === "DR-M260" || p.model === "DR-M140II");
+                }
+            } 
+            // 3. Standard Matrix Mapping
+            else {
                 filtered = allProducts.filter(p => {
                     const industryKey = Object.keys(p.verticals).find(k => 
                         k.toLowerCase().includes(vertical.toLowerCase())
                     );
                     if (!industryKey) return false;
-                    return p.verticals[industryKey].some(a => a.toLowerCase().includes(area.toLowerCase()));
+                    
+                    // Match business area logic
+                    const areaMatch = p.verticals[industryKey].some(a => {
+                        const target = area.toLowerCase();
+                        if (target === "reception") return a.toLowerCase().includes("reception") || a.toLowerCase().includes("teller");
+                        if (target === "office") return a.toLowerCase().includes("office") || a.toLowerCase().includes("standard") || a.toLowerCase().includes("admin");
+                        if (target === "back") return a.toLowerCase().includes("back") || a.toLowerCase().includes("production") || a.toLowerCase().includes("central");
+                        return false;
+                    });
+                    
+                    return areaMatch;
                 });
             }
 
             if (filtered.length === 0) {
                 grid.innerHTML = `
-                    <div class="col-span-full py-20 px-10 text-center bg-white/40 rounded-[3rem] border-2 border-dashed border-gray-200">
-                        <p class="text-gray-500 font-bold text-lg mb-2">No product found</p>
-                        <p class="text-gray-400 text-sm max-w-lg mx-auto">
-                            Unfortunately, we couldn't locate a product to fit your specific need. For additional assistance, please e-mail 
-                            <a href="mailto:productmarketing@canada.canon.com" class="text-red-600 hover:underline font-bold">productmarketing@canada.canon.com</a>.
+                    <div class="col-span-full py-20 px-10 text-center bg-white/40 rounded-[3rem] border-2 border-dashed border-gray-200 text-left">
+                        <p class="text-gray-500 font-bold text-lg mb-2 text-center">No product found</p>
+                        <p class="text-gray-400 text-sm max-w-lg mx-auto text-center leading-relaxed">
+                            Unfortunately we couldn't locate a product to fit your need, for additional assistance please e-mail 
+                            <a href="mailto:productmarketing@canada.canon.com" class="text-red-600 hover:underline font-bold">productmarketing@canada.canon.com</a> 
+                            for further assistance.
                         </p>
                     </div>`;
                 return;
@@ -200,9 +223,9 @@
                     <div class="h-40 w-full mb-6 flex items-center justify-center">
                         <img src="${p.assets.image}" alt="${p.model}" class="max-h-full object-contain group-hover:scale-105 transition-transform duration-500">
                     </div>
-                    <p class="text-[10px] font-black text-red-600 uppercase tracking-widest mb-1">Recommended Solution</p>
-                    <h3 class="text-xl font-black text-gray-900">${p.model}</h3>
-                    <p class="text-xs text-gray-400 font-medium mb-6 italic text-left">SKU: ${p.sku}</p>
+                    <p class="text-[10px] font-black text-red-600 uppercase tracking-widest mb-1 text-left w-full">Recommended Solution</p>
+                    <h3 class="text-xl font-black text-gray-900 w-full text-left">${p.model}</h3>
+                    <p class="text-xs text-gray-400 font-medium mb-6 italic text-left w-full">SKU: ${p.sku}</p>
                     <div class="mt-auto w-full pt-6 border-t border-gray-100 flex justify-between items-center">
                         <span class="text-[9px] font-black uppercase text-gray-400 tracking-tighter text-left">${p.specs.speed}</span>
                         <span class="text-xs font-bold text-gray-800 group-hover:text-red-600 transition-colors text-right">Details →</span>
@@ -217,7 +240,6 @@
             const modal = document.getElementById('productModal');
             const content = document.getElementById('modalContent');
             
-            // Point to English brochure
             const brochureUrl = p.assets.brochure;
 
             content.innerHTML = `
@@ -229,11 +251,11 @@
                         <div class="grid grid-cols-2 gap-4 mt-8">
                             <div class="bg-red-50 p-4 rounded-2xl text-center">
                                 <p class="text-[9px] font-bold text-gray-400 uppercase tracking-tighter">Speed</p>
-                                <p class="text-xs font-black text-red-600">${p.specs.speed}</p>
+                                <p class="text-xs font-black text-red-600 leading-tight">${p.specs.speed}</p>
                             </div>
                             <div class="bg-red-50 p-4 rounded-2xl text-center">
                                 <p class="text-[9px] font-bold text-gray-400 uppercase tracking-tighter">Daily Volume</p>
-                                <p class="text-xs font-black text-red-600">${p.specs.daily_volume.toLocaleString()} pages</p>
+                                <p class="text-xs font-black text-red-600 leading-tight">${p.specs.daily_volume.toLocaleString()} pages</p>
                             </div>
                         </div>
                     </div>
@@ -246,7 +268,7 @@
                         <h4 class="text-[10px] font-black text-gray-900 uppercase tracking-[0.2em] mb-4 text-left">Key Advantages:</h4>
                         <ul class="space-y-3 mb-10 text-left">
                             ${p.content.en.features.map(f => `
-                                <li class="flex items-start gap-3 text-sm text-gray-700 font-medium leading-tight">
+                                <li class="flex items-start gap-3 text-sm text-gray-700 font-medium leading-tight text-left">
                                     <svg class="w-5 h-5 text-red-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
                                     ${f}
                                 </li>

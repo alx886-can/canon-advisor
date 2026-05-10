@@ -48,11 +48,11 @@
 
     <!-- Header -->
     <header class="w-full py-6 flex justify-center items-center bg-white border-b border-gray-100 shadow-sm sticky top-0 z-50">
-        <div class="w-full max-w-7xl px-6 flex justify-between items-center">
+        <div class="w-full max-w-7xl px-6 flex justify-between items-center text-left">
             <div class="flex items-center gap-8">
                 <a href="index.html"><img src="https://i.ibb.co/YBMsYnYj/Canon-Logo-2.png" alt="Canon" class="h-8 w-auto"></a>
                 <a href="selectorEN.html" class="hidden md:flex items-center text-xs font-bold text-gray-400 uppercase tracking-widest hover:text-red-600 transition-colors">
-                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M15 19l-7-7 7-7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"></path></svg>
+                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M15 19l-7-7 7-7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
                     Back to Hub
                 </a>
             </div>
@@ -70,11 +70,11 @@
                     <button id="resetFilters" class="text-[10px] font-bold text-red-600 hover:underline uppercase">Clear All</button>
                 </div>
 
-                <!-- Category Filter -->
+                <!-- Product Category Filter (New) -->
                 <div class="mb-8">
-                    <h3 class="text-[10px] font-black text-gray-400 uppercase tracking-[0.2em] mb-4">Category</h3>
+                    <h3 class="text-[10px] font-black text-gray-400 uppercase tracking-[0.2em] mb-4">Hardware Category</h3>
                     <div class="space-y-3" id="categoryFilters">
-                        <!-- JS Injected -->
+                        <!-- Dynamically Injected: Personal, Desktop, Departmental, etc. -->
                     </div>
                 </div>
 
@@ -103,7 +103,7 @@
                     Scanner <span class="text-[#ED1C24]">Selector</span>
                 </h1>
                 <p class="text-gray-500 font-medium text-lg max-w-2xl">
-                    Browse the complete imageFORMULA lineup. Use the filters to refine by technical requirements.
+                    Browse the complete imageFORMULA lineup. Use the filters to refine by hardware category or technical requirements.
                 </p>
             </div>
 
@@ -159,9 +159,11 @@
         }
 
         function generateFilterOptions() {
+            // Get unique categories and sizes
             const categories = [...new Set(allProducts.map(p => p.category))].sort();
             const sizes = [...new Set(allProducts.map(p => p.specs.max_size))].sort();
             
+            // Extract unique connectivity options from arrays
             let connections = new Set();
             allProducts.forEach(p => p.specs.connectivity.forEach(c => connections.add(c)));
             connections = [...connections].sort();
@@ -177,6 +179,7 @@
             document.getElementById('sizeFilters').innerHTML = sizes.map(s => createCheckbox(s, 'max_size')).join('');
             document.getElementById('connectivityFilters').innerHTML = connections.map(c => createCheckbox(c, 'connectivity')).join('');
 
+            // Add Event Listeners
             document.querySelectorAll('.filter-input').forEach(input => {
                 input.addEventListener('change', (e) => {
                     const type = e.target.dataset.type;
@@ -211,10 +214,10 @@
                 
                 grid.innerHTML = filtered.map(p => `
                     <div onclick="openModal('${p.sku}')" class="product-card glass-panel p-8 rounded-[2.5rem] flex flex-col items-center text-center border-2 border-transparent cursor-pointer group h-full">
-                        <div class="h-36 w-full mb-6 flex items-center justify-center">
-                            <img src="${p.assets.image}" alt="${p.model}" class="max-h-full object-contain group-hover:scale-105 transition-transform duration-500">
+                        <div class="h-36 w-full mb-6 flex items-center justify-center text-center">
+                            <img src="${p.assets.image}" alt="${p.model}" class="max-h-full object-contain group-hover:scale-105 transition-transform duration-500 mx-auto">
                         </div>
-                        <div class="mb-4">
+                        <div class="mb-4 w-full">
                             <p class="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-1 text-center">${p.category}</p>
                             <h3 class="text-xl font-black text-gray-900 leading-tight text-center">${p.model}</h3>
                         </div>
@@ -243,6 +246,7 @@
             const modal = document.getElementById('productModal');
             const content = document.getElementById('modalContent');
 
+            // Template literal uses backticks ` and ${variable} to inject data
             content.innerHTML = `
                 <div class="flex flex-col lg:flex-row gap-12 items-center lg:items-start text-left">
                     <div class="w-full lg:w-2/5 text-center">

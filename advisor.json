@@ -26,9 +26,9 @@
         "duplex": true
       },
       "assets": {
-        "image": "[https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Personal---Workgroup/P-208II/Canon_iF-P208II_Thumbnail_230x230.png](https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Personal---Workgroup/P-208II/Canon_iF-P208II_Thumbnail_230x230.png)",
-        "brochure": "[https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Personal---Workgroup/P-208II/ImageFORMULA-P-208-II-Product-Brochure--EN--CA-.pdf](https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Personal---Workgroup/P-208II/ImageFORMULA-P-208-II-Product-Brochure--EN--CA-.pdf)",
-        "video": "[https://www.youtube.com/watch?v=rqqgkQ_f2aY](https://www.youtube.com/watch?v=rqqgkQ_f2aY)"
+        "image": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Personal---Workgroup/P-208II/Canon_iF-P208II_Thumbnail_230x230.png",
+        "brochure": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Personal---Workgroup/P-208II/ImageFORMULA-P-208-II-Product-Brochure--EN--CA-.pdf",
+        "video": "https://www.youtube.com/watch?v=rqqgkQ_f2aY"
       },
       "verticals": {
         "Government": ["On Field / Mobile"],
@@ -74,9 +74,9 @@
         "duplex": true
       },
       "assets": {
-        "image": "[https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Personal---Workgroup/DR-P215II/Canon_iF-P215II_Thumbnail_230x230.png](https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Personal---Workgroup/DR-P215II/Canon_iF-P215II_Thumbnail_230x230.png)",
-        "brochure": "[https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Personal---Workgroup/DR-P215II/ImageFORMULA-P-215-II-Product-Brochure--EN--CA-.pdf](https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Personal---Workgroup/DR-P215II/ImageFORMULA-P-215-II-Product-Brochure--EN--CA-.pdf)",
-        "video": "[https://www.youtube.com/watch?v=mYwJ1_h0iKU](https://www.youtube.com/watch?v=mYwJ1_h0iKU)"
+        "image": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Personal---Workgroup/DR-P215II/Canon_iF-P215II_Thumbnail_230x230.png",
+        "brochure": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Personal---Workgroup/DR-P215II/ImageFORMULA-P-215-II-Product-Brochure--EN--CA-.pdf",
+        "video": "https://www.youtube.com/watch?v=mYwJ1_h0iKU"
       },
       "verticals": {
         "Government": ["On Field / Mobile", "Home Office"],
@@ -122,9 +122,9 @@
         "duplex": true
       },
       "assets": {
-        "image": "[https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Personal---Workgroup/DR-C225-II/Canon_iF-DR-C225-II_Side_V3_580x580.png](https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Personal---Workgroup/DR-C225-II/Canon_iF-DR-C225-II_Side_V3_580x580.png)",
-        "brochure": "[https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Personal---Workgroup/DR-C225-II/BROCHURE_DRC225II_01_EN.pdf](https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Personal---Workgroup/DR-C225-II/BROCHURE_DRC225II_01_EN.pdf)",
-        "video": "[https://www.youtube.com/watch?v=Ia90Khl0JMM](https://www.youtube.com/watch?v=Ia90Khl0JMM)"
+        "image": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Personal---Workgroup/DR-C225-II/Canon_iF-DR-C225-II_Side_V3_580x580.png",
+        "brochure": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Personal---Workgroup/DR-C225-II/BROCHURE_DRC225II_01_EN.pdf",
+        "video": "https://www.youtube.com/watch?v=Ia90Khl0JMM"
       },
       "verticals": {
         "Government": ["Office", "Counter Services"],
@@ -170,9 +170,9 @@
         "duplex": true
       },
       "assets": {
-        "image": "[https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Personal---Workgroup/DR-C340/CB_001.png](https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Personal---Workgroup/DR-C340/CB_001.png)",
-        "brochure": "[https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Personal---Workgroup/DR-C340/imageFORMULA-DR-C340-Office-Document-Scanner-Brochure-FINAL.pdf](https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Personal---Workgroup/DR-C340/imageFORMULA-DR-C340-Office-Document-Scanner-Brochure-FINAL.pdf)",
-        "video": "[https://www.youtube.com/watch?v=klkKoFVfSzg](https://www.youtube.com/watch?v=klkKoFVfSzg)"
+        "image": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Personal---Workgroup/DR-C340/CB_001.png",
+        "brochure": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Personal---Workgroup/DR-C340/imageFORMULA-DR-C340-Office-Document-Scanner-Brochure-FINAL.pdf",
+        "video": "https://www.youtube.com/watch?v=klkKoFVfSzg"
       },
       "verticals": {
         "Government": ["Office"],
@@ -218,9 +218,9 @@
         "duplex": true
       },
       "assets": {
-        "image": "[https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Personal---Workgroup/DR-C350/CA_001.png](https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Personal---Workgroup/DR-C350/CA_001.png)",
-        "brochure": "[https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Personal---Workgroup/DR-C350/imageFORMULA-DR-C350-Office-Document-Scanner-Brochure-FINAL.pdf](https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Personal---Workgroup/DR-C350/imageFORMULA-DR-C350-Office-Document-Scanner-Brochure-FINAL.pdf)",
-        "video": "[https://www.youtube.com/watch?v=klkKoFVfSzg](https://www.youtube.com/watch?v=klkKoFVfSzg)"
+        "image": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Personal---Workgroup/DR-C350/CA_001.png",
+        "brochure": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Personal---Workgroup/DR-C350/imageFORMULA-DR-C350-Office-Document-Scanner-Brochure-FINAL.pdf",
+        "video": "https://www.youtube.com/watch?v=klkKoFVfSzg"
       },
       "verticals": {
         "Government": ["Standard Office"],
@@ -266,9 +266,9 @@
         "duplex": true
       },
       "assets": {
-        "image": "[https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Personal---Workgroup/DR-S250N/DR-S250N-Front-V2.png](https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Personal---Workgroup/DR-S250N/DR-S250N-Front-V2.png)",
-        "brochure": "[https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Personal---Workgroup/DR-S250N/Canon---imageFORMULA_Scanner_DRS250N_EN.pdf](https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Personal---Workgroup/DR-S250N/Canon---imageFORMULA_Scanner_DRS250N_EN.pdf)",
-        "video": "[https://www.youtube.com/watch?v=QUdwawjg8KU](https://www.youtube.com/watch?v=QUdwawjg8KU)"
+        "image": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Personal---Workgroup/DR-S250N/DR-S250N-Front-V2.png",
+        "brochure": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Personal---Workgroup/DR-S250N/Canon---imageFORMULA_Scanner_DRS250N_EN.pdf",
+        "video": "https://www.youtube.com/watch?v=QUdwawjg8KU"
       },
       "verticals": {
         "Government": ["Shared Reception"],
@@ -314,9 +314,9 @@
         "duplex": true
       },
       "assets": {
-        "image": "[https://www.canon.ca/dam/products/BUSINESS-UNIT/ITCG/Scanners/imageFORMULA-DR-S350NW/imageFORMULA-DR-S350NW-1.png](https://www.canon.ca/dam/products/BUSINESS-UNIT/ITCG/Scanners/imageFORMULA-DR-S350NW/imageFORMULA-DR-S350NW-1.png)",
-        "brochure": "[https://www.canon.ca/dam/products/BUSINESS-UNIT/ITCG/Scanners/imageFORMULA-DR-S350NW/EN-imageFORMULA-DR-S350NW-Brochure.pdf](https://www.canon.ca/dam/products/BUSINESS-UNIT/ITCG/Scanners/imageFORMULA-DR-S350NW/EN-imageFORMULA-DR-S350NW-Brochure.pdf)",
-        "video": "[https://www.youtube.com/watch?v=tiI1DbR9YUw](https://www.youtube.com/watch?v=tiI1DbR9YUw)"
+        "image": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ITCG/Scanners/imageFORMULA-DR-S350NW/imageFORMULA-DR-S350NW-1.png",
+        "brochure": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ITCG/Scanners/imageFORMULA-DR-S350NW/EN-imageFORMULA-DR-S350NW-Brochure.pdf",
+        "video": "https://www.youtube.com/watch?v=tiI1DbR9YUw"
       },
       "verticals": {
         "Government": ["Mobile Reception"],
@@ -362,9 +362,9 @@
         "duplex": true
       },
       "assets": {
-        "image": "[https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/DR-M140II/DR-M140II-front.png](https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/DR-M140II/DR-M140II-front.png)",
-        "brochure": "[https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/DR-M140II/Canon---imageFORMULA_Scanner_DRM140II_FA.pdf](https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/DR-M140II/Canon---imageFORMULA_Scanner_DRM140II_FA.pdf)",
-        "video": "[https://www.youtube.com/watch?v=0FOok_lQQaI](https://www.youtube.com/watch?v=0FOok_lQQaI)"
+        "image": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/DR-M140II/DR-M140II-front.png",
+        "brochure": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/DR-M140II/Canon---imageFORMULA_Scanner_DRM140II_FA.pdf",
+        "video": "https://www.youtube.com/watch?v=0FOok_lQQaI"
       },
       "verticals": {
         "Government": ["Admin Office"],
@@ -410,9 +410,9 @@
         "duplex": true
       },
       "assets": {
-        "image": "[https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/DR-M260/Canon_iF-DR-M260-Thumbnail_580X580.png](https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/DR-M260/Canon_iF-DR-M260-Thumbnail_580X580.png)",
-        "brochure": "[https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/DR-M260/ImageFORMULA-DR-M260-Product-Brochure--EN--CA-.pdf](https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/DR-M260/ImageFORMULA-DR-M260-Product-Brochure--EN--CA-.pdf)",
-        "video": "[https://www.youtube.com/watch?v=YUz8sjjYJyA](https://www.youtube.com/watch?v=YUz8sjjYJyA)"
+        "image": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/DR-M260/Canon_iF-DR-M260-Thumbnail_580X580.png",
+        "brochure": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/DR-M260/ImageFORMULA-DR-M260-Product-Brochure--EN--CA-.pdf",
+        "video": "https://www.youtube.com/watch?v=YUz8sjjYJyA"
       },
       "verticals": {
         "Government": ["Central Office"],
@@ -459,9 +459,9 @@
         "duplex": true
       },
       "assets": {
-        "image": "[https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/DR-M1060II/DR-M1060II-front.png](https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/DR-M1060II/DR-M1060II-front.png)",
-        "brochure": "[https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/DR-M1060II/Canon---imageFORMULA_Scanner_DRM1060II_FA.pdf](https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/DR-M1060II/Canon---imageFORMULA_Scanner_DRM1060II_FA.pdf)",
-        "video": "[https://www.youtube.com/watch?v=5PSaOmwCwmo](https://www.youtube.com/watch?v=5PSaOmwCwmo)"
+        "image": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/DR-M1060II/DR-M1060II-front.png",
+        "brochure": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/DR-M1060II/Canon---imageFORMULA_Scanner_DRM1060II_FA.pdf",
+        "video": "https://www.youtube.com/watch?v=5PSaOmwCwmo"
       },
       "verticals": {
         "Government": ["Public Records"],
@@ -507,9 +507,9 @@
         "duplex": true
       },
       "assets": {
-        "image": "[https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Personal---Workgroup/Scanfront-400/Canon_iF-ScanFront400_Thumbnail_580x580.png](https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Personal---Workgroup/Scanfront-400/Canon_iF-ScanFront400_Thumbnail_580x580.png)",
-        "brochure": "[https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Personal---Workgroup/Scanfront-400/BROCHURE_SCANFRONT400_01_EN.pdf](https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Personal---Workgroup/Scanfront-400/BROCHURE_SCANFRONT400_01_EN.pdf)",
-        "video": "[https://www.youtube.com/watch?v=qUU3w7sv2R4](https://www.youtube.com/watch?v=qUU3w7sv2R4)"
+        "image": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Personal---Workgroup/Scanfront-400/Canon_iF-ScanFront400_Thumbnail_580x580.png",
+        "brochure": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Personal---Workgroup/Scanfront-400/BROCHURE_SCANFRONT400_01_EN.pdf",
+        "video": "https://www.youtube.com/watch?v=qUU3w7sv2R4"
       },
       "verticals": {
         "Government": ["Self-Service Kiosk"],
@@ -556,9 +556,9 @@
         "duplex": true
       },
       "assets": {
-        "image": "[https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/DR-G2110/Canon_iF-DR-G2110_Thumbnail_580x580.png](https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/DR-G2110/Canon_iF-DR-G2110_Thumbnail_580x580.png)",
-        "brochure": "[https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/DR-G2090/ImageFORMULA-DR-G2090-USB-Product-Brochure--EN--CA-.pdf.pdf](https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/DR-G2090/ImageFORMULA-DR-G2090-USB-Product-Brochure--EN--CA-.pdf.pdf)",
-        "video": "[https://www.youtube.com/watch?v=PxwRVly8_2A](https://www.youtube.com/watch?v=PxwRVly8_2A)"
+        "image": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/DR-G2110/Canon_iF-DR-G2110_Thumbnail_580x580.png",
+        "brochure": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/DR-G2090/ImageFORMULA-DR-G2090-USB-Product-Brochure--EN--CA-.pdf.pdf",
+        "video": "https://www.youtube.com/watch?v=PxwRVly8_2A"
       },
       "verticals": {
         "Government": ["Archives"],
@@ -605,9 +605,9 @@
         "duplex": true
       },
       "assets": {
-        "image": "[https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/DR-G2110/Canon_iF-DR-G2110_Thumbnail_580x580.png](https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/DR-G2110/Canon_iF-DR-G2110_Thumbnail_580x580.png)",
-        "brochure": "[https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/DR-G2110/ImageFORMULA-DR-G2110-Product-Brochure--EN--CA-.pdf](https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/DR-G2110/ImageFORMULA-DR-G2110-Product-Brochure--EN--CA-.pdf)",
-        "video": "[https://www.youtube.com/watch?v=PxwRVly8_2A](https://www.youtube.com/watch?v=PxwRVly8_2A)"
+        "image": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/DR-G2110/Canon_iF-DR-G2110_Thumbnail_580x580.png",
+        "brochure": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/DR-G2110/ImageFORMULA-DR-G2110-Product-Brochure--EN--CA-.pdf",
+        "video": "https://www.youtube.com/watch?v=PxwRVly8_2A"
       },
       "verticals": {
         "Government": ["State Archives"],
@@ -654,9 +654,9 @@
         "duplex": true
       },
       "assets": {
-        "image": "[https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/DR-G2110/Canon_iF-DR-G2110_Thumbnail_580x580.png](https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/DR-G2110/Canon_iF-DR-G2110_Thumbnail_580x580.png)",
-        "brochure": "[https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/DR-G2140/ImageFORMULA-DR-G2140-Product-Brochure--EN--CA-.pdf](https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/DR-G2140/ImageFORMULA-DR-G2140-Product-Brochure--EN--CA-.pdf)",
-        "video": "[https://www.youtube.com/watch?v=yEu4-nByNsk](https://www.youtube.com/watch?v=yEu4-nByNsk)"
+        "image": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/DR-G2110/Canon_iF-DR-G2110_Thumbnail_580x580.png",
+        "brochure": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/DR-G2140/ImageFORMULA-DR-G2140-Product-Brochure--EN--CA-.pdf",
+        "video": "https://www.youtube.com/watch?v=yEu4-nByNsk"
       },
       "verticals": {
         "Government": ["Federal Records Hub"],
@@ -703,8 +703,8 @@
         "duplex": true
       },
       "assets": {
-        "image": "[https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/DR-X10CII/Canon_iF-DR-X10C-II_Thumbnail_230x230.png](https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/DR-X10CII/Canon_iF-DR-X10C-II_Thumbnail_230x230.png)",
-        "brochure": "[https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/DR-X10CII/ImageFORMULA-DR-X10C-II-Product-Brochure--EN--CA-.pdf](https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/DR-X10CII/ImageFORMULA-DR-X10C-II-Product-Brochure--EN--CA-.pdf)",
+        "image": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/DR-X10CII/Canon_iF-DR-X10C-II_Thumbnail_230x230.png",
+        "brochure": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/DR-X10CII/ImageFORMULA-DR-X10C-II-Product-Brochure--EN--CA-.pdf",
         "video": ""
       },
       "verticals": {
@@ -749,9 +749,9 @@
         "duplex": true
       },
       "assets": {
-        "image": "[https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Cheque/CR-L1/Canon_iF-CR-L1_Side_580x580.png](https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Cheque/CR-L1/Canon_iF-CR-L1_Side_580x580.png)",
-        "brochure": "[https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Cheque/CR-L1/ImageFORMULA-CR-L1-Product-Brochure--EN--CA-.pdf](https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Cheque/CR-L1/ImageFORMULA-CR-L1-Product-Brochure--EN--CA-.pdf)",
-        "video": "[https://www.youtube.com/watch?v=yiyVvf-OVR8](https://www.youtube.com/watch?v=yiyVvf-OVR8)"
+        "image": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Cheque/CR-L1/Canon_iF-CR-L1_Side_580x580.png",
+        "brochure": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Cheque/CR-L1/ImageFORMULA-CR-L1-Product-Brochure--EN--CA-.pdf",
+        "video": "https://www.youtube.com/watch?v=yiyVvf-OVR8"
       },
       "verticals": {
         "Financial": ["Teller / Reception"]
@@ -793,8 +793,8 @@
         "duplex": true
       },
       "assets": {
-        "image": "[https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Cheque/CR-120-CR-150/Canon_iF-CR-120-CR-150_Side_580x580.png](https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Cheque/CR-120-CR-150/Canon_iF-CR-120-CR-150_Side_580x580.png)",
-        "brochure": "[https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Cheque/CR-120-CR-150/ImageFORMULA-CR-120-Product-Brochure--EN--CA-.pdf](https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Cheque/CR-120-CR-150/ImageFORMULA-CR-120-Product-Brochure--EN--CA-.pdf)",
+        "image": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Cheque/CR-120-CR-150/Canon_iF-CR-120-CR-150_Side_580x580.png",
+        "brochure": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Cheque/CR-120-CR-150/ImageFORMULA-CR-120-Product-Brochure--EN--CA-.pdf",
         "video": ""
       },
       "verticals": {
@@ -837,8 +837,8 @@
         "duplex": true
       },
       "assets": {
-        "image": "[https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Cheque/CR-120-CR-150/Canon_iF-CR-120-CR-150_Side_580x580.png](https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Cheque/CR-120-CR-150/Canon_iF-CR-120-CR-150_Side_580x580.png)",
-        "brochure": "[https://www.canon.ca/dam/products/BUSINESS-UNIT/ITCG/Scanners/CR-120N/ImageFORMULA-CR-120N-Product-Brochure--EN--CA----Copy.pdf](https://www.canon.ca/dam/products/BUSINESS-UNIT/ITCG/Scanners/CR-120N/ImageFORMULA-CR-120N-Product-Brochure--EN--CA----Copy.pdf)",
+        "image": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Cheque/CR-120-CR-150/Canon_iF-CR-120-CR-150_Side_580x580.png",
+        "brochure": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ITCG/Scanners/CR-120N/ImageFORMULA-CR-120N-Product-Brochure--EN--CA----Copy.pdf",
         "video": ""
       },
       "verticals": {
@@ -881,8 +881,8 @@
         "duplex": true
       },
       "assets": {
-        "image": "[https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Cheque/CR-120-CR-150/Canon_iF-CR-120-CR-150_Side_580x580.png](https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Cheque/CR-120-CR-150/Canon_iF-CR-120-CR-150_Side_580x580.png)",
-        "brochure": "[https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Cheque/CR-120-CR-150/ImageFORMULA-CR-150-Product-Brochure--EN--CA-.pdf.pdf](https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Cheque/CR-120-CR-150/ImageFORMULA-CR-150-Product-Brochure--EN--CA-.pdf.pdf)",
+        "image": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Cheque/CR-120-CR-150/Canon_iF-CR-120-CR-150_Side_580x580.png",
+        "brochure": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Cheque/CR-120-CR-150/ImageFORMULA-CR-150-Product-Brochure--EN--CA-.pdf.pdf",
         "video": ""
       },
       "verticals": {
@@ -925,8 +925,8 @@
         "duplex": true
       },
       "assets": {
-        "image": "[https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Cheque/CR-190i-II/Canon_iF-CR-190i-II_Thumbnail_230x230.png](https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Cheque/CR-190i-II/Canon_iF-CR-190i-II_Thumbnail_230x230.png)",
-        "brochure": "[https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Cheque/CR-190i-II/imageFORMULA-CR-190i-II---Product-Brochure--EN--CA----V2.pdf](https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Cheque/CR-190i-II/imageFORMULA-CR-190i-II---Product-Brochure--EN--CA----V2.pdf)",
+        "image": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Cheque/CR-190i-II/Canon_iF-CR-190i-II_Thumbnail_230x230.png",
+        "brochure": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Cheque/CR-190i-II/imageFORMULA-CR-190i-II---Product-Brochure--EN--CA----V2.pdf",
         "video": ""
       },
       "verticals": {
@@ -970,7 +970,7 @@
         "duplex": false
       },
       "assets": {
-        "image": "[https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/FSU-102-Accessory/imageFORMULA-FSU-102-1.png](https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/FSU-102-Accessory/imageFORMULA-FSU-102-1.png)",
+        "image": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/FSU-102-Accessory/imageFORMULA-FSU-102-1.png",
         "brochure": "",
         "video": ""
       },
@@ -1015,7 +1015,7 @@
         "duplex": false
       },
       "assets": {
-        "image": "[https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/FSU-202-Accessory/hero--1-.png](https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/FSU-202-Accessory/hero--1-.png)",
+        "image": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/FSU-202-Accessory/hero--1-.png",
         "brochure": "",
         "video": ""
       },

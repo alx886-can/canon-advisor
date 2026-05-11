@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-05-09",
-  "version": "1.0",
+  "last_updated": "2026-05-10",
+  "version": "1.1",
   "config": {
     "currency": "CAD",
     "region": "Canada",
@@ -16,7 +16,7 @@
       "sku": "9704B007",
       "model": "P-208II",
       "series": "Personal",
-      "category": "Document",
+      "category": "Personal",
       "specs": {
         "speed": "8 ppm / 16 ipm",
         "daily_volume": 250,
@@ -34,27 +34,28 @@
         "Government": ["On Field / Mobile"],
         "Financial": ["On Field / Mobile"],
         "Legal": ["On Field / Mobile"],
-        "Logistics": ["On Field / Mobile"]
+        "Logistics": ["On Field / Mobile"],
+        "Healthcare": ["Home Care"]
       },
       "content": {
         "en": {
-          "why": "Ultra-compact and USB-powered, making it the perfect choice for mobile professionals and investigators.",
+          "why": "Ultra-compact and USB-powered, this unit provides professional-grade capture for field professionals where a desktop isn't an option.",
           "features": [
-            "Ultra-Compact & Lightweight",
-            "USB-Powered Convenience",
-            "True Duplex Scanning",
-            "Support for Mixed Media",
-            "Plug-and-Scan Simplicity"
+            "Ultra-Compact & Mobile Design",
+            "USB-Powered (No AC outlet needed)",
+            "Single-Pass Duplex Scanning",
+            "Automatic Page Size Detection",
+            "Plug-and-Scan Utility Built-in"
           ]
         },
         "fr": {
-          "why": "Ultra-compact et alimenté par USB, le choix parfait pour les professionnels mobiles.",
+          "why": "Ultra-compact et alimenté par USB, cet appareil offre une capture de qualité professionnelle pour les experts sur le terrain.",
           "features": [
-            "Ultra-compact et léger",
-            "Alimenté par USB",
-            "Numérisation recto-verso",
-            "Support pour supports mixtes",
-            "Simplicité Plug-and-Scan"
+            "Conception ultra-compacte et mobile",
+            "Alimenté par USB (sans prise CA)",
+            "Numérisation recto-verso en un passage",
+            "Détection automatique du format",
+            "Utilitaire Plug-and-Scan intégré"
           ]
         }
       }
@@ -63,7 +64,7 @@
       "sku": "9705B007",
       "model": "P-215II",
       "series": "Personal",
-      "category": "Document",
+      "category": "Personal",
       "specs": {
         "speed": "15 ppm / 30 ipm",
         "daily_volume": 700,
@@ -78,30 +79,31 @@
         "video": "https://www.youtube.com/watch?v=mYwJ1_h0iKU"
       },
       "verticals": {
-        "Government": ["On Field / Mobile"],
-        "Financial": ["On Field / Mobile"],
+        "Government": ["On Field / Mobile", "Home Office"],
+        "Financial": ["On Field / Mobile", "Retail Banking"],
         "Legal": ["On Field / Mobile"],
-        "Logistics": ["On Field / Mobile"]
+        "Logistics": ["On Field / Mobile"],
+        "Healthcare": ["Patient Intake"]
       },
       "content": {
         "en": {
-          "why": "The mobile workhorse for field professionals. Features a dedicated card scanner and high-speed duplexing.",
+          "why": "The mobile workhorse for high-stakes environments. Features a dedicated card scanner for processing IDs and licenses instantly.",
           "features": [
-            "Integrated Card Scanner",
-            "Fast Duplex Performance",
-            "No Software Install Required",
-            "Bus Powered (USB 3.0)",
-            "High-Quality OCR Output"
+            "Integrated Dedicated Card Scanner",
+            "High-Speed 15ppm Mobile Capture",
+            "No Software Installation Required",
+            "USB 3.0 Bus Powered Performance",
+            "Advanced OCR for Searchable Files"
           ]
         },
         "fr": {
-          "why": "Le cheval de bataille mobile pour les professionnels de terrain.",
+          "why": "Le moteur de travail mobile pour les environnements exigeants. Comprend un numériseur de cartes dédié pour traiter les pièces d'identité.",
           "features": [
-            "Scanner de cartes intégré",
-            "Performance recto-verso rapide",
-            "Aucune installation de logiciel requise",
-            "Alimenté par bus (USB 3.0)",
-            "Sortie OCR de haute qualité"
+            "Numériseur de cartes intégré",
+            "Capture mobile rapide (15 ppm)",
+            "Aucune installation logicielle requise",
+            "Performance USB 3.0 alimentée par bus",
+            "OCR avancé pour fichiers recherchables"
           ]
         }
       }
@@ -110,7 +112,7 @@
       "sku": "3258C002",
       "model": "DR-C225II",
       "series": "Workgroup",
-      "category": "Document",
+      "category": "Desktop/Workgroup",
       "specs": {
         "speed": "25 ppm / 50 ipm",
         "daily_volume": 2500,
@@ -125,31 +127,31 @@
         "video": "https://www.youtube.com/watch?v=Ia90Khl0JMM"
       },
       "verticals": {
-        "Government": ["Office"],
-        "Healthcare": ["Office"],
-        "Financial": ["Office / Administration"],
-        "Legal": ["Office"],
-        "Logistics": ["Office / Depot"]
+        "Government": ["Office", "Counter Services"],
+        "Healthcare": ["Reception", "Patient Admitting"],
+        "Financial": ["Retail Banking", "Administration"],
+        "Legal": ["Secretary Desk", "Admin"],
+        "Logistics": ["Shipping Dock", "Depot"]
       },
       "content": {
         "en": {
-          "why": "Unique upright design frees up desk space while providing professional office performance.",
+          "why": "Optimized for tight spaces, the J-Path design allows for high-quality scanning on narrow reception counters and reception desks.",
           "features": [
-            "Unique Vertical U-Turn Path",
-            "Compact Desktop Footprint",
-            "Fast 25ppm Capture",
-            "Handles Embossed Cards",
-            "Included Software Suite"
+            "Space-Saving J-Path Paper Path",
+            "Top-Feeding / Top-Ejecting Design",
+            "Handles Embossed Plastic Cards",
+            "Full Duplex 25ppm Speed",
+            "Built-in Folio Mode for A3 Scanning"
           ]
         },
         "fr": {
-          "why": "La conception verticale unique libère de l'espace sur le bureau.",
+          "why": "Optimisé pour les espaces restreints, la conception J-Path permet une numérisation de haute qualité sur les comptoirs de réception étroits.",
           "features": [
-            "Chemin vertical unique en U",
-            "Encombrement réduit",
-            "Capture rapide de 25 ppm",
-            "Gère les cartes gaufrées",
-            "Suite logicielle incluse"
+            "Chemin de papier J-Path compact",
+            "Conception à alimentation par le haut",
+            "Gère les cartes plastifiées gaufrées",
+            "Vitesse recto-verso de 25 ppm",
+            "Mode Folio intégré pour documents A3"
           ]
         }
       }
@@ -158,7 +160,7 @@
       "sku": "7291C002",
       "model": "DR-C340",
       "series": "Workgroup",
-      "category": "Document",
+      "category": "Desktop/Workgroup",
       "specs": {
         "speed": "40 ppm / 80 ipm",
         "daily_volume": 7000,
@@ -174,30 +176,30 @@
       },
       "verticals": {
         "Government": ["Office"],
-        "Healthcare": ["Office"],
-        "Financial": ["Office / Administration"],
-        "Legal": ["Office"],
-        "Logistics": ["Office / Depot"]
+        "Healthcare": ["Records", "Office"],
+        "Financial": ["Operations", "Loan Processing"],
+        "Legal": ["Case Files", "Paralegal"],
+        "Logistics": ["Dispatch", "Logistics Office"]
       },
       "content": {
         "en": {
-          "why": "Reliable batch scanner for intake forms and financial documentation in professional environments.",
+          "why": "A versatile office scanner designed for reliable batch processing of mixed documents, from thin paper to heavy cards.",
           "features": [
-            "100-Sheet ADF Capacity",
-            "High 40ppm Speed",
-            "Durable Daily Duty Cycle",
-            "Smooth Document Feeding",
-            "Tailored for Batch Jobs"
+            "High-Capacity 100-Sheet ADF",
+            "Reliable Heavy-Duty Feeding",
+            "40ppm High-Throughput Speed",
+            "Support for Embossed Cards",
+            "CaptureOnTouch Software Bundle"
           ]
         },
         "fr": {
-          "why": "Scanner de lots fiable pour les formulaires d'admission et la documentation financière.",
+          "why": "Un numériseur de bureau polyvalent conçu pour le traitement par lots fiable de documents mixtes.",
           "features": [
-            "Capacité du CAD de 100 feuilles",
-            "Vitesse élevée de 40 ppm",
-            "Cycle de travail quotidien durable",
-            "Alimentation fluide des documents",
-            "Adapté aux travaux par lots"
+            "CAD haute capacité de 100 feuilles",
+            "Alimentation robuste et fiable",
+            "Vitesse à haut débit de 40 ppm",
+            "Support pour cartes gaufrées",
+            "Logiciel CaptureOnTouch inclus"
           ]
         }
       }
@@ -206,7 +208,7 @@
       "sku": "7290C002",
       "model": "DR-C350",
       "series": "Workgroup",
-      "category": "Document",
+      "category": "Desktop/Workgroup",
       "specs": {
         "speed": "50 ppm / 100 ipm",
         "daily_volume": 8000,
@@ -221,31 +223,31 @@
         "video": "https://www.youtube.com/watch?v=klkKoFVfSzg"
       },
       "verticals": {
-        "Government": ["Office"],
-        "Healthcare": ["Office"],
-        "Financial": ["Office / Administration"],
-        "Legal": ["Office"],
-        "Logistics": ["Office / Depot"]
+        "Government": ["Standard Office"],
+        "Healthcare": ["Patient Records"],
+        "Financial": ["Account Services"],
+        "Legal": ["Legal Admin"],
+        "Logistics": ["Manifest Scanning"]
       },
       "content": {
         "en": {
-          "why": "High-speed document capture with enterprise features for high-traffic office intake.",
+          "why": "Delivers superior image quality and speed for office environments needing to digitize high volumes of standardized documents.",
           "features": [
-            "Blazing 50ppm Capture",
-            "100-Sheet Document Feeder",
-            "EPEAT Gold Certified",
-            "Superior Image Processing",
-            "Intake Form Optimization"
+            "Rapid 50ppm Document Capture",
+            "Robust 100-Sheet Feeder Tray",
+            "EPEAT Gold Eco-Certification",
+            "Advanced Image Cleanup Tech",
+            "Optimized for Form Processing"
           ]
         },
         "fr": {
-          "why": "Capture de documents haute vitesse avec des fonctions d'entreprise.",
+          "why": "Offre une qualité d'image et une vitesse supérieures pour les environnements de bureau traitant de gros volumes.",
           "features": [
-            "Capture ultra-rapide de 50 ppm",
-            "Chargeur de documents de 100 feuilles",
-            "Certifié EPEAT Or",
-            "Traitement d'image supérieur",
-            "Optimisation des formulaires d'entrée"
+            "Capture rapide à 50 ppm",
+            "Plateau d'alimentation de 100 f.",
+            "Certification Éco EPEAT Or",
+            "Traitement d'image avancé",
+            "Optimisé pour les formulaires"
           ]
         }
       }
@@ -254,7 +256,7 @@
       "sku": "6383C002",
       "model": "DR-S250N",
       "series": "Workgroup",
-      "category": "Document",
+      "category": "Desktop/Workgroup",
       "specs": {
         "speed": "50 ppm / 100 ipm",
         "daily_volume": 6000,
@@ -269,30 +271,31 @@
         "video": "https://www.youtube.com/watch?v=QUdwawjg8KU"
       },
       "verticals": {
-        "Government": ["Reception"],
-        "Healthcare": ["Reception"],
-        "Legal": ["Reception"],
-        "Logistics": ["Office / Depot"]
+        "Government": ["Shared Reception"],
+        "Healthcare": ["Shared Admitting"],
+        "Legal": ["Shared Admin Desk"],
+        "Logistics": ["Shared Distribution Center"],
+        "BPO": ["Reception"]
       },
       "content": {
         "en": {
-          "why": "Built for reception efficiency. Allows scanning directly to email or network folders without a PC.",
+          "why": "Eliminates the need for a host PC. Scan directly to network folders, cloud, or email using the built-in Ethernet connectivity.",
           "features": [
-            "Direct Scan (PC-Free)",
-            "Wired & Wireless Ready",
-            "Passport/ID Card Support",
-            "Intuitive Color LCD",
-            "Centralized Management"
+            "PC-Less Network Scanning",
+            "High-Speed Wired Ethernet",
+            "Direct Capture to Cloud/Email",
+            "OLED Operation Status Screen",
+            "Enterprise-Grade Security"
           ]
         },
         "fr": {
-          "why": "Conçu pour l'efficacité de la réception. Permet de numériser directement vers courriel ou dossier.",
+          "why": "Élimine le besoin d'un PC hôte. Numérisez vers des dossiers réseau ou courriels via Ethernet.",
           "features": [
-            "Numérisation directe (sans PC)",
-            "Prêt pour réseau filaire/sans fil",
-            "Support passeport/carte d'identité",
-            "Écran LCD couleur intuitif",
-            "Gestion centralisée"
+            "Numérisation réseau sans PC",
+            "Connectivité Ethernet rapide",
+            "Capture directe vers le nuage",
+            "Écran d'état OLED intuitif",
+            "Sécurité de classe entreprise"
           ]
         }
       }
@@ -301,7 +304,7 @@
       "sku": "6897C002",
       "model": "DR-S350NW",
       "series": "Workgroup",
-      "category": "Document",
+      "category": "Desktop/Workgroup",
       "specs": {
         "speed": "50 ppm / 100 ipm",
         "daily_volume": 6000,
@@ -316,30 +319,31 @@
         "video": "https://www.youtube.com/watch?v=tiI1DbR9YUw"
       },
       "verticals": {
-        "Government": ["Reception"],
-        "Healthcare": ["Reception"],
+        "Government": ["Mobile Reception"],
+        "Healthcare": ["Patient Registration"],
         "Legal": ["Reception"],
-        "Logistics": ["Office / Depot"]
+        "Logistics": ["Logistics Depot"],
+        "BPO": ["Reception"]
       },
       "content": {
         "en": {
-          "why": "Ultimate network flexibility with Wi-Fi and Ethernet. Large touchscreen for easy shared intake.",
+          "why": "The ultimate in shared connectivity. The large touchscreen provides a smartphone-like experience for easy, secure user interaction.",
           "features": [
-            "Built-In Wi-Fi & Ethernet",
-            "Large 4.3\" Touchscreen",
-            "User PIN Security",
-            "Dual-Band Connectivity",
-            "High-Volume Shared Scan"
+            "Built-in Wi-Fi & Ethernet",
+            "Large 4.3\" Color Touchscreen",
+            "User Profile & PIN Security",
+            "Triple-Path Connectivity",
+            "uniFLOW Software Compatible"
           ]
         },
         "fr": {
-          "why": "Flexibilité réseau ultime avec Wi-Fi et Ethernet.",
+          "why": "Le summum de la connectivité partagée. Le grand écran tactile offre une expérience conviviale et sécurisée.",
           "features": [
             "Wi-Fi et Ethernet intégrés",
             "Grand écran tactile de 4,3 po",
-            "Sécurité par code PIN",
-            "Connectivité bibande",
-            "Numérisation partagée"
+            "Sécurité par profil et NIP",
+            "Connectivité à triple voie",
+            "Compatible avec uniFLOW"
           ]
         }
       }
@@ -348,7 +352,7 @@
       "sku": "6050C002",
       "model": "DR-M140II",
       "series": "Departmental",
-      "category": "Document",
+      "category": "Departmental",
       "specs": {
         "speed": "40 ppm / 80 ipm",
         "daily_volume": 8500,
@@ -363,31 +367,31 @@
         "video": "https://www.youtube.com/watch?v=0FOok_lQQaI"
       },
       "verticals": {
-        "Government": ["Office"],
-        "Healthcare": ["Office"],
-        "Financial": ["Office / Administration"],
-        "Legal": ["Office"],
-        "Logistics": ["Office / Depot"]
+        "Government": ["Admin Office"],
+        "Healthcare": ["Department Records"],
+        "Financial": ["Mortgage Processing"],
+        "Legal": ["Case Documentation"],
+        "Logistics": ["Waybill Capture"]
       },
       "content": {
         "en": {
-          "why": "Compact power with a dual paper path (U-turn/Straight) to handle delicate or thick media.",
+          "why": "Unique dual-path (U-turn and Straight) allows this compact departmental unit to scan delicate receipts and thick cardstocks with ease.",
           "features": [
-            "Dual Paper Path Flexibility",
-            "80-Sheet High-Capacity ADF",
-            "Reliable Feeding Control",
-            "Compact Desk-Friendly Size",
-            "Professional Image Cleanup"
+            "Dual-Path Media Handling",
+            "High-Durability ADF System",
+            "U-Turn Path for Tight Desks",
+            "Straight Path for Thick Cards",
+            "Superior Character Cleaning"
           ]
         },
         "fr": {
-          "why": "Puissance compacte avec un double chemin de papier.",
+          "why": "Le double chemin (U-turn et droit) permet de numériser des reçus fragiles ou des cartons épais avec facilité.",
           "features": [
-            "Flexibilité du double chemin",
-            "CAD haute capacité de 80 feuilles",
-            "Contrôle d'alimentation fiable",
-            "Taille compacte pour bureau",
-            "Nettoyage d'image professionnel"
+            "Gestion des médias à double voie",
+            "Système CAD haute durabilité",
+            "Voie en U pour bureaux étroits",
+            "Voie droite pour supports épais",
+            "Nettoyage de caractères supérieur"
           ]
         }
       }
@@ -396,7 +400,7 @@
       "sku": "2405C002",
       "model": "DR-M260",
       "series": "Departmental",
-      "category": "Document",
+      "category": "Departmental",
       "specs": {
         "speed": "60 ppm / 120 ipm",
         "daily_volume": 13000,
@@ -411,31 +415,32 @@
         "video": "https://www.youtube.com/watch?v=YUz8sjjYJyA"
       },
       "verticals": {
-        "Government": ["Office"],
-        "Healthcare": ["Office"],
-        "Financial": ["Office / Administration"],
-        "Legal": ["Office"],
-        "Logistics": ["Office / Depot"]
+        "Government": ["Central Office"],
+        "Healthcare": ["Records Management"],
+        "Financial": ["Compliance Admin"],
+        "Legal": ["Litigation Support"],
+        "Logistics": ["Main Distribution Hub"],
+        "BPO": ["Departmental Scan"]
       },
       "content": {
         "en": {
-          "why": "Features an onboard processing chip to deliver fast, high-quality scans for heavy workloads.",
+          "why": "Powered by an onboard processing chip, the DR-M260 maintains blazing speeds while cleaning up complex image background noise.",
           "features": [
-            "Integrated Processing CPU",
-            "Superb Image Precision",
-            "Heavy-Duty 90-Sheet Feeder",
-            "USB 3.1 High-Speed Sync",
-            "Advanced Security Features"
+            "Dedicated Image Processor CPU",
+            "USB 3.1 High-Speed Data Bus",
+            "Industrial-Grade Roller System",
+            "Precise Color Correction Tech",
+            "Secure File Archival Ready"
           ]
         },
         "fr": {
-          "why": "Dispose d'une puce de traitement intégrée pour une numérisation rapide.",
+          "why": "Propulsé par une puce de traitement intégrée, il maintient des vitesses élevées tout en nettoyant les bruits d'arrière-plan.",
           "features": [
-            "CPU de traitement intégré",
-            "Superbe précision d'image",
-            "Chargeur robuste de 90 feuilles",
-            "USB 3.1 haute vitesse",
-            "Fonctions de sécurité avancées"
+            "Processeur d'image dédié",
+            "Bus de données USB 3.1 rapide",
+            "Système de rouleaux industriel",
+            "Correction des couleurs précise",
+            "Prêt pour l'archivage sécurisé"
           ]
         }
       }
@@ -444,7 +449,7 @@
       "sku": "6049C002",
       "model": "DR-M1060II",
       "series": "Departmental",
-      "category": "Document",
+      "category": "Departmental",
       "specs": {
         "speed": "60 ppm / 120 ipm",
         "daily_volume": 13000,
@@ -459,31 +464,31 @@
         "video": "https://www.youtube.com/watch?v=5PSaOmwCwmo"
       },
       "verticals": {
-        "Government": ["Office"],
-        "Healthcare": ["Office"],
-        "Financial": ["Office / Administration"],
-        "Legal": ["Office"],
-        "Logistics": ["Office / Depot"]
+        "Government": ["Public Records"],
+        "Healthcare": ["Chart Management"],
+        "Financial": ["Large-Format Admin"],
+        "Legal": ["Blueprints / Large Records"],
+        "Logistics": ["Logistics Hub"]
       },
       "content": {
         "en": {
-          "why": "Versatile A3 scanning in a compact desktop footprint. Ideal for records and legal documents.",
+          "why": "Provides A3/Ledger scanning in a desktop-sized chassis. Ideal for legal firms and hospitals that need occasional large-format support.",
           "features": [
-            "Front-Feeding A3 Support",
-            "Compact Ledger Scanning",
-            "Mixed Document Handling",
-            "U-Turn/Straight Paper Path",
-            "Ideal for oversized records"
+            "Versatile A3 Hybrid Scanning",
+            "Space-Saving Desktop Footprint",
+            "Mixed Batch Media Handling",
+            "Straight-Path Media Support",
+            "Optimized for Medical Records"
           ]
         },
         "fr": {
-          "why": "Numérisation A3 polyvalente dans un format de bureau compact.",
+          "why": "Offre une numérisation A3 dans un format de bureau. Idéal pour les firmes juridiques et les hôpitaux.",
           "features": [
-            "Support A3 à alimentation frontale",
-            "Format registre compact",
-            "Gestion des documents mixtes",
-            "Chemin de papier polyvalent",
-            "Idéal pour les dossiers grand format"
+            "Numérisation hybride A3",
+            "Format de bureau compact",
+            "Gestion de supports mixtes",
+            "Support pour supports épais",
+            "Optimisé pour dossiers médicaux"
           ]
         }
       }
@@ -492,7 +497,7 @@
       "sku": "1255C002",
       "model": "SCANFRONT 400",
       "series": "Workgroup",
-      "category": "Document",
+      "category": "Desktop/Workgroup",
       "specs": {
         "speed": "45 ppm / 90 ipm",
         "daily_volume": 8500,
@@ -507,31 +512,32 @@
         "video": "https://www.youtube.com/watch?v=qUU3w7sv2R4"
       },
       "verticals": {
-        "Government": ["Reception"],
-        "Healthcare": ["Reception"],
-        "Financial": ["Teller / Reception"],
-        "Legal": ["Reception"],
-        "Logistics": ["Office / Depot"]
+        "Government": ["Self-Service Kiosk"],
+        "Healthcare": ["Patient Intake Portal"],
+        "Financial": ["Retail Banking Hub"],
+        "Legal": ["Shared Scan Point"],
+        "Logistics": ["Dispatch Hub"],
+        "BPO": ["Reception"]
       },
       "content": {
         "en": {
-          "why": "A standalone network scanner with a large 10.1\" screen. No PC required for document routing.",
+          "why": "A standalone network scanner with a large 10.1\" screen. No PC required for high-security document routing.",
           "features": [
-            "Large 10.1\" Touchscreen",
-            "PC-Free Network Routing",
-            "Secure User Profiles/PIN",
-            "LDAP Directory Support",
-            "uniFLOW Platform Ready"
+            "Large 10.1\" Wide Touchscreen",
+            "Standalone PC-Free Operation",
+            "High-Security User Login/PIN",
+            "LDAP Directory Integration",
+            "One-Touch Task Customization"
           ]
         },
         "fr": {
-          "why": "Un scanner réseau autonome avec un grand écran de 10,1 po.",
+          "why": "Un numériseur réseau autonome avec un écran de 10,1 po. Aucun PC requis pour l'acheminement sécurisé.",
           "features": [
-            "Grand écran tactile 10,1 po",
-            "Routage réseau sans PC",
-            "Profils utilisateur sécurisés",
-            "Support d'annuaire LDAP",
-            "Prêt pour la plateforme uniFLOW"
+            "Écran tactile large de 10,1 po",
+            "Opération autonome sans PC",
+            "Sécurité de connexion par NIP",
+            "Intégration d'annuaire LDAP",
+            "Personnalisation des tâches"
           ]
         }
       }
@@ -540,7 +546,7 @@
       "sku": "3151C002",
       "model": "DR-G2090",
       "series": "Production",
-      "category": "Document",
+      "category": "Production",
       "specs": {
         "speed": "90 ppm / 180 ipm",
         "daily_volume": 55000,
@@ -555,31 +561,32 @@
         "video": "https://www.youtube.com/watch?v=PxwRVly8_2A"
       },
       "verticals": {
-        "Government": ["Back-Office"],
-        "Healthcare": ["Back-Office"],
-        "Financial": ["Back-Office"],
-        "Legal": ["Back-Office"],
-        "Logistics": ["Back-Office"]
+        "Government": ["Archives"],
+        "Healthcare": ["Medical Records"],
+        "Financial": ["Mortgage Hub"],
+        "Legal": ["Court Filing"],
+        "Logistics": ["Global Logistics Admin"],
+        "BPO": ["Production Hub"]
       },
       "content": {
         "en": {
-          "why": "Reliable production scanning for back-office environments with high-throughput demands.",
+          "why": "The entry point for high-volume production. Features a heavy-duty roller system for sustained back-office performance.",
           "features": [
-            "High-Throughput Feeder",
-            "300-Sheet ADF Load",
-            "Reliable Roller Mechanism",
+            "Production-Grade Throughput",
+            "Heavy-Duty 300-Sheet ADF",
+            "Reliable High-Volume Rollers",
             "Precision Skew Correction",
-            "Cost-Effective Production"
+            "Cost-Effective Back-Office Power"
           ]
         },
         "fr": {
-          "why": "Numérisation de production fiable pour les environnements de back-office.",
+          "why": "Le point d'entrée pour la production de gros volumes. Comprend un système de rouleaux robuste.",
           "features": [
-            "Chargeur à haut débit",
-            "CAD de 300 feuilles",
-            "Mécanisme de rouleau fiable",
-            "Correction de désalignement",
-            "Production rentable"
+            "Débit de classe production",
+            "CAD robuste de 300 feuilles",
+            "Rouleaux haute performance",
+            "Correction précise du biais",
+            "Puissance de bureau rentable"
           ]
         }
       }
@@ -588,7 +595,7 @@
       "sku": "3150C002",
       "model": "DR-G2110",
       "series": "Production",
-      "category": "Document",
+      "category": "Production",
       "specs": {
         "speed": "110 ppm / 220 ipm",
         "daily_volume": 100000,
@@ -603,31 +610,32 @@
         "video": "https://www.youtube.com/watch?v=PxwRVly8_2A"
       },
       "verticals": {
-        "Government": ["Back-Office"],
-        "Healthcare": ["Back-Office"],
-        "Financial": ["Back-Office"],
-        "Legal": ["Back-Office"],
-        "Logistics": ["Back-Office"]
+        "Government": ["State Archives"],
+        "Healthcare": ["Centralized Records"],
+        "Financial": ["Bulk Audit Scanning"],
+        "Legal": ["Evidence Management"],
+        "Logistics": ["National Logistics Hub"],
+        "BPO": ["Back-Office Production"]
       },
       "content": {
         "en": {
-          "why": "Enterprise-grade production scanner with robust performance and network connectivity.",
+          "why": "Industrial-grade production capture with built-in LAN. Allows multiple workstations to share a powerful production resource.",
           "features": [
-            "Shared Network Resource",
-            "500-Sheet ADF Capacity",
-            "600dpi Precision CIS",
-            "Centralized Back-Office Power",
-            "Barcode/Batch Separation"
+            "Shared LAN Production Resource",
+            "Massive 500-Sheet ADF Loading",
+            "Ultra-Precision CIS Optics",
+            "Centralized Departmental Power",
+            "Barcode-Triggered Separation"
           ]
         },
         "fr": {
-          "why": "Scanner de production de classe entreprise avec réseau.",
+          "why": "Capture de production industrielle avec LAN intégré. Permet à plusieurs postes de partager une ressource puissante.",
           "features": [
-            "Ressource réseau partagée",
-            "Capacité CAD de 500 feuilles",
-            "CIS de précision 600 ppp",
+            "Ressource de production LAN",
+            "CAD massif de 500 feuilles",
+            "Optique CIS de haute précision",
             "Puissance centralisée",
-            "Séparation par code-barres"
+            "Séparation par codes à barres"
           ]
         }
       }
@@ -636,7 +644,7 @@
       "sku": "3149C002",
       "model": "DR-G2140",
       "series": "Production",
-      "category": "Document",
+      "category": "Production",
       "specs": {
         "speed": "140 ppm / 280 ipm",
         "daily_volume": 70000,
@@ -651,31 +659,32 @@
         "video": "https://www.youtube.com/watch?v=yEu4-nByNsk"
       },
       "verticals": {
-        "Government": ["Back-Office"],
-        "Healthcare": ["Back-Office"],
-        "Financial": ["Back-Office"],
-        "Legal": ["Back-Office"],
-        "Logistics": ["Back-Office"]
+        "Government": ["Federal Records Hub"],
+        "Healthcare": ["Hospital Archives"],
+        "Financial": ["National Payment Center"],
+        "Legal": ["Mass Discovery Desk"],
+        "Logistics": ["Global Fulfillment Hub"],
+        "BPO": ["Back-Office Production"]
       },
       "content": {
         "en": {
-          "why": "Canon's fastest production scanner, built for massive backfile digitization and conversion projects.",
+          "why": "Canon's fastest production scanner, designed for high-integrity capture and mission-critical backfile conversion.",
           "features": [
-            "Industrial 140ppm Speed",
-            "Massive 500-Sheet ADF",
-            "Production-Class Durability",
-            "Gigabit Ethernet Onboard",
-            "Ultrasonic Multifeed Detection"
+            "Extreme Industrial 140ppm Speed",
+            "Intelligent 500-Sheet Auto-Feeder",
+            "Production-Class Core Durability",
+            "High-Speed Gigabit LAN Port",
+            "Ultrasonic Multifeed Prevention"
           ]
         },
         "fr": {
-          "why": "Le scanner le plus rapide de Canon, conçu pour la numérisation massive.",
+          "why": "Le numériseur de production le plus rapide de Canon, conçu pour la capture d'intégrité supérieure.",
           "features": [
-            "Vitesse industrielle 140 ppm",
-            "CAD massif de 500 feuilles",
+            "Vitesse industrielle de 140 ppm",
+            "CAD intelligent de 500 f.",
             "Durabilité de classe production",
-            "Ethernet Gigabit intégré",
-            "Détection d'alimentation multiple"
+            "Port LAN Gigabit haute vitesse",
+            "Prévention ultrasonique d'alimentation"
           ]
         }
       }
@@ -684,7 +693,7 @@
       "sku": "2260C001",
       "model": "DR-X10CII",
       "series": "Production",
-      "category": "Document",
+      "category": "Production",
       "specs": {
         "speed": "130 ppm / 260 ipm",
         "daily_volume": 60000,
@@ -699,28 +708,29 @@
         "video": ""
       },
       "verticals": {
-        "Government": ["Back-Office"],
-        "Healthcare": ["Back-Office"]
+        "Government": ["Archives"],
+        "Healthcare": ["Archives"],
+        "BPO": ["Centralized Hub"]
       },
       "content": {
         "en": {
-          "why": "Archival-grade production scanner with 600 dpi resolution for the highest precision capture.",
+          "why": "Archival-grade production capture with precision optics and active thresholding logic for difficult-to-read legacy documents.",
           "features": [
-            "True 600dpi Optical Res",
-            "High-Volume Production",
-            "Active Threshold Logic",
-            "Skew Detection Onboard",
-            "Legacy Capture Quality"
+            "True 600dpi Precision Capture",
+            "High-Volume Durability Core",
+            "Active Logic Background Control",
+            "Advanced Skew Handling",
+            "Archival Quality Image Cleanup"
           ]
         },
         "fr": {
-          "why": "Scanner de production de qualité archivistique avec résolution 600 ppp.",
+          "why": "Capture de production de qualité archivistique avec optique de précision pour documents hérités.",
           "features": [
-            "Résolution optique 600 ppp",
-            "Production gros volume",
-            "Logique de seuil actif",
-            "Détection de désalignement",
-            "Qualité de capture héritée"
+            "Capture de précision à 600 ppp",
+            "Durabilité pour gros volumes",
+            "Contrôle d'arrière-plan actif",
+            "Gestion avancée du biais",
+            "Nettoyage de qualité archivistique"
           ]
         }
       }
@@ -748,23 +758,23 @@
       },
       "content": {
         "en": {
-          "why": "Reliable entry-level cheque scanner for retail and low-volume teller environments.",
+          "why": "The entry-level standard for branch capture. Combines a small footprint with precision MICR reading for accurate accounting.",
           "features": [
-            "Precision MICR Recognition",
-            "Ultra-Compact Footprint",
-            "Easy Maintenance Access",
-            "High-Resolution Scanning",
-            "Bank Software Ready"
+            "Precision MICR Accounting Tech",
+            "Space-Saving Teller Footprint",
+            "Tool-Free Maintenance Path",
+            "Reliable Cheque Document Flow",
+            "Financial App Compatibility"
           ]
         },
         "fr": {
-          "why": "Scanner de chèques d'entrée de gamme fiable.",
+          "why": "La norme d'entrée de gamme pour la capture en succursale. Allie compacité et précision de lecture MICR.",
           "features": [
-            "Reconnaissance MICR de précision",
-            "Encombrement ultra-compact",
-            "Accès facile pour l'entretien",
-            "Numérisation haute résolution",
-            "Prêt pour les logiciels bancaires"
+            "Technologie MICR de précision",
+            "Format compact pour guichet",
+            "Entretien facile sans outils",
+            "Flux de documents fiable",
+            "Compatible applications financières"
           ]
         }
       }
@@ -788,27 +798,27 @@
         "video": ""
       },
       "verticals": {
-        "Financial": ["Teller / Reception"]
+        "Financial": ["Teller Hub", "Retail Counter"]
       },
       "content": {
         "en": {
-          "why": "Fast and reliable mid-volume cheque scanning for financial front-lines.",
+          "why": "Delivers high-speed precision capture for busy financial counters. Features a robust feeder to handle large daily volumes.",
           "features": [
-            "120 Cheques Per Minute",
-            "100-Item Auto Feeder",
-            "High MICR Read Rate",
-            "Compact Desktop Design",
-            "Wired Connectivity"
+            "120 Items Per Minute Flow",
+            "Reliable 100-Item Auto Feeder",
+            "Superior MICR Read Integrity",
+            "High-Speed USB Connection",
+            "Compact Desktop Design"
           ]
         },
         "fr": {
-          "why": "Numérisation de chèques rapide et fiable pour le secteur financier.",
+          "why": "Offre une capture de précision haute vitesse. Comprend un chargeur robuste pour les volumes quotidiens.",
           "features": [
-            "120 chèques par minute",
-            "Chargeur auto de 100 articles",
-            "Taux de lecture MICR élevé",
-            "Format de bureau compact",
-            "Connectivité filaire"
+            "Débit de 120 articles par min.",
+            "CAD fiable de 100 articles",
+            "Intégrité de lecture MICR",
+            "Connexion USB haute vitesse",
+            "Châssis de bureau compact"
           ]
         }
       }
@@ -832,27 +842,27 @@
         "video": ""
       },
       "verticals": {
-        "Financial": ["Teller / Reception"]
+        "Financial": ["Shared Teller Desk", "Back-Office"]
       },
       "content": {
         "en": {
-          "why": "Network-attached cheque reader for seamless branch transformation and shared use.",
+          "why": "Network-attached cheque scanning for branch transformation. Allows multiple tellers to share a single high-speed capture device.",
           "features": [
-            "Direct Network Connectivity",
-            "Built-In MSR reader",
-            "Accurate Data Capture",
-            "Shared Resource Capability",
-            "Secure Transmission"
+            "Network-Ready Ethernet Port",
+            "Built-In MSR Verification",
+            "Secure Financial Data Link",
+            "Resource-Sharing Optimization",
+            "Rapid Item Processing"
           ]
         },
         "fr": {
-          "why": "Lecteur de chèques relié au réseau pour une utilisation partagée.",
+          "why": "Numérisation de chèques réseau pour succursales. Plusieurs guichetiers partagent un seul appareil.",
           "features": [
-            "Connectivité réseau directe",
-            "Lecteur MSR intégré",
-            "Capture de données précise",
-            "Capacité de ressource partagée",
-            "Transmission sécurisée"
+            "Port Ethernet prêt réseau",
+            "Vérification MSR intégrée",
+            "Lien de données sécurisé",
+            "Optimisation des ressources",
+            "Traitement rapide des articles"
           ]
         }
       }
@@ -876,27 +886,27 @@
         "video": ""
       },
       "verticals": {
-        "Financial": ["Teller / Reception"]
+        "Financial": ["Centralized Branch Admin"]
       },
       "content": {
         "en": {
-          "why": "Precision high-speed cheque capture with accurate MICR reading for financial institutions.",
+          "why": "High-performance cheque capture with built-in imprinter for endorsing items during the scanning workflow.",
           "features": [
-            "150-Cheque ADF Feeder",
-            "Advanced MICR + OCR",
-            "Built-In Imprinter Options",
-            "UV Scanning Support",
-            "MSR Tracking Ready"
+            "150 Items High-Speed Intake",
+            "150-Item Auto Feeder Capacity",
+            "Built-in Endorsement Imprinter",
+            "UV Scanning Support Options",
+            "Advanced OCR/MICR Logic"
           ]
         },
         "fr": {
-          "why": "Capture de chèques haute vitesse de précision.",
+          "why": "Capture de chèques haute performance avec imprimante intégrée pour l'endossement.",
           "features": [
-            "Chargeur CAD de 150 chèques",
-            "MICR + OCR avancés",
-            "Options d'imprimante intégrée",
-            "Support de numérisation UV",
-            "Prêt pour le suivi MSR"
+            "Entrée rapide (150 articles)",
+            "CAD de 150 articles",
+            "Imprimante d'endos intégrée",
+            "Options de numérisation UV",
+            "Logique OCR/MICR avancée"
           ]
         }
       }
@@ -920,25 +930,26 @@
         "video": ""
       },
       "verticals": {
-        "Financial": ["Back-Office"]
+        "Financial": ["Main Lockbox", "Central Processing"],
+        "BPO": ["Cheque Processing Hub"]
       },
       "content": {
         "en": {
-          "why": "Highest volume cheque scanner for centralized lockbox and payment processing.",
+          "why": "The industrial standard for high-volume lockbox operations. Features dual-pocket physical sorting for real-time document separation.",
           "features": [
-            "190 Cheques Per Minute",
-            "Huge 250-Item Feeder",
-            "2-Pocket Sorting",
-            "8-Line Built-In Endorser",
-            "Production-Class Reliability"
+            "Extreme 190 Items Per Minute",
+            "Massive 250-Item Feed Intake",
+            "Dual-Pocket Physical Sorting",
+            "8-Line Built-in Endorser",
+            "Production-Grade Reliability"
           ]
         },
         "fr": {
-          "why": "Scanner de chèques à volume élevé pour le traitement centralisé.",
+          "why": "La norme industrielle pour le traitement de gros volumes. Tri physique à deux poches en temps réel.",
           "features": [
-            "190 chèques par minute",
-            "Chargeur massif de 250 articles",
-            "Tri à 2 poches",
+            "Vitesse extrême (190 art./min)",
+            "Chargeur massif de 250 art.",
+            "Tri physique à deux poches",
             "Endosseur 8 lignes intégré",
             "Fiabilité de classe production"
           ]
@@ -963,26 +974,29 @@
         "brochure": "",
         "video": ""
       },
-      "verticals": {},
+      "verticals": {
+        "Government": ["Bound Records"],
+        "Legal": ["Evidence Documentation"]
+      },
       "content": {
         "en": {
-          "why": "Optional accessory for scanning bound and fragile documents up to A4 size.",
+          "why": "Add flatbed capability to your imageFORMULA DR-Series scanner for processing books and fragile documents.",
           "features": [
-            "Seamless Integration",
-            "High-Resolution Capture",
+            "Seamless Integration with DR",
+            "High-Resolution Platen Scan",
             "Bound Document Support",
-            "Compact Flatbed Design",
+            "Compact Add-on Design",
             "Versatile Media Handling"
           ]
         },
         "fr": {
-          "why": "Accessoire optionnel pour la numérisation de documents reliés.",
+          "why": "Ajoutez une capacité de platine à votre numériseur DR pour traiter livres et documents fragiles.",
           "features": [
-            "Intégration transparente",
-            "Capture haute résolution",
+            "Intégration fluide avec DR",
+            "Platine haute résolution",
             "Support de documents reliés",
-            "Conception de platine compacte",
-            "Gestion polyvalente des supports"
+            "Conception d'ajout compacte",
+            "Gestion de supports variés"
           ]
         }
       }
@@ -1005,29 +1019,33 @@
         "brochure": "",
         "video": ""
       },
-      "verticals": {},
+      "verticals": {
+        "Government": ["Oversized Records"],
+        "Legal": ["Evidence"],
+        "Healthcare": ["Large Medical Charts"]
+      },
       "content": {
         "en": {
-          "why": "High-speed flatbed accessory for oversized or delicate media up to Ledger size.",
+          "why": "High-speed A3 flatbed for oversized documents. Features a cover-open detection system for efficient batch scanning.",
           "features": [
             "A3 Large Format Capture",
-            "Extreme 3s Scan Speed",
-            "Cover-Open Detection",
-            "Superior Image Detail",
-            "One-Step Integration"
+            "Extreme 3s Platen Scan Speed",
+            "Cover-Open Detection Logic",
+            "High-Precision Image Detail",
+            "Universal DR-Series Add-on"
           ]
         },
         "fr": {
-          "why": "Accessoire de platine haute vitesse pour supports grand format.",
+          "why": "Platine A3 haute vitesse pour documents grand format. Comprend un système de détection de couvercle ouvert.",
           "features": [
             "Capture grand format A3",
-            "Vitesse de numérisation de 3 s",
+            "Vitesse de platine de 3 s",
             "Détection de couvercle ouvert",
-            "Détail d'image supérieur",
-            "Intégration en une étape"
+            "Détails d'image précis",
+            "Ajout DR universel"
           ]
         }
       }
     }
   ]
-}
+}" code between  and  tags.

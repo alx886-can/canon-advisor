@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-05-10",
-  "version": "1.1",
+  "last_updated": "2026-05-12",
+  "version": "1.2",
   "config": {
     "currency": "CAD",
     "region": "Canada",
@@ -31,11 +31,13 @@
         "video": "https://www.youtube.com/watch?v=rqqgkQ_f2aY"
       },
       "verticals": {
-        "Government": ["On Field / Mobile"],
-        "Financial": ["On Field / Mobile"],
-        "Legal": ["On Field / Mobile"],
-        "Logistics": ["On Field / Mobile"],
-        "Healthcare": ["Home Care"]
+        "Government": ["Mobile"],
+        "Financial": ["Mobile"],
+        "Legal": ["Mobile"],
+        "Logistics": ["Mobile"],
+        "Education": ["Mobile"],
+        "Healthcare": ["Mobile"],
+        "Work-From-Home": ["Office"]
       },
       "content": {
         "en": {
@@ -79,11 +81,13 @@
         "video": "https://www.youtube.com/watch?v=mYwJ1_h0iKU"
       },
       "verticals": {
-        "Government": ["On Field / Mobile", "Home Office"],
-        "Financial": ["On Field / Mobile", "Retail Banking"],
-        "Legal": ["On Field / Mobile"],
-        "Logistics": ["On Field / Mobile"],
-        "Healthcare": ["Patient Intake"]
+        "Government": ["Mobile", "Office"],
+        "Financial": ["Mobile", "Reception"],
+        "Legal": ["Mobile", "Office"],
+        "Logistics": ["Mobile"],
+        "Education": ["Mobile"],
+        "Healthcare": ["Mobile", "Reception"],
+        "Work-From-Home": ["Office"]
       },
       "content": {
         "en": {
@@ -127,11 +131,14 @@
         "video": "https://www.youtube.com/watch?v=Ia90Khl0JMM"
       },
       "verticals": {
-        "Government": ["Office", "Counter Services"],
-        "Healthcare": ["Reception", "Patient Admitting"],
-        "Financial": ["Retail Banking", "Administration"],
-        "Legal": ["Secretary Desk", "Admin"],
-        "Logistics": ["Shipping Dock", "Depot"]
+        "Government": ["Reception", "Office"],
+        "Healthcare": ["Reception", "Office"],
+        "Financial": ["Reception", "Office"],
+        "Legal": ["Reception", "Office"],
+        "Logistics": ["Reception", "Office"],
+        "Education": ["Reception", "Office"],
+        "BPO": ["Reception"],
+        "Work-From-Home": ["Office"]
       },
       "content": {
         "en": {
@@ -176,10 +183,12 @@
       },
       "verticals": {
         "Government": ["Office"],
-        "Healthcare": ["Records", "Office"],
-        "Financial": ["Operations", "Loan Processing"],
-        "Legal": ["Case Files", "Paralegal"],
-        "Logistics": ["Dispatch", "Logistics Office"]
+        "Healthcare": ["Office"],
+        "Financial": ["Office"],
+        "Legal": ["Office"],
+        "Logistics": ["Office"],
+        "Education": ["Office"],
+        "BPO": ["Office"]
       },
       "content": {
         "en": {
@@ -223,11 +232,13 @@
         "video": "https://www.youtube.com/watch?v=klkKoFVfSzg"
       },
       "verticals": {
-        "Government": ["Standard Office"],
-        "Healthcare": ["Patient Records"],
-        "Financial": ["Account Services"],
-        "Legal": ["Legal Admin"],
-        "Logistics": ["Manifest Scanning"]
+        "Government": ["Office"],
+        "Healthcare": ["Office"],
+        "Financial": ["Office"],
+        "Legal": ["Office"],
+        "Logistics": ["Office"],
+        "Education": ["Office"],
+        "BPO": ["Office"]
       },
       "content": {
         "en": {
@@ -271,11 +282,13 @@
         "video": "https://www.youtube.com/watch?v=QUdwawjg8KU"
       },
       "verticals": {
-        "Government": ["Shared Reception"],
-        "Healthcare": ["Shared Admitting"],
-        "Legal": ["Shared Admin Desk"],
-        "Logistics": ["Shared Distribution Center"],
-        "BPO": ["Reception"]
+        "Government": ["Reception", "Office"],
+        "Healthcare": ["Reception", "Office"],
+        "Financial": ["Reception", "Office"],
+        "Legal": ["Reception", "Office"],
+        "Logistics": ["Reception", "Office"],
+        "Education": ["Reception", "Office"],
+        "BPO": ["Reception", "Office"]
       },
       "content": {
         "en": {
@@ -319,11 +332,13 @@
         "video": "https://www.youtube.com/watch?v=tiI1DbR9YUw"
       },
       "verticals": {
-        "Government": ["Mobile Reception"],
-        "Healthcare": ["Patient Registration"],
-        "Legal": ["Reception"],
-        "Logistics": ["Logistics Depot"],
-        "BPO": ["Reception"]
+        "Government": ["Reception", "Office"],
+        "Healthcare": ["Reception", "Office"],
+        "Financial": ["Reception", "Office"],
+        "Legal": ["Reception", "Office"],
+        "Logistics": ["Reception", "Office"],
+        "Education": ["Reception", "Office"],
+        "BPO": ["Reception", "Office"]
       },
       "content": {
         "en": {
@@ -367,11 +382,13 @@
         "video": "https://www.youtube.com/watch?v=0FOok_lQQaI"
       },
       "verticals": {
-        "Government": ["Admin Office"],
-        "Healthcare": ["Department Records"],
-        "Financial": ["Mortgage Processing"],
-        "Legal": ["Case Documentation"],
-        "Logistics": ["Waybill Capture"]
+        "Government": ["Office", "Back"],
+        "Healthcare": ["Office", "Back"],
+        "Financial": ["Office", "Back"],
+        "Legal": ["Office", "Back"],
+        "Logistics": ["Office", "Back"],
+        "Education": ["Office", "Back"],
+        "BPO": ["Office", "Back"]
       },
       "content": {
         "en": {
@@ -415,12 +432,13 @@
         "video": "https://www.youtube.com/watch?v=YUz8sjjYJyA"
       },
       "verticals": {
-        "Government": ["Central Office"],
-        "Healthcare": ["Records Management"],
-        "Financial": ["Compliance Admin"],
-        "Legal": ["Litigation Support"],
-        "Logistics": ["Main Distribution Hub"],
-        "BPO": ["Departmental Scan"]
+        "Government": ["Office", "Back"],
+        "Healthcare": ["Office", "Back"],
+        "Financial": ["Office", "Back"],
+        "Legal": ["Office", "Back"],
+        "Logistics": ["Office", "Back"],
+        "Education": ["Office", "Back"],
+        "BPO": ["Office", "Back"]
       },
       "content": {
         "en": {
@@ -464,11 +482,13 @@
         "video": "https://www.youtube.com/watch?v=5PSaOmwCwmo"
       },
       "verticals": {
-        "Government": ["Public Records"],
-        "Healthcare": ["Chart Management"],
-        "Financial": ["Large-Format Admin"],
-        "Legal": ["Blueprints / Large Records"],
-        "Logistics": ["Logistics Hub"]
+        "Government": ["Office", "Back"],
+        "Healthcare": ["Office", "Back"],
+        "Financial": ["Office", "Back"],
+        "Legal": ["Office", "Back"],
+        "Logistics": ["Office", "Back"],
+        "Education": ["Office", "Back"],
+        "BPO": ["Office", "Back"]
       },
       "content": {
         "en": {
@@ -512,12 +532,13 @@
         "video": "https://www.youtube.com/watch?v=qUU3w7sv2R4"
       },
       "verticals": {
-        "Government": ["Self-Service Kiosk"],
-        "Healthcare": ["Patient Intake Portal"],
-        "Financial": ["Retail Banking Hub"],
-        "Legal": ["Shared Scan Point"],
-        "Logistics": ["Dispatch Hub"],
-        "BPO": ["Reception"]
+        "Government": ["Reception", "Office"],
+        "Healthcare": ["Reception", "Office"],
+        "Financial": ["Reception", "Office"],
+        "Legal": ["Reception", "Office"],
+        "Logistics": ["Reception", "Office"],
+        "Education": ["Reception", "Office"],
+        "BPO": ["Reception", "Office"]
       },
       "content": {
         "en": {
@@ -561,12 +582,13 @@
         "video": "https://www.youtube.com/watch?v=PxwRVly8_2A"
       },
       "verticals": {
-        "Government": ["Archives"],
-        "Healthcare": ["Medical Records"],
-        "Financial": ["Mortgage Hub"],
-        "Legal": ["Court Filing"],
-        "Logistics": ["Global Logistics Admin"],
-        "BPO": ["Production Hub"]
+        "Government": ["Back"],
+        "Healthcare": ["Back"],
+        "Financial": ["Back"],
+        "Legal": ["Back"],
+        "Logistics": ["Back"],
+        "Education": ["Back"],
+        "BPO": ["Back"]
       },
       "content": {
         "en": {
@@ -610,12 +632,13 @@
         "video": "https://www.youtube.com/watch?v=PxwRVly8_2A"
       },
       "verticals": {
-        "Government": ["State Archives"],
-        "Healthcare": ["Centralized Records"],
-        "Financial": ["Bulk Audit Scanning"],
-        "Legal": ["Evidence Management"],
-        "Logistics": ["National Logistics Hub"],
-        "BPO": ["Back-Office Production"]
+        "Government": ["Back"],
+        "Healthcare": ["Back"],
+        "Financial": ["Back"],
+        "Legal": ["Back"],
+        "Logistics": ["Back"],
+        "Education": ["Back"],
+        "BPO": ["Back"]
       },
       "content": {
         "en": {
@@ -659,12 +682,13 @@
         "video": "https://www.youtube.com/watch?v=yEu4-nByNsk"
       },
       "verticals": {
-        "Government": ["Federal Records Hub"],
-        "Healthcare": ["Hospital Archives"],
-        "Financial": ["National Payment Center"],
-        "Legal": ["Mass Discovery Desk"],
-        "Logistics": ["Global Fulfillment Hub"],
-        "BPO": ["Back-Office Production"]
+        "Government": ["Back"],
+        "Healthcare": ["Back"],
+        "Financial": ["Back"],
+        "Legal": ["Back"],
+        "Logistics": ["Back"],
+        "Education": ["Back"],
+        "BPO": ["Back"]
       },
       "content": {
         "en": {
@@ -708,9 +732,13 @@
         "video": ""
       },
       "verticals": {
-        "Government": ["Archives"],
-        "Healthcare": ["Archives"],
-        "BPO": ["Centralized Hub"]
+        "Government": ["Back"],
+        "Healthcare": ["Back"],
+        "Financial": ["Back"],
+        "Legal": ["Back"],
+        "Logistics": ["Back"],
+        "Education": ["Back"],
+        "BPO": ["Back"]
       },
       "content": {
         "en": {
@@ -754,7 +782,7 @@
         "video": "https://www.youtube.com/watch?v=yiyVvf-OVR8"
       },
       "verticals": {
-        "Financial": ["Teller / Reception"]
+        "Financial": ["Reception"]
       },
       "content": {
         "en": {
@@ -798,7 +826,7 @@
         "video": ""
       },
       "verticals": {
-        "Financial": ["Teller Hub", "Retail Counter"]
+        "Financial": ["Reception", "Back"]
       },
       "content": {
         "en": {
@@ -842,7 +870,7 @@
         "video": ""
       },
       "verticals": {
-        "Financial": ["Shared Teller Desk", "Back-Office"]
+        "Financial": ["Reception", "Back"]
       },
       "content": {
         "en": {
@@ -886,7 +914,7 @@
         "video": ""
       },
       "verticals": {
-        "Financial": ["Centralized Branch Admin"]
+        "Financial": ["Reception", "Back"]
       },
       "content": {
         "en": {
@@ -930,8 +958,8 @@
         "video": ""
       },
       "verticals": {
-        "Financial": ["Main Lockbox", "Central Processing"],
-        "BPO": ["Cheque Processing Hub"]
+        "Financial": ["Back"],
+        "BPO": ["Back"]
       },
       "content": {
         "en": {
@@ -952,97 +980,6 @@
             "Tri physique à deux poches",
             "Endosseur 8 lignes intégré",
             "Fiabilité de classe production"
-          ]
-        }
-      }
-    },
-    {
-      "sku": "2152C002",
-      "model": "Flatbed 102",
-      "series": "Accessory",
-      "category": "Accessory",
-      "specs": {
-        "speed": "7 seconds / page",
-        "daily_volume": 0,
-        "max_size": "A4",
-        "connectivity": ["USB 2.0"],
-        "flatbed_compatible": false,
-        "duplex": false
-      },
-      "assets": {
-        "image": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/FSU-102-Accessory/imageFORMULA-FSU-102-1.png",
-        "brochure": "",
-        "video": ""
-      },
-      "verticals": {
-        "Government": ["Bound Records"],
-        "Legal": ["Evidence Documentation"]
-      },
-      "content": {
-        "en": {
-          "why": "Add flatbed capability to your imageFORMULA DR-Series scanner for processing books and fragile documents.",
-          "features": [
-            "Seamless Integration with DR",
-            "High-Resolution Platen Scan",
-            "Bound Document Support",
-            "Compact Add-on Design",
-            "Versatile Media Handling"
-          ]
-        },
-        "fr": {
-          "why": "Ajoutez une capacité de platine à votre numériseur DR pour traiter livres et documents fragiles.",
-          "features": [
-            "Intégration fluide avec DR",
-            "Platine haute résolution",
-            "Support de documents reliés",
-            "Conception d'ajout compacte",
-            "Gestion de supports variés"
-          ]
-        }
-      }
-    },
-    {
-      "sku": "5031C002AA",
-      "model": "Flatbed 202",
-      "series": "Accessory",
-      "category": "Accessory",
-      "specs": {
-        "speed": "3 seconds / page",
-        "daily_volume": 0,
-        "max_size": "A3",
-        "connectivity": ["USB 2.0"],
-        "flatbed_compatible": false,
-        "duplex": false
-      },
-      "assets": {
-        "image": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/FSU-202-Accessory/hero--1-.png",
-        "brochure": "",
-        "video": ""
-      },
-      "verticals": {
-        "Government": ["Oversized Records"],
-        "Legal": ["Evidence"],
-        "Healthcare": ["Large Medical Charts"]
-      },
-      "content": {
-        "en": {
-          "why": "High-speed A3 flatbed for oversized documents. Features a cover-open detection system for efficient batch scanning.",
-          "features": [
-            "A3 Large Format Capture",
-            "Extreme 3s Platen Scan Speed",
-            "Cover-Open Detection Logic",
-            "High-Precision Image Detail",
-            "Universal DR-Series Add-on"
-          ]
-        },
-        "fr": {
-          "why": "Platine A3 haute vitesse pour documents grand format. Comprend un système de détection de couvercle ouvert.",
-          "features": [
-            "Capture grand format A3",
-            "Vitesse de platine de 3 s",
-            "Détection de couvercle ouvert",
-            "Détails d'image précis",
-            "Ajout DR universel"
           ]
         }
       }

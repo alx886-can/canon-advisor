@@ -35,6 +35,16 @@
             border-color: var(--canon-red);
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
+        .line-card-banner {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.7) 100%);
+        }
+        .line-card-banner:hover {
+            background: linear-gradient(135deg, #ffffff 0%, #fff1f2 100%);
+            border-color: var(--canon-red);
+            transform: scale(1.01);
+            box-shadow: 0 25px 30px -10px rgba(237, 28, 36, 0.15);
+        }
         .icon-box {
             background: white;
             transition: all 0.3s ease;
@@ -65,7 +75,6 @@
             <div class="flex items-center gap-4 md:gap-10 text-left">
                 <img src="https://i.ibb.co/svcfqT91/image-FORMULA2.png" alt="imageFORMULA" class="hidden sm:block h-6 md:h-8 w-auto opacity-80">
                 
-                <!-- Language Switcher -->
                 <div class="flex items-center gap-3 text-[10px] font-black uppercase tracking-[0.2em] border-l border-gray-200 pl-4 md:pl-10 text-right">
                     <span class="text-gray-400">Language:</span>
                     <div class="flex items-center gap-2 text-left">
@@ -78,7 +87,7 @@
         </div>
     </header>
 
-    <main class="w-full max-w-7xl px-6 py-12 md:py-20 flex flex-col items-center text-center">
+    <main class="w-full max-w-6xl px-6 py-12 md:py-20 flex flex-col items-center">
         
         <div class="mb-16 fade-in text-center">
             <p class="text-[10px] font-black uppercase tracking-[0.4em] text-red-600 mb-2">imageFORMULA Hub</p>
@@ -86,12 +95,12 @@
                 Specialized <span class="text-[#ED1C24]">Tools</span>
             </h1>
             <p class="text-gray-500 font-medium text-lg max-w-2xl mx-auto text-center leading-relaxed">
-                Select the application that best fits your document capture requirements or browse our complete product lineup.
+                Empowering your business with precision capture. Choose a specialized utility to find your ideal scanning solution.
             </p>
         </div>
 
-        <!-- Tools Selection Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl fade-in" style="animation-delay: 0.1s;">
+        <!-- Main Utility Grid (4 Boxes) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full mb-10 fade-in" style="animation-delay: 0.1s;">
             
             <!-- 1. Vertical Explorer -->
             <a href="verticalexEN.html" class="tool-card glass-panel p-8 rounded-[2.5rem] flex flex-col border-2 border-transparent group text-left">
@@ -100,10 +109,10 @@
                 </div>
                 <h3 class="text-xl font-bold mb-3 text-gray-900 leading-tight">Vertical Explorer</h3>
                 <p class="text-gray-500 text-sm leading-relaxed mb-6">
-                    Identify products based on your vertical of choice and the specific area of business within that industry.
+                    Identify solutions based on your specific industry and the targeted application area within your sector.
                 </p>
                 <div class="mt-auto flex items-center text-[10px] font-black uppercase tracking-widest text-gray-400 group-hover:text-red-600 transition-colors">
-                    Explore Verticals 
+                    Explore Industries 
                     <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                 </div>
             </a>
@@ -115,10 +124,10 @@
                 </div>
                 <h3 class="text-xl font-bold mb-3 text-gray-900 leading-tight">Scan Selector</h3>
                 <p class="text-gray-500 text-sm leading-relaxed mb-6">
-                    Browse all of our products and select based on criteria like connection type, paper size supported, and more.
+                    Filter our entire hardware catalog based on technical criteria like connectivity, paper size, and speed.
                 </p>
                 <div class="mt-auto flex items-center text-[10px] font-black uppercase tracking-widest text-gray-400 group-hover:text-red-600 transition-colors">
-                    Filter Catalog
+                    Search Hardware
                     <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                 </div>
             </a>
@@ -130,10 +139,10 @@
                 </div>
                 <h3 class="text-xl font-bold mb-3 text-gray-900 leading-tight">Efficiency Calculator</h3>
                 <p class="text-gray-500 text-sm leading-relaxed mb-6">
-                    Calculate job completion times based on volume and scanner speed. Compare models to maximize throughput.
+                    Input your daily volume to see time-to-scan estimates. Compare models to optimize your ROI and labor costs.
                 </p>
                 <div class="mt-auto flex items-center text-[10px] font-black uppercase tracking-widest text-gray-400 group-hover:text-red-600 transition-colors">
-                    Calculate Time
+                    Calculate Throughput
                     <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                 </div>
             </a>
@@ -145,29 +154,37 @@
                 </div>
                 <h3 class="text-xl font-bold mb-3 text-gray-900 leading-tight">Scanner Advisor</h3>
                 <p class="text-gray-500 text-sm leading-relaxed mb-6">
-                    A wizard-driven interface to narrow down your choices and find the perfect scanner for your workflow.
+                    A guided wizard that asks simple questions to help you navigate our fleet and find your perfect match.
                 </p>
                 <div class="mt-auto flex items-center text-[10px] font-black uppercase tracking-widest text-gray-400 group-hover:text-red-600 transition-colors">
-                    Start Wizard
+                    Start Advisor
                     <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                 </div>
             </a>
 
-            <!-- 5. Product Line Card (New) -->
-            <a href="linecardEN.html" class="tool-card glass-panel p-8 rounded-[2.5rem] flex flex-col border-2 border-transparent group text-left">
-                <div class="icon-box w-14 h-14 rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-sm border border-gray-100 text-left">
-                    📋
-                </div>
-                <h3 class="text-xl font-bold mb-3 text-gray-900 leading-tight text-left">Product Line Card</h3>
-                <p class="text-gray-500 text-sm leading-relaxed mb-6 text-left">
-                    Learn more about our products. View the complete fleet organized by category with compelling stories and technical highlights.
-                </p>
-                <div class="mt-auto flex items-center text-[10px] font-black uppercase tracking-widest text-gray-400 group-hover:text-red-600 transition-colors text-left">
-                    View Catalog
-                    <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+        </div>
+
+        <!-- Product Line Card Banner (Prominent Rectangle Below) -->
+        <div class="w-full fade-in" style="animation-delay: 0.2s;">
+            <a href="linecardEN.html" class="line-card-banner block glass-panel p-1 md:p-2 rounded-[3rem] border-2 border-transparent group overflow-hidden">
+                <div class="flex flex-col md:flex-row items-center p-8 md:p-12 gap-8">
+                    <div class="w-20 h-20 md:w-24 md:h-24 bg-white rounded-[2rem] flex items-center justify-center text-4xl shadow-md border border-gray-100 group-hover:bg-red-600 group-hover:text-white transition-all duration-500">
+                        📋
+                    </div>
+                    <div class="flex-grow text-center md:text-left">
+                        <h2 class="text-2xl md:text-3xl font-black text-gray-900 mb-2 uppercase tracking-tight">Learn more about our products</h2>
+                        <p class="text-gray-500 font-medium text-sm md:text-base leading-relaxed max-w-2xl">
+                            Dive deep into the imageFORMULA fleet. Explore detailed product stories, technical specifications, and key selling points for every model in our lineup.
+                        </p>
+                    </div>
+                    <div class="shrink-0 flex items-center justify-center">
+                        <div class="bg-gray-900 text-white px-8 py-4 rounded-2xl font-bold text-xs uppercase tracking-widest group-hover:bg-red-600 transition-all shadow-lg flex items-center">
+                            View Line Card
+                            <svg class="w-4 h-4 ml-3 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </div>
+                    </div>
                 </div>
             </a>
-
         </div>
 
     </main>

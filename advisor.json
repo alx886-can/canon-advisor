@@ -1,6 +1,6 @@
 {
   "last_updated": "2026-05-13",
-  "version": "1.3",
+  "version": "1.4",
   "config": {
     "currency": "CAD",
     "region": "Canada",
@@ -20,6 +20,7 @@
       "specs": {
         "speed": "8 ppm / 16 ipm",
         "daily_volume": 250,
+        "adf_capacity": 10,
         "max_size": "A4",
         "connectivity": ["USB 2.0"],
         "flatbed_compatible": false,
@@ -70,6 +71,7 @@
       "specs": {
         "speed": "15 ppm / 30 ipm",
         "daily_volume": 700,
+        "adf_capacity": 20,
         "max_size": "A4",
         "connectivity": ["USB 2.0", "USB 3.0"],
         "flatbed_compatible": false,
@@ -120,6 +122,7 @@
       "specs": {
         "speed": "25 ppm / 50 ipm",
         "daily_volume": 2500,
+        "adf_capacity": 30,
         "max_size": "A4",
         "connectivity": ["USB 2.0"],
         "flatbed_compatible": true,
@@ -171,6 +174,7 @@
       "specs": {
         "speed": "40 ppm / 80 ipm",
         "daily_volume": 7000,
+        "adf_capacity": 100,
         "max_size": "A4",
         "connectivity": ["USB 2.0"],
         "flatbed_compatible": true,
@@ -221,6 +225,7 @@
       "specs": {
         "speed": "50 ppm / 100 ipm",
         "daily_volume": 8000,
+        "adf_capacity": 100,
         "max_size": "A4",
         "connectivity": ["USB 2.0"],
         "flatbed_compatible": true,
@@ -271,6 +276,7 @@
       "specs": {
         "speed": "50 ppm / 100 ipm",
         "daily_volume": 6000,
+        "adf_capacity": 60,
         "max_size": "A4",
         "connectivity": ["USB 3.2", "Ethernet"],
         "flatbed_compatible": true,
@@ -321,6 +327,7 @@
       "specs": {
         "speed": "50 ppm / 100 ipm",
         "daily_volume": 6000,
+        "adf_capacity": 60,
         "max_size": "A4",
         "connectivity": ["USB 3.2", "Ethernet", "WIFI"],
         "flatbed_compatible": true,
@@ -371,6 +378,7 @@
       "specs": {
         "speed": "40 ppm / 80 ipm",
         "daily_volume": 8500,
+        "adf_capacity": 80,
         "max_size": "A4",
         "connectivity": ["USB 2.0"],
         "flatbed_compatible": true,
@@ -421,6 +429,7 @@
       "specs": {
         "speed": "60 ppm / 120 ipm",
         "daily_volume": 13000,
+        "adf_capacity": 90,
         "max_size": "A4",
         "connectivity": ["USB 3.1"],
         "flatbed_compatible": true,
@@ -471,6 +480,7 @@
       "specs": {
         "speed": "60 ppm / 120 ipm",
         "daily_volume": 13000,
+        "adf_capacity": 80,
         "max_size": "A3",
         "connectivity": ["USB 2.0"],
         "flatbed_compatible": true,
@@ -515,12 +525,13 @@
     },
     {
       "sku": "1255C002",
-      "model": "SCANFRONT 400",
+      "model": "Scanfront 400",
       "series": "Workgroup",
       "category": "Desktop/Workgroup",
       "specs": {
         "speed": "45 ppm / 90 ipm",
         "daily_volume": 8500,
+        "adf_capacity": 60,
         "max_size": "A4",
         "connectivity": ["Ethernet"],
         "flatbed_compatible": true,
@@ -571,6 +582,7 @@
       "specs": {
         "speed": "90 ppm / 180 ipm",
         "daily_volume": 60000,
+        "adf_capacity": 300,
         "max_size": "A3",
         "connectivity": ["USB 3.1"],
         "flatbed_compatible": true,
@@ -621,6 +633,7 @@
       "specs": {
         "speed": "110 ppm / 220 ipm",
         "daily_volume": 100000,
+        "adf_capacity": 500,
         "max_size": "A3",
         "connectivity": ["USB 3.1", "Ethernet"],
         "flatbed_compatible": true,
@@ -671,6 +684,7 @@
       "specs": {
         "speed": "140 ppm / 280 ipm",
         "daily_volume": 70000,
+        "adf_capacity": 500,
         "max_size": "A3",
         "connectivity": ["USB 3.1", "Ethernet"],
         "flatbed_compatible": true,
@@ -715,12 +729,13 @@
     },
     {
       "sku": "2260C001",
-      "model": "DR-X10CII",
+      "model": "DR-X10C II",
       "series": "Production",
       "category": "Production",
       "specs": {
         "speed": "130 ppm / 260 ipm",
         "daily_volume": 60000,
+        "adf_capacity": 500,
         "max_size": "A3",
         "connectivity": ["USB 2.0"],
         "flatbed_compatible": true,
@@ -734,17 +749,13 @@
       "verticals": {
         "Government": ["Back"],
         "Healthcare": ["Back"],
-        "Financial": ["Back"],
-        "Legal": ["Back"],
-        "Logistics": ["Back"],
-        "Education": ["Back"],
         "BPO": ["Back"]
       },
       "content": {
         "en": {
-          "why": "Archival-grade production capture with precision optics and a Kofax CGA board for dedicated high-speed image processing.",
+          "why": "Archival-grade production capture with precision optics and a Kofax CGA board for dedicated high-speed image processing that handles complex jobs without slowing down your PC.",
           "features": [
-            "Integrated Kofax CGA Image Processor",
+            "Integrated Kofax CGA Processing Board",
             "True 600dpi Precision Capture",
             "High-Volume Durability Core",
             "Active Logic Background Control",
@@ -754,7 +765,7 @@
         "fr": {
           "why": "Capture de production avec optique de précision et carte Kofax CGA pour un traitement d'image haute vitesse dédié.",
           "features": [
-            "Processeur d'image Kofax CGA intégré",
+            "Carte de traitement Kofax CGA intégrée",
             "Capture de précision à 600 ppp",
             "Durabilité pour gros volumes",
             "Contrôle d'arrière-plan actif",
@@ -771,6 +782,7 @@
       "specs": {
         "speed": "45 cpm",
         "daily_volume": 2000,
+        "adf_capacity": 50,
         "max_size": "Cheque",
         "connectivity": ["USB 2.0"],
         "flatbed_compatible": false,
@@ -815,6 +827,7 @@
       "specs": {
         "speed": "120 cpm",
         "daily_volume": 12000,
+        "adf_capacity": 100,
         "max_size": "Cheque",
         "connectivity": ["USB 2.0"],
         "flatbed_compatible": false,
@@ -859,6 +872,7 @@
       "specs": {
         "speed": "120 cpm",
         "daily_volume": 12000,
+        "adf_capacity": 100,
         "max_size": "Cheque",
         "connectivity": ["USB 2.0", "Ethernet"],
         "flatbed_compatible": false,
@@ -903,6 +917,7 @@
       "specs": {
         "speed": "150 cpm",
         "daily_volume": 12000,
+        "adf_capacity": 150,
         "max_size": "Cheque",
         "connectivity": ["USB 2.0"],
         "flatbed_compatible": false,
@@ -947,6 +962,7 @@
       "specs": {
         "speed": "190 cpm",
         "daily_volume": 24000,
+        "adf_capacity": 250,
         "max_size": "Cheque",
         "connectivity": ["USB 2.0"],
         "flatbed_compatible": false,

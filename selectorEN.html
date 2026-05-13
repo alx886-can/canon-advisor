@@ -12,72 +12,111 @@
             --canon-gray: #f8f9fa;
         }
         body {
-            background-color: var(--canon-gray);
+            background-color: #ffffff;
             font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             color: var(--canon-dark);
             margin: 0;
-            background-image: radial-gradient(#d1d5db 0.5px, transparent 0.5px);
-            background-size: 24px 24px;
+            overflow: hidden; /* Prevents scrolling for the "No Scroll" experience */
         }
-        .glass-panel {
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.4);
+        .hero-bg {
+            background: radial-gradient(circle at 50% 50%, #ffffff 0%, #f3f4f6 100%);
         }
-        .tool-card {
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        .banner-container {
+            display: flex;
+            width: 100%;
+            height: 65vh; /* Adjusted to fit common viewport heights without scrolling */
+            gap: 1rem;
+            padding: 0 2rem;
+        }
+        .tool-banner {
+            flex: 1;
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border-radius: 2.5rem;
             cursor: pointer;
-            height: 100%;
-        }
-        .tool-card:hover {
-            transform: translateY(-8px);
-            border-color: var(--canon-red);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-        }
-        .line-card-banner {
-            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-            background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.7) 100%);
-        }
-        .line-card-banner:hover {
-            background: linear-gradient(135deg, #ffffff 0%, #fff1f2 100%);
-            border-color: var(--canon-red);
-            transform: scale(1.01);
-            box-shadow: 0 25px 30px -10px rgba(237, 28, 36, 0.15);
-        }
-        .icon-box {
+            border: 1px solid rgba(0,0,0,0.05);
             background: white;
-            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
         }
-        .tool-card:hover .icon-box {
-            background: var(--canon-red);
-            color: white;
-            transform: scale(1.1) rotate(5deg);
+        .tool-banner:hover {
+            flex: 1.5;
+            border-color: var(--canon-red);
+            box-shadow: 0 25px 30px -10px rgba(0, 0, 0, 0.1);
+        }
+        /* Middle highlight for Product Line Card */
+        .tool-banner.featured {
+            background: linear-gradient(180deg, #ffffff 0%, #fff1f2 100%);
+            border-color: rgba(237, 28, 36, 0.2);
+        }
+        .tool-banner.featured:hover {
+            background: linear-gradient(180deg, #ffffff 0%, #ffe4e6 100%);
+        }
+        .banner-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            transition: transform 0.4s ease;
+        }
+        .tool-banner:hover .banner-icon {
+            transform: scale(1.2) translateY(-10px);
+        }
+        .banner-content {
+            padding: 0 1.5rem;
+            max-width: 250px;
         }
         .fade-in {
-            animation: fadeIn 0.6s ease-out forwards;
+            animation: fadeIn 0.8s ease-out forwards;
         }
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
+            from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
+        }
+        .banner-label {
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.4s ease 0.1s;
+        }
+        .tool-banner:hover .banner-label {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Mobile fallback - screen might be too small for side-by-side */
+        @media (max-width: 768px) {
+            body { overflow: auto; }
+            .banner-container {
+                flex-direction: column;
+                height: auto;
+                padding: 1rem;
+            }
+            .tool-banner {
+                height: 200px;
+                flex: none;
+            }
+            .banner-label { opacity: 1; transform: none; }
         }
     </style>
 </head>
-<body class="min-h-screen flex flex-col items-center">
+<body class="min-h-screen flex flex-col hero-bg">
 
     <!-- Top Branding Bar -->
-    <header class="w-full py-6 flex justify-center items-center bg-white border-b border-gray-100 shadow-sm sticky top-0 z-50">
-        <div class="w-full max-w-7xl px-6 flex justify-between items-center text-left">
+    <header class="w-full py-6 flex justify-center items-center bg-white border-b border-gray-100 z-50">
+        <div class="w-full max-w-7xl px-6 flex justify-between items-center">
             <a href="index.html" class="transition-opacity hover:opacity-80">
                 <img src="https://i.ibb.co/YBMsYnYj/Canon-Logo-2.png" alt="Canon" class="h-8 md:h-10 w-auto">
             </a>
             
-            <div class="flex items-center gap-4 md:gap-10 text-left">
+            <div class="flex items-center gap-4 md:gap-10">
                 <img src="https://i.ibb.co/svcfqT91/image-FORMULA2.png" alt="imageFORMULA" class="hidden sm:block h-6 md:h-8 w-auto opacity-80">
                 
                 <div class="flex items-center gap-3 text-[10px] font-black uppercase tracking-[0.2em] border-l border-gray-200 pl-4 md:pl-10 text-right">
                     <span class="text-gray-400">Language:</span>
-                    <div class="flex items-center gap-2 text-left">
+                    <div class="flex items-center gap-2">
                         <span class="text-red-600 font-bold">EN</span>
                         <span class="text-gray-300">|</span>
                         <a href="selectorFR.html" class="text-gray-400 hover:text-red-600 transition-colors">FR</a>
@@ -87,111 +126,75 @@
         </div>
     </header>
 
-    <main class="w-full max-w-6xl px-6 py-12 md:py-20 flex flex-col items-center">
+    <main class="flex-grow flex flex-col items-center justify-center py-8">
         
-        <div class="mb-16 fade-in text-center">
-            <p class="text-[10px] font-black uppercase tracking-[0.4em] text-red-600 mb-2">imageFORMULA Hub</p>
-            <h1 class="text-4xl md:text-5xl font-black text-gray-900 tracking-tighter mb-4 text-center">
+        <div class="mb-12 fade-in text-center px-4">
+            <p class="text-[10px] font-black uppercase tracking-[0.4em] text-red-600 mb-2">Discovery Hub</p>
+            <h1 class="text-3xl md:text-5xl font-black text-gray-900 tracking-tighter mb-4">
                 Specialized <span class="text-[#ED1C24]">Tools</span>
             </h1>
-            <p class="text-gray-500 font-medium text-lg max-w-2xl mx-auto text-center leading-relaxed">
-                Empowering your business with precision capture. Choose a specialized utility to find your ideal scanning solution.
+            <p class="text-gray-500 font-medium text-sm md:text-lg max-w-2xl mx-auto">
+                Select a tool to explore vertical solutions, technical specifications, or ROI estimates.
             </p>
         </div>
 
-        <!-- Main Utility Grid (4 Boxes) -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full mb-10 fade-in" style="animation-delay: 0.1s;">
+        <!-- Vertical Side-by-Side Banners -->
+        <div class="banner-container fade-in" style="animation-delay: 0.2s;">
             
             <!-- 1. Vertical Explorer -->
-            <a href="verticalexEN.html" class="tool-card glass-panel p-8 rounded-[2.5rem] flex flex-col border-2 border-transparent group text-left">
-                <div class="icon-box w-14 h-14 rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-sm border border-gray-100">
-                    🏢
-                </div>
-                <h3 class="text-xl font-bold mb-3 text-gray-900 leading-tight">Vertical Explorer</h3>
-                <p class="text-gray-500 text-sm leading-relaxed mb-6">
-                    Identify solutions based on your specific industry and the targeted application area within your sector.
-                </p>
-                <div class="mt-auto flex items-center text-[10px] font-black uppercase tracking-widest text-gray-400 group-hover:text-red-600 transition-colors">
-                    Explore Industries 
-                    <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            <a href="verticalexEN.html" class="tool-banner group">
+                <div class="banner-icon">🏢</div>
+                <div class="banner-content">
+                    <h3 class="text-lg font-black text-gray-900 uppercase tracking-tight mb-2">Vertical Explorer</h3>
+                    <p class="text-xs text-gray-400 font-bold uppercase tracking-widest banner-label">Explore Industries</p>
                 </div>
             </a>
 
             <!-- 2. Scan Selector -->
-            <a href="scanselectEN.html" class="tool-card glass-panel p-8 rounded-[2.5rem] flex flex-col border-2 border-transparent group text-left">
-                <div class="icon-box w-14 h-14 rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-sm border border-gray-100">
-                    🔍
-                </div>
-                <h3 class="text-xl font-bold mb-3 text-gray-900 leading-tight">Scan Selector</h3>
-                <p class="text-gray-500 text-sm leading-relaxed mb-6">
-                    Filter our entire hardware catalog based on technical criteria like connectivity, paper size, and speed.
-                </p>
-                <div class="mt-auto flex items-center text-[10px] font-black uppercase tracking-widest text-gray-400 group-hover:text-red-600 transition-colors">
-                    Search Hardware
-                    <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            <a href="scanselectEN.html" class="tool-banner group">
+                <div class="banner-icon">🔍</div>
+                <div class="banner-content">
+                    <h3 class="text-lg font-black text-gray-900 uppercase tracking-tight mb-2">Scan Selector</h3>
+                    <p class="text-xs text-gray-400 font-bold uppercase tracking-widest banner-label">Filter Specs</p>
                 </div>
             </a>
 
-            <!-- 3. Efficiency Calculator -->
-            <a href="efficiencyEN.html" class="tool-card glass-panel p-8 rounded-[2.5rem] flex flex-col border-2 border-transparent group text-left">
-                <div class="icon-box w-14 h-14 rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-sm border border-gray-100">
-                    ⏱️
+            <!-- 3. Product Line Card (CENTERED) -->
+            <a href="linecardEN.html" class="tool-banner featured group">
+                <div class="absolute top-6">
+                    <span class="bg-red-600 text-white text-[8px] font-black uppercase px-3 py-1 rounded-full tracking-widest">New</span>
                 </div>
-                <h3 class="text-xl font-bold mb-3 text-gray-900 leading-tight">Efficiency Calculator</h3>
-                <p class="text-gray-500 text-sm leading-relaxed mb-6">
-                    Input your daily volume to see time-to-scan estimates. Compare models to optimize your ROI and labor costs.
-                </p>
-                <div class="mt-auto flex items-center text-[10px] font-black uppercase tracking-widest text-gray-400 group-hover:text-red-600 transition-colors">
-                    Calculate Throughput
-                    <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                <div class="banner-icon">📋</div>
+                <div class="banner-content">
+                    <h3 class="text-xl font-black text-gray-900 uppercase tracking-tight mb-2">Product Line Card</h3>
+                    <p class="text-[10px] text-red-600 font-black uppercase tracking-widest leading-tight">Learn more about our products & stories</p>
                 </div>
             </a>
 
-            <!-- 4. Scanner Advisor -->
-            <a href="scanadvisorEN.html" class="tool-card glass-panel p-8 rounded-[2.5rem] flex flex-col border-2 border-transparent group text-left">
-                <div class="icon-box w-14 h-14 rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-sm border border-gray-100">
-                    💡
-                </div>
-                <h3 class="text-xl font-bold mb-3 text-gray-900 leading-tight">Scanner Advisor</h3>
-                <p class="text-gray-500 text-sm leading-relaxed mb-6">
-                    A guided wizard that asks simple questions to help you navigate our fleet and find your perfect match.
-                </p>
-                <div class="mt-auto flex items-center text-[10px] font-black uppercase tracking-widest text-gray-400 group-hover:text-red-600 transition-colors">
-                    Start Advisor
-                    <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            <!-- 4. Efficiency Calculator -->
+            <a href="efficiencyEN.html" class="tool-banner group">
+                <div class="banner-icon">⏱️</div>
+                <div class="banner-content">
+                    <h3 class="text-lg font-black text-gray-900 uppercase tracking-tight mb-2">Efficiency Calculator</h3>
+                    <p class="text-xs text-gray-400 font-bold uppercase tracking-widest banner-label">Calculate ROI</p>
                 </div>
             </a>
 
-        </div>
-
-        <!-- Product Line Card Banner (Prominent Rectangle Below) -->
-        <div class="w-full fade-in" style="animation-delay: 0.2s;">
-            <a href="linecardEN.html" class="line-card-banner block glass-panel p-1 md:p-2 rounded-[3rem] border-2 border-transparent group overflow-hidden">
-                <div class="flex flex-col md:flex-row items-center p-8 md:p-12 gap-8">
-                    <div class="w-20 h-20 md:w-24 md:h-24 bg-white rounded-[2rem] flex items-center justify-center text-4xl shadow-md border border-gray-100 group-hover:bg-red-600 group-hover:text-white transition-all duration-500">
-                        📋
-                    </div>
-                    <div class="flex-grow text-center md:text-left">
-                        <h2 class="text-2xl md:text-3xl font-black text-gray-900 mb-2 uppercase tracking-tight">Learn more about our products</h2>
-                        <p class="text-gray-500 font-medium text-sm md:text-base leading-relaxed max-w-2xl">
-                            Dive deep into the imageFORMULA fleet. Explore detailed product stories, technical specifications, and key selling points for every model in our lineup.
-                        </p>
-                    </div>
-                    <div class="shrink-0 flex items-center justify-center">
-                        <div class="bg-gray-900 text-white px-8 py-4 rounded-2xl font-bold text-xs uppercase tracking-widest group-hover:bg-red-600 transition-all shadow-lg flex items-center">
-                            View Line Card
-                            <svg class="w-4 h-4 ml-3 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                        </div>
-                    </div>
+            <!-- 5. Scanner Advisor -->
+            <a href="scanadvisorEN.html" class="tool-banner group">
+                <div class="banner-icon">💡</div>
+                <div class="banner-content">
+                    <h3 class="text-lg font-black text-gray-900 uppercase tracking-tight mb-2">Scanner Advisor</h3>
+                    <p class="text-xs text-gray-400 font-bold uppercase tracking-widest banner-label">Guided Match</p>
                 </div>
             </a>
+
         </div>
 
     </main>
 
-    <!-- Global Footer -->
-    <footer class="w-full py-10 bg-white border-t border-gray-100 flex flex-col items-center justify-center mt-auto text-center">
-        <p class="text-[9px] text-gray-400 font-bold uppercase tracking-[0.3em] text-center">
+    <footer class="w-full py-6 bg-white border-t border-gray-50 flex justify-center">
+        <p class="text-[9px] text-gray-400 font-bold uppercase tracking-[0.3em]">
             &copy; 2026 Canon Canada Inc. All Rights Reserved.
         </p>
     </footer>

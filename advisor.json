@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-05-12",
-  "version": "1.2",
+  "last_updated": "2026-05-13",
+  "version": "1.3",
   "config": {
     "currency": "CAD",
     "region": "Canada",
@@ -570,7 +570,7 @@
       "category": "Production",
       "specs": {
         "speed": "90 ppm / 180 ipm",
-        "daily_volume": 55000,
+        "daily_volume": 60000,
         "max_size": "A3",
         "connectivity": ["USB 3.1"],
         "flatbed_compatible": true,
@@ -742,22 +742,22 @@
       },
       "content": {
         "en": {
-          "why": "Archival-grade production capture with precision optics and active thresholding logic for difficult-to-read legacy documents.",
+          "why": "Archival-grade production capture with precision optics and a Kofax CGA board for dedicated high-speed image processing.",
           "features": [
+            "Integrated Kofax CGA Image Processor",
             "True 600dpi Precision Capture",
             "High-Volume Durability Core",
             "Active Logic Background Control",
-            "Advanced Skew Handling",
             "Archival Quality Image Cleanup"
           ]
         },
         "fr": {
-          "why": "Capture de production de qualité archivistique avec optique de précision pour documents hérités.",
+          "why": "Capture de production avec optique de précision et carte Kofax CGA pour un traitement d'image haute vitesse dédié.",
           "features": [
+            "Processeur d'image Kofax CGA intégré",
             "Capture de précision à 600 ppp",
             "Durabilité pour gros volumes",
             "Contrôle d'arrière-plan actif",
-            "Gestion avancée du biais",
             "Nettoyage de qualité archivistique"
           ]
         }

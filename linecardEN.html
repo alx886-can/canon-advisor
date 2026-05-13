@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canon | Product Line Card</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --canon-red: #ED1C24;
+            --canon-dark: #1a1a1a;
+            --canon-gray: #f8f9fa;
+        }
+        body {
+            background-color: var(--canon-gray);
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            color: var(--canon-dark);
+            margin: 0;
+            background-image: radial-gradient(#d1d5db 0.5px, transparent 0.5px);
+            background-size: 24px 24px;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+        }
+        .category-header {
+            position: sticky;
+            top: 80px;
+            z-index: 40;
+            background: rgba(248, 249, 250, 0.8);
+            backdrop-filter: blur(8px);
+        }
+        .product-mini-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+        }
+        .product-mini-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--canon-red);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        .modal-overlay {
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(4px);
+        }
+        .fade-in { animation: fadeIn 0.4s ease-out forwards; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        
+        .conn-icon { opacity: 0.3; grayscale: 100%; }
+        .conn-icon.active { opacity: 1; grayscale: 0; color: var(--canon-red); }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col text-left">
+
+    <!-- Header -->
+    <header class="w-full py-6 flex justify-center items-center bg-white border-b border-gray-100 shadow-sm sticky top-0 z-50">
+        <div class="w-full max-w-7xl px-6 flex justify-between items-center text-left">
+            <div class="flex items-center gap-8">
+                <a href="index.html"><img src="https://i.ibb.co/YBMsYnYj/Canon-Logo-2.png" alt="Canon" class="h-8 md:h-10 w-auto"></a>
+                <a href="selectorEN.html" class="hidden md:flex items-center text-xs font-bold text-gray-400 uppercase tracking-widest hover:text-red-600 transition-colors">
+                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M15 19l-7-7 7-7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                    Back to Hub
+                </a>
+            </div>
+            
+            <div class="flex items-center gap-4 md:gap-10">
+                <img src="https://i.ibb.co/svcfqT91/image-FORMULA2.png" alt="imageFORMULA" class="hidden sm:block h-6 md:h-8 w-auto opacity-80">
+                
+                <div class="flex items-center gap-3 text-[10px] font-black uppercase tracking-[0.2em] border-l border-gray-200 pl-4 md:pl-10 text-right">
+                    <span class="text-gray-400">Language:</span>
+                    <div class="flex items-center gap-2">
+                        <span class="text-red-600 font-black">EN</span>
+                        <span class="text-gray-300">|</span>
+                        <a href="linecardFR.html" class="text-gray-400 hover:text-red-600 transition-colors">FR</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="w-full max-w-7xl px-6 py-12 mx-auto flex-grow text-left">
+        
+        <!-- Intro -->
+        <div class="mb-16 fade-in">
+            <p class="text-[10px] font-black text-red-600 uppercase tracking-[0.4em] mb-2">Product Catalog</p>
+            <h1 class="text-4xl md:text-6xl font-black text-gray-900 tracking-tighter mb-4 uppercase">
+                imageFORMULA <span class="text-[#ED1C24]">Line Card</span>
+            </h1>
+            <p class="text-gray-500 font-medium text-lg max-w-2xl leading-tight">
+                Explore the complete fleet of Canon document and cheque scanners, designed for precision, speed, and reliability.
+            </p>
+        </div>
+
+        <!-- Line Card Sections -->
+        <div id="lineCardContainer" class="space-y-20 mb-20 fade-in" style="animation-delay: 0.1s;">
+            <!-- Categories Injected Here -->
+        </div>
+
+    </main>
+
+    <!-- Modal -->
+    <div id="productModal" class="modal-overlay fixed inset-0 z-[100] hidden flex items-center justify-center p-4 text-left" onclick="closeModal()">
+        <div class="bg-white rounded-[2.5rem] shadow-2xl max-w-5xl w-full p-8 md:p-12 relative overflow-y-auto max-h-[90vh]" onclick="event.stopPropagation()">
+            <button onclick="closeModal()" class="absolute top-6 right-6 text-gray-400 hover:text-gray-800 transition-colors focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+            <div id="modalContent" class="text-left"></div>
+        </div>
+    </div>
+
+    <footer class="w-full py-10 bg-white border-t border-gray-100 flex flex-col items-center justify-center mt-auto text-center">
+        <p class="text-[9px] text-gray-400 font-bold uppercase tracking-[0.3em]">
+            &copy; 2026 Canon Canada Inc. All Rights Reserved.
+        </p>
+    </footer>
+
+    <script>
+        let allProducts = [];
+        const categories = [
+            { id: "Personal", name: "Personal Scanners", desc: "Ultra-compact and portable solutions for professionals on the move." },
+            { id: "Desktop/Workgroup", name: "Desktop & Workgroup", desc: "Space-saving, powerful scanners for front counters and busy office teams." },
+            { id: "Departmental", name: "Departmental Scanners", desc: "High-speed, high-durability machines for reliable batch processing." },
+            { id: "Production", name: "Production Scanners", desc: "Industrial-grade hardware for high-volume back office and archival projects." },
+            { id: "Cheque", name: "Financial Cheque Scanners", desc: "Specialized MICR capture for banking, retail, and teller environments." }
+        ];
+
+        const verticalIcons = {
+            "Government": { icon: "🏛️", label: "Gov" },
+            "Healthcare": { icon: "🏥", label: "Health" },
+            "Financial": { icon: "💰", label: "Finance" },
+            "Legal": { icon: "⚖️", label: "Legal" },
+            "Education": { icon: "🎓", label: "Edu" },
+            "Logistics": { icon: "📦", label: "Logistics" },
+            "BPO": { icon: "🏢", label: "BPO" },
+            "Work-From-Home": { icon: "🏠", label: "WFH" }
+        };
+
+        async function init() {
+            try {
+                const response = await fetch('advisor.json');
+                const data = await response.json();
+                allProducts = data.products.filter(p => p.category !== 'Accessory');
+                renderLineCard();
+            } catch (error) {
+                console.error("Database load error:", error);
+            }
+        }
+
+        function renderLineCard() {
+            const container = document.getElementById('lineCardContainer');
+            
+            container.innerHTML = categories.map(cat => {
+                const products = allProducts.filter(p => p.category === cat.id);
+                if (products.length === 0) return '';
+
+                return `
+                    <section id="cat-${cat.id}">
+                        <div class="mb-8 border-b-2 border-gray-100 pb-4">
+                            <h2 class="text-3xl font-black text-gray-900 uppercase tracking-tight">${cat.name}</h2>
+                            <p class="text-gray-400 font-medium text-sm mt-1">${cat.desc}</p>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                            ${products.map(p => `
+                                <div onclick="openModal('${p.sku}')" class="product-mini-card bg-white p-6 rounded-[2rem] border-2 border-transparent shadow-sm flex flex-col items-center text-center">
+                                    <div class="h-32 w-full mb-6 flex items-center justify-center">
+                                        <img src="${p.assets.image}" class="max-h-full object-contain" alt="${p.model}">
+                                    </div>
+                                    <h3 class="text-lg font-black text-gray-900 leading-none mb-1">${p.model}</h3>
+                                    <p class="text-[10px] text-red-600 font-black uppercase tracking-widest mb-4">${p.specs.speed}</p>
+                                    <div class="mt-auto pt-4 border-t border-gray-50 w-full flex justify-between items-center text-[9px] font-bold text-gray-400 uppercase tracking-tighter">
+                                        <span>SKU: ${p.sku}</span>
+                                        <span class="text-gray-900">Details →</span>
+                                    </div>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </section>
+                `;
+            }).join('');
+        }
+
+        function openModal(sku) {
+            const p = allProducts.find(x => x.sku === sku);
+            if (!p) return;
+            const modal = document.getElementById('productModal');
+            const content = document.getElementById('modalContent');
+
+            // Find ADF size from features (usually contains "Sheet ADF" or similar)
+            const adfMatch = p.content.en.features.find(f => f.toLowerCase().includes('adf') || f.toLowerCase().includes('sheet'));
+            const adfSize = adfMatch ? adfMatch.split(' ')[0] : 'N/A';
+
+            content.innerHTML = `
+                <div class="flex flex-col lg:flex-row gap-12 items-center lg:items-start text-left">
+                    <div class="w-full lg:w-2/5 text-center text-left">
+                        <div class="bg-gray-50 rounded-[3rem] p-10 flex items-center justify-center border border-gray-100 shadow-inner">
+                            <img src="${p.assets.image}" class="w-full h-auto object-contain max-h-80" alt="${p.model}">
+                        </div>
+                        
+                        <!-- Connectivity Icons -->
+                        <div class="mt-8 flex justify-center gap-6 p-6 bg-gray-50 rounded-2xl">
+                            <div class="flex flex-col items-center gap-2 ${p.specs.connectivity.some(c => c.includes('USB')) ? 'active' : 'conn-icon'}">
+                                <span class="text-2xl">🔌</span>
+                                <span class="text-[8px] font-black uppercase tracking-widest">USB</span>
+                            </div>
+                            <div class="flex flex-col items-center gap-2 ${p.specs.connectivity.includes('Ethernet') ? 'active' : 'conn-icon'}">
+                                <span class="text-2xl">🌐</span>
+                                <span class="text-[8px] font-black uppercase tracking-widest">Ethernet</span>
+                            </div>
+                            <div class="flex flex-col items-center gap-2 ${p.specs.connectivity.includes('WIFI') ? 'active' : 'conn-icon'}">
+                                <span class="text-2xl">📶</span>
+                                <span class="text-[8px] font-black uppercase tracking-widest">Wi-Fi</span>
+                            </div>
+                            <div class="flex flex-col items-center gap-2 ${p.model === 'Scanfront 400' ? 'active' : 'conn-icon'}">
+                                <span class="text-2xl">🖥️</span>
+                                <span class="text-[8px] font-black uppercase tracking-widest">Standalone</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-full lg:w-3/5 text-left">
+                        <div class="mb-8">
+                            <p class="text-red-600 font-black text-xs tracking-[0.4em] uppercase mb-1">${p.category}</p>
+                            <h2 class="text-5xl font-black text-gray-900 mb-2 leading-tight">${p.model}</h2>
+                            <p class="text-gray-400 font-bold text-sm tracking-widest">SKU: ${p.sku}</p>
+                        </div>
+
+                        <!-- Highlights -->
+                        <div class="grid grid-cols-3 gap-4 mb-10">
+                            <div class="bg-red-50 p-5 rounded-2xl border border-red-100 text-center">
+                                <p class="text-[9px] font-bold text-gray-400 uppercase tracking-tighter">Rated Speed</p>
+                                <p class="text-sm font-black text-gray-900 leading-none mt-1">${p.specs.speed.split('/')[0]}</p>
+                            </div>
+                            <div class="bg-red-50 p-5 rounded-2xl border border-red-100 text-center">
+                                <p class="text-[9px] font-bold text-gray-400 uppercase tracking-tighter">ADF Capacity</p>
+                                <p class="text-sm font-black text-gray-900 leading-none mt-1">${adfSize}</p>
+                            </div>
+                            <div class="bg-red-50 p-5 rounded-2xl border border-red-100 text-center">
+                                <p class="text-[9px] font-bold text-gray-400 uppercase tracking-tighter">Max Format</p>
+                                <p class="text-sm font-black text-gray-900 leading-none mt-1">${p.specs.max_size}</p>
+                            </div>
+                        </div>
+
+                        <!-- Story -->
+                        <div class="mb-10">
+                            <h4 class="text-[10px] font-black text-gray-400 uppercase tracking-[0.2em] mb-4">The Competitive Story</h4>
+                            <p class="text-lg font-medium text-gray-700 leading-relaxed italic border-l-4 border-red-600 pl-6 bg-gray-50/50 py-4 rounded-r-2xl">
+                                "${p.content.en.why}"
+                            </p>
+                        </div>
+
+                        <!-- Vertical Success -->
+                        <div class="mb-10">
+                            <h4 class="text-[10px] font-black text-gray-400 uppercase tracking-[0.2em] mb-4">Best Fit For These Industries</h4>
+                            <div class="flex flex-wrap gap-3">
+                                ${Object.keys(p.verticals).map(v => {
+                                    const info = verticalIcons[v] || { icon: '🏢', label: v };
+                                    return `
+                                        <div class="flex items-center gap-2 bg-white border border-gray-200 px-4 py-2 rounded-xl shadow-sm">
+                                            <span class="text-lg">${info.icon}</span>
+                                            <span class="text-xs font-bold text-gray-800">${v}</span>
+                                        </div>
+                                    `;
+                                }).join('')}
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            ${p.assets.brochure ? `<a href="${p.assets.brochure}" target="_blank" class="flex-1 bg-red-600 text-white text-center py-5 rounded-2xl font-bold text-sm hover:bg-black transition-all shadow-lg shadow-red-100 uppercase tracking-widest">Download Brochure</a>` : ''}
+                            ${p.assets.video ? `
+                                <a href="${p.assets.video}" target="_blank" class="flex-1 border-2 border-gray-200 text-gray-600 text-center py-5 rounded-2xl font-bold text-sm hover:bg-gray-50 flex items-center justify-center gap-2 transition-all uppercase tracking-widest">
+                                    <svg class="w-4 h-4 text-red-600" fill="currentColor" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 4-8 4z"/></svg>
+                                    Watch Video
+                                </a>` : ''}
+                        </div>
+                    </div>
+                </div>
+            `;
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            document.getElementById('productModal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        window.addEventListener('keydown', (e) => { if(e.key === 'Escape') closeModal(); });
+        document.getElementById('productModal').addEventListener('click', (e) => { if(e.target.id === 'productModal') closeModal(); });
+
+        init();
+    </script>
+</body>
+</html>

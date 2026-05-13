@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conseiller en numérisation Canon | Outils spécialisés</title>
+    <title>Conseiller en numérisation Canon | Outils en français</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         :root {
@@ -53,16 +53,16 @@
         }
     </style>
 </head>
-<body class="min-h-screen flex flex-col items-center">
+<body class="min-h-screen flex flex-col items-center text-left">
 
-    <!-- Top Branding Bar -->
-    <header class="w-full py-6 flex justify-center items-center bg-white border-b border-gray-100 shadow-sm sticky top-0 z-50">
-        <div class="w-full max-w-7xl px-6 flex justify-between items-center">
+    <!-- Barre de marque supérieure -->
+    <header class="w-full py-6 flex justify-center items-center bg-white border-b border-gray-100 shadow-sm sticky top-0 z-50 text-left">
+        <div class="w-full max-w-7xl px-6 flex justify-between items-center text-left">
             <a href="index.html" class="transition-opacity hover:opacity-80">
                 <img src="https://i.ibb.co/YBMsYnYj/Canon-Logo-2.png" alt="Canon" class="h-8 md:h-10 w-auto">
             </a>
             
-            <div class="flex items-center gap-4 md:gap-10">
+            <div class="flex items-center gap-4 md:gap-10 text-left">
                 <img src="https://i.ibb.co/svcfqT91/image-FORMULA2.png" alt="imageFORMULA" class="hidden sm:block h-6 md:h-8 w-auto opacity-80">
                 
                 <!-- Sélecteur de langue -->
@@ -71,7 +71,7 @@
                     <div class="flex items-center gap-2">
                         <a href="selectorEN.html" class="text-gray-400 hover:text-red-600 transition-colors">EN</a>
                         <span class="text-gray-300">|</span>
-                        <span class="text-red-600">FR</span>
+                        <span class="text-red-600 font-bold">FR</span>
                     </div>
                 </div>
             </div>
@@ -80,18 +80,18 @@
 
     <main class="w-full max-w-7xl px-6 py-12 md:py-20 flex flex-col items-center text-center">
         
-        <div class="mb-16 fade-in">
+        <div class="mb-16 fade-in text-center">
             <p class="text-[10px] font-black uppercase tracking-[0.4em] text-red-600 mb-2">Centre imageFORMULA</p>
-            <h1 class="text-4xl md:text-5xl font-black text-gray-900 tracking-tighter mb-4">
+            <h1 class="text-4xl md:text-5xl font-black text-gray-900 tracking-tighter mb-4 text-center">
                 Outils <span class="text-[#ED1C24]">spécialisés</span>
             </h1>
-            <p class="text-gray-500 font-medium text-lg max-w-2xl mx-auto leading-relaxed">
-                Sélectionnez l'application qui correspond le mieux à vos besoins de capture de documents.
+            <p class="text-gray-500 font-medium text-lg max-w-2xl mx-auto text-center leading-relaxed">
+                Sélectionnez l'application qui correspond le mieux à vos besoins de capture de documents ou parcourez notre gamme complète de produits.
             </p>
         </div>
 
         <!-- Grille de sélection des outils -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full fade-in" style="animation-delay: 0.1s;">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl fade-in" style="animation-delay: 0.1s;">
             
             <!-- 1. Explorateur vertical -->
             <a href="verticalexFR.html" class="tool-card glass-panel p-8 rounded-[2.5rem] flex flex-col border-2 border-transparent group text-left">
@@ -115,7 +115,7 @@
                 </div>
                 <h3 class="text-xl font-bold mb-3 text-gray-900 leading-tight">Sélecteur de numériseur</h3>
                 <p class="text-gray-500 text-sm leading-relaxed mb-6">
-                    Parcourez tous nos produits et effectuez une sélection basée sur des critères comme la connexion, le format papier et plus encore.
+                    Parcourez tous nos produits et effectuez une sélection basée sur des critères tels que la connexion, le format de papier et plus encore.
                 </p>
                 <div class="mt-auto flex items-center text-[10px] font-black uppercase tracking-widest text-gray-400 group-hover:text-red-600 transition-colors">
                     Filtrer le catalogue
@@ -130,7 +130,7 @@
                 </div>
                 <h3 class="text-xl font-bold mb-3 text-gray-900 leading-tight">Calculateur d'efficacité</h3>
                 <p class="text-gray-500 text-sm leading-relaxed mb-6">
-                    Calculez le temps requis pour terminer une tâche en fonction de sa taille et de la vitesse du numériseur choisi.
+                    Calculez le temps requis pour terminer une tâche en fonction de sa taille et de la vitesse du numériseur. Comparez les modèles.
                 </p>
                 <div class="mt-auto flex items-center text-[10px] font-black uppercase tracking-widest text-gray-400 group-hover:text-red-600 transition-colors">
                     Calculer le temps
@@ -138,17 +138,32 @@
                 </div>
             </a>
 
-            <!-- 4. Conseiller numérisation -->
+            <!-- 4. Conseiller en numérisation -->
             <a href="scanadvisorFR.html" class="tool-card glass-panel p-8 rounded-[2.5rem] flex flex-col border-2 border-transparent group text-left">
                 <div class="icon-box w-14 h-14 rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-sm border border-gray-100">
                     💡
                 </div>
-                <h3 class="text-xl font-bold mb-3 text-gray-900 leading-tight">Conseiller numérisation</h3>
+                <h3 class="text-xl font-bold mb-3 text-gray-900 leading-tight">Conseiller en numérisation</h3>
                 <p class="text-gray-500 text-sm leading-relaxed mb-6">
-                    Une interface guidée où vous pouvez sélectionner différentes options pour affiner vos choix et trouver le bon numériseur.
+                    Une interface guidée pour affiner vos choix et trouver le numériseur idéal pour votre flux de travail.
                 </p>
                 <div class="mt-auto flex items-center text-[10px] font-black uppercase tracking-widest text-gray-400 group-hover:text-red-600 transition-colors">
                     Démarrer l'assistant
+                    <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </div>
+            </a>
+
+            <!-- 5. Fiche de gamme de produits -->
+            <a href="linecardFR.html" class="tool-card glass-panel p-8 rounded-[2.5rem] flex flex-col border-2 border-transparent group text-left text-left">
+                <div class="icon-box w-14 h-14 rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-sm border border-gray-100 text-left">
+                    📋
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-gray-900 leading-tight text-left">Fiche de gamme de produits</h3>
+                <p class="text-gray-500 text-sm leading-relaxed mb-6 text-left">
+                    Apprenez-en davantage sur nos produits. Visualisez la gamme complète organisée par catégorie avec des points saillants techniques.
+                </p>
+                <div class="mt-auto flex items-center text-[10px] font-black uppercase tracking-widest text-gray-400 group-hover:text-red-600 transition-colors text-left text-left">
+                    Voir le catalogue
                     <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                 </div>
             </a>
@@ -158,8 +173,8 @@
     </main>
 
     <!-- Global Footer -->
-    <footer class="w-full py-10 bg-white border-t border-gray-100 flex flex-col items-center justify-center mt-auto">
-        <p class="text-[9px] text-gray-400 font-bold uppercase tracking-[0.3em]">
+    <footer class="w-full py-10 bg-white border-t border-gray-100 flex flex-col items-center justify-center mt-auto text-center">
+        <p class="text-[9px] text-gray-400 font-bold uppercase tracking-[0.3em] text-center">
             &copy; 2026 Canon Canada Inc. Tous droits réservés.
         </p>
     </footer>

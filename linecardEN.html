@@ -24,13 +24,6 @@
             backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.4);
         }
-        .category-header {
-            position: sticky;
-            top: 80px;
-            z-index: 40;
-            background: rgba(248, 249, 250, 0.8);
-            backdrop-filter: blur(8px);
-        }
         .product-mini-card {
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             cursor: pointer;
@@ -47,8 +40,8 @@
         .fade-in { animation: fadeIn 0.4s ease-out forwards; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
         
-        .conn-icon { opacity: 0.3; grayscale: 100%; }
-        .conn-icon.active { opacity: 1; grayscale: 0; color: var(--canon-red); }
+        .conn-icon { opacity: 0.2; grayscale: 100%; filter: grayscale(1); }
+        .conn-icon.active { opacity: 1; grayscale: 0; filter: none; color: var(--canon-red); }
     </style>
 </head>
 <body class="min-h-screen flex flex-col text-left">
@@ -82,7 +75,7 @@
     <main class="w-full max-w-7xl px-6 py-12 mx-auto flex-grow text-left">
         
         <!-- Intro -->
-        <div class="mb-16 fade-in">
+        <div class="mb-16 fade-in text-left">
             <p class="text-[10px] font-black text-red-600 uppercase tracking-[0.4em] mb-2">Product Catalog</p>
             <h1 class="text-4xl md:text-6xl font-black text-gray-900 tracking-tighter mb-4 uppercase">
                 imageFORMULA <span class="text-[#ED1C24]">Line Card</span>
@@ -94,7 +87,7 @@
 
         <!-- Line Card Sections -->
         <div id="lineCardContainer" class="space-y-20 mb-20 fade-in" style="animation-delay: 0.1s;">
-            <!-- Categories Injected Here -->
+            <!-- Categories dynamically injected -->
         </div>
 
     </main>
@@ -155,19 +148,19 @@
                 if (products.length === 0) return '';
 
                 return `
-                    <section id="cat-${cat.id}">
-                        <div class="mb-8 border-b-2 border-gray-100 pb-4">
-                            <h2 class="text-3xl font-black text-gray-900 uppercase tracking-tight">${cat.name}</h2>
-                            <p class="text-gray-400 font-medium text-sm mt-1">${cat.desc}</p>
+                    <section id="cat-${cat.id}" class="text-left">
+                        <div class="mb-8 border-b-2 border-gray-100 pb-4 text-left">
+                            <h2 class="text-3xl font-black text-gray-900 uppercase tracking-tight text-left">${cat.name}</h2>
+                            <p class="text-gray-400 font-medium text-sm mt-1 text-left">${cat.desc}</p>
                         </div>
-                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-left">
                             ${products.map(p => `
                                 <div onclick="openModal('${p.sku}')" class="product-mini-card bg-white p-6 rounded-[2rem] border-2 border-transparent shadow-sm flex flex-col items-center text-center">
                                     <div class="h-32 w-full mb-6 flex items-center justify-center">
                                         <img src="${p.assets.image}" class="max-h-full object-contain" alt="${p.model}">
                                     </div>
-                                    <h3 class="text-lg font-black text-gray-900 leading-none mb-1">${p.model}</h3>
-                                    <p class="text-[10px] text-red-600 font-black uppercase tracking-widest mb-4">${p.specs.speed}</p>
+                                    <h3 class="text-lg font-black text-gray-900 leading-none mb-1 text-center">${p.model}</h3>
+                                    <p class="text-[10px] text-red-600 font-black uppercase tracking-widest mb-4 text-center">${p.specs.speed}</p>
                                     <div class="mt-auto pt-4 border-t border-gray-50 w-full flex justify-between items-center text-[9px] font-bold text-gray-400 uppercase tracking-tighter">
                                         <span>SKU: ${p.sku}</span>
                                         <span class="text-gray-900">Details →</span>
@@ -186,20 +179,19 @@
             const modal = document.getElementById('productModal');
             const content = document.getElementById('modalContent');
 
-            // Find ADF size from features (usually contains "Sheet ADF" or similar)
-            const adfMatch = p.content.en.features.find(f => f.toLowerCase().includes('adf') || f.toLowerCase().includes('sheet'));
-            const adfSize = adfMatch ? adfMatch.split(' ')[0] : 'N/A';
+            // Accurate ADF display pulling from spec integer
+            const adfDisplay = p.specs.adf_capacity ? `${p.specs.adf_capacity}-Sheets` : "Manual / N/A";
 
             content.innerHTML = `
                 <div class="flex flex-col lg:flex-row gap-12 items-center lg:items-start text-left">
                     <div class="w-full lg:w-2/5 text-center text-left">
                         <div class="bg-gray-50 rounded-[3rem] p-10 flex items-center justify-center border border-gray-100 shadow-inner">
-                            <img src="${p.assets.image}" class="w-full h-auto object-contain max-h-80" alt="${p.model}">
+                            <img src="${p.assets.image}" class="w-full h-auto object-contain max-h-80 mx-auto" alt="${p.model}">
                         </div>
                         
                         <!-- Connectivity Icons -->
                         <div class="mt-8 flex justify-center gap-6 p-6 bg-gray-50 rounded-2xl">
-                            <div class="flex flex-col items-center gap-2 ${p.specs.connectivity.some(c => c.includes('USB')) ? 'active' : 'conn-icon'}">
+                            <div class="flex flex-col items-center gap-2 ${p.specs.connectivity.some(c => c.includes('USB')) && p.model !== 'Scanfront 400' ? 'active' : 'conn-icon'}">
                                 <span class="text-2xl">🔌</span>
                                 <span class="text-[8px] font-black uppercase tracking-widest">USB</span>
                             </div>
@@ -219,40 +211,40 @@
                     </div>
 
                     <div class="w-full lg:w-3/5 text-left">
-                        <div class="mb-8">
-                            <p class="text-red-600 font-black text-xs tracking-[0.4em] uppercase mb-1">${p.category}</p>
-                            <h2 class="text-5xl font-black text-gray-900 mb-2 leading-tight">${p.model}</h2>
-                            <p class="text-gray-400 font-bold text-sm tracking-widest">SKU: ${p.sku}</p>
+                        <div class="mb-8 text-left">
+                            <p class="text-red-600 font-black text-xs tracking-[0.4em] uppercase mb-1 text-left">${p.category}</p>
+                            <h2 class="text-5xl font-black text-gray-900 mb-2 leading-tight text-left">${p.model}</h2>
+                            <p class="text-gray-400 font-bold text-sm tracking-widest text-left">SKU: ${p.sku}</p>
                         </div>
 
-                        <!-- Highlights -->
-                        <div class="grid grid-cols-3 gap-4 mb-10">
+                        <!-- Technical Spec Grid -->
+                        <div class="grid grid-cols-3 gap-4 mb-10 text-left">
                             <div class="bg-red-50 p-5 rounded-2xl border border-red-100 text-center">
-                                <p class="text-[9px] font-bold text-gray-400 uppercase tracking-tighter">Rated Speed</p>
+                                <p class="text-[9px] font-bold text-gray-400 uppercase tracking-tighter">Scan Speed</p>
                                 <p class="text-sm font-black text-gray-900 leading-none mt-1">${p.specs.speed.split('/')[0]}</p>
                             </div>
                             <div class="bg-red-50 p-5 rounded-2xl border border-red-100 text-center">
                                 <p class="text-[9px] font-bold text-gray-400 uppercase tracking-tighter">ADF Capacity</p>
-                                <p class="text-sm font-black text-gray-900 leading-none mt-1">${adfSize}</p>
+                                <p class="text-sm font-black text-gray-900 leading-none mt-1">${adfDisplay}</p>
                             </div>
                             <div class="bg-red-50 p-5 rounded-2xl border border-red-100 text-center">
-                                <p class="text-[9px] font-bold text-gray-400 uppercase tracking-tighter">Max Format</p>
+                                <p class="text-[9px] font-bold text-gray-400 uppercase tracking-tighter">Max Size</p>
                                 <p class="text-sm font-black text-gray-900 leading-none mt-1">${p.specs.max_size}</p>
                             </div>
                         </div>
 
-                        <!-- Story -->
-                        <div class="mb-10">
-                            <h4 class="text-[10px] font-black text-gray-400 uppercase tracking-[0.2em] mb-4">The Competitive Story</h4>
-                            <p class="text-lg font-medium text-gray-700 leading-relaxed italic border-l-4 border-red-600 pl-6 bg-gray-50/50 py-4 rounded-r-2xl">
+                        <!-- Product Story -->
+                        <div class="mb-10 text-left">
+                            <h4 class="text-[10px] font-black text-gray-400 uppercase tracking-[0.2em] mb-4 text-left">The Competitive Story</h4>
+                            <p class="text-lg font-medium text-gray-700 leading-relaxed italic border-l-4 border-red-600 pl-6 bg-gray-50/50 py-4 rounded-r-2xl text-left">
                                 "${p.content.en.why}"
                             </p>
                         </div>
 
-                        <!-- Vertical Success -->
-                        <div class="mb-10">
-                            <h4 class="text-[10px] font-black text-gray-400 uppercase tracking-[0.2em] mb-4">Best Fit For These Industries</h4>
-                            <div class="flex flex-wrap gap-3">
+                        <!-- Industry Vertical Icons -->
+                        <div class="mb-10 text-left">
+                            <h4 class="text-[10px] font-black text-gray-400 uppercase tracking-[0.2em] mb-4 text-left">Best Fit For These Industries</h4>
+                            <div class="flex flex-wrap gap-3 text-left">
                                 ${Object.keys(p.verticals).map(v => {
                                     const info = verticalIcons[v] || { icon: '🏢', label: v };
                                     return `
@@ -265,7 +257,7 @@
                             </div>
                         </div>
 
-                        <div class="flex flex-col sm:flex-row gap-4">
+                        <div class="flex flex-col sm:flex-row gap-4 text-left">
                             ${p.assets.brochure ? `<a href="${p.assets.brochure}" target="_blank" class="flex-1 bg-red-600 text-white text-center py-5 rounded-2xl font-bold text-sm hover:bg-black transition-all shadow-lg shadow-red-100 uppercase tracking-widest">Download Brochure</a>` : ''}
                             ${p.assets.video ? `
                                 <a href="${p.assets.video}" target="_blank" class="flex-1 border-2 border-gray-200 text-gray-600 text-center py-5 rounded-2xl font-bold text-sm hover:bg-gray-50 flex items-center justify-center gap-2 transition-all uppercase tracking-widest">

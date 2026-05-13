@@ -12,60 +12,108 @@
             --canon-gray: #f8f9fa;
         }
         body {
-            background-color: var(--canon-gray);
+            background-color: #ffffff;
             font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             color: var(--canon-dark);
             margin: 0;
-            background-image: radial-gradient(#d1d5db 0.5px, transparent 0.5px);
-            background-size: 24px 24px;
+            overflow: hidden; /* Empêche le défilement pour l'expérience "Sans défilement" */
         }
-        .glass-panel {
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.4);
+        .hero-bg {
+            background: radial-gradient(circle at 50% 50%, #ffffff 0%, #f3f4f6 100%);
         }
-        .tool-card {
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        .banner-container {
+            display: flex;
+            width: 100%;
+            height: 65vh; /* Ajusté pour s'adapter aux hauteurs d'écran courantes sans défilement */
+            gap: 1rem;
+            padding: 0 2rem;
+        }
+        .tool-banner {
+            flex: 1;
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border-radius: 2.5rem;
             cursor: pointer;
-            height: 100%;
-        }
-        .tool-card:hover {
-            transform: translateY(-8px);
-            border-color: var(--canon-red);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-        }
-        .icon-box {
+            border: 1px solid rgba(0,0,0,0.05);
             background: white;
-            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
         }
-        .tool-card:hover .icon-box {
-            background: var(--canon-red);
-            color: white;
-            transform: scale(1.1) rotate(5deg);
+        .tool-banner:hover {
+            flex: 1.5;
+            border-color: var(--canon-red);
+            box-shadow: 0 25px 30px -10px rgba(0, 0, 0, 0.1);
+        }
+        /* Mise en évidence centrale pour la Fiche de gamme */
+        .tool-banner.featured {
+            background: linear-gradient(180deg, #ffffff 0%, #fff1f2 100%);
+            border-color: rgba(237, 28, 36, 0.2);
+        }
+        .tool-banner.featured:hover {
+            background: linear-gradient(180deg, #ffffff 0%, #ffe4e6 100%);
+        }
+        .banner-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            transition: transform 0.4s ease;
+        }
+        .tool-banner:hover .banner-icon {
+            transform: scale(1.2) translateY(-10px);
+        }
+        .banner-content {
+            padding: 0 1.5rem;
+            max-width: 250px;
         }
         .fade-in {
-            animation: fadeIn 0.6s ease-out forwards;
+            animation: fadeIn 0.8s ease-out forwards;
         }
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
+            from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
+        }
+        .banner-label {
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.4s ease 0.1s;
+        }
+        .tool-banner:hover .banner-label {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Fallback mobile - l'écran peut être trop petit pour le côte à côte */
+        @media (max-width: 768px) {
+            body { overflow: auto; }
+            .banner-container {
+                flex-direction: column;
+                height: auto;
+                padding: 1rem;
+            }
+            .tool-banner {
+                height: 200px;
+                flex: none;
+            }
+            .banner-label { opacity: 1; transform: none; }
         }
     </style>
 </head>
-<body class="min-h-screen flex flex-col items-center text-left">
+<body class="min-h-screen flex flex-col hero-bg">
 
     <!-- Barre de marque supérieure -->
-    <header class="w-full py-6 flex justify-center items-center bg-white border-b border-gray-100 shadow-sm sticky top-0 z-50 text-left">
-        <div class="w-full max-w-7xl px-6 flex justify-between items-center text-left">
+    <header class="w-full py-6 flex justify-center items-center bg-white border-b border-gray-100 z-50">
+        <div class="w-full max-w-7xl px-6 flex justify-between items-center">
             <a href="index.html" class="transition-opacity hover:opacity-80">
                 <img src="https://i.ibb.co/YBMsYnYj/Canon-Logo-2.png" alt="Canon" class="h-8 md:h-10 w-auto">
             </a>
             
-            <div class="flex items-center gap-4 md:gap-10 text-left">
+            <div class="flex items-center gap-4 md:gap-10">
                 <img src="https://i.ibb.co/svcfqT91/image-FORMULA2.png" alt="imageFORMULA" class="hidden sm:block h-6 md:h-8 w-auto opacity-80">
                 
-                <!-- Sélecteur de langue -->
                 <div class="flex items-center gap-3 text-[10px] font-black uppercase tracking-[0.2em] border-l border-gray-200 pl-4 md:pl-10 text-right">
                     <span class="text-gray-400">Langue :</span>
                     <div class="flex items-center gap-2">
@@ -78,93 +126,66 @@
         </div>
     </header>
 
-    <main class="w-full max-w-7xl px-6 py-12 md:py-20 flex flex-col items-center text-center">
+    <main class="flex-grow flex flex-col items-center justify-center py-8">
         
-        <div class="mb-16 fade-in text-center">
-            <p class="text-[10px] font-black uppercase tracking-[0.4em] text-red-600 mb-2">Centre imageFORMULA</p>
-            <h1 class="text-4xl md:text-5xl font-black text-gray-900 tracking-tighter mb-4 text-center">
+        <div class="mb-12 fade-in text-center px-4">
+            <p class="text-[10px] font-black uppercase tracking-[0.4em] text-red-600 mb-2">Centre de découverte</p>
+            <h1 class="text-3xl md:text-5xl font-black text-gray-900 tracking-tighter mb-4">
                 Outils <span class="text-[#ED1C24]">spécialisés</span>
             </h1>
-            <p class="text-gray-500 font-medium text-lg max-w-2xl mx-auto text-center leading-relaxed">
-                Sélectionnez l'application qui correspond le mieux à vos besoins de capture de documents ou parcourez notre gamme complète de produits.
+            <p class="text-gray-500 font-medium text-sm md:text-lg max-w-2xl mx-auto">
+                Sélectionnez un outil pour explorer les solutions sectorielles, les spécifications techniques ou les estimations de RCI.
             </p>
         </div>
 
-        <!-- Grille de sélection des outils -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl fade-in" style="animation-delay: 0.1s;">
+        <!-- Bannières verticales côte à côte -->
+        <div class="banner-container fade-in" style="animation-delay: 0.2s;">
             
             <!-- 1. Explorateur vertical -->
-            <a href="verticalexFR.html" class="tool-card glass-panel p-8 rounded-[2.5rem] flex flex-col border-2 border-transparent group text-left">
-                <div class="icon-box w-14 h-14 rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-sm border border-gray-100">
-                    🏢
-                </div>
-                <h3 class="text-xl font-bold mb-3 text-gray-900 leading-tight">Explorateur vertical</h3>
-                <p class="text-gray-500 text-sm leading-relaxed mb-6">
-                    Identifiez les produits en fonction de votre secteur d'activité et du domaine d'application spécifique au sein de ce secteur.
-                </p>
-                <div class="mt-auto flex items-center text-[10px] font-black uppercase tracking-widest text-gray-400 group-hover:text-red-600 transition-colors">
-                    Explorer les secteurs 
-                    <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            <a href="verticalexFR.html" class="tool-banner group">
+                <div class="banner-icon">🏢</div>
+                <div class="banner-content">
+                    <h3 class="text-lg font-black text-gray-900 uppercase tracking-tight mb-2">Explorateur vertical</h3>
+                    <p class="text-xs text-gray-400 font-bold uppercase tracking-widest banner-label">Explorer les secteurs</p>
                 </div>
             </a>
 
             <!-- 2. Sélecteur de numériseur -->
-            <a href="scanselectFR.html" class="tool-card glass-panel p-8 rounded-[2.5rem] flex flex-col border-2 border-transparent group text-left">
-                <div class="icon-box w-14 h-14 rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-sm border border-gray-100">
-                    🔍
-                </div>
-                <h3 class="text-xl font-bold mb-3 text-gray-900 leading-tight">Sélecteur de numériseur</h3>
-                <p class="text-gray-500 text-sm leading-relaxed mb-6">
-                    Parcourez tous nos produits et effectuez une sélection basée sur des critères tels que la connexion, le format de papier et plus encore.
-                </p>
-                <div class="mt-auto flex items-center text-[10px] font-black uppercase tracking-widest text-gray-400 group-hover:text-red-600 transition-colors">
-                    Filtrer le catalogue
-                    <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            <a href="scanselectFR.html" class="tool-banner group">
+                <div class="banner-icon">🔍</div>
+                <div class="banner-content">
+                    <h3 class="text-lg font-black text-gray-900 uppercase tracking-tight mb-2">Sélecteur de numériseur</h3>
+                    <p class="text-xs text-gray-400 font-bold uppercase tracking-widest banner-label">Filtrer par spécifications</p>
                 </div>
             </a>
 
-            <!-- 3. Calculateur d'efficacité -->
-            <a href="efficiencyFR.html" class="tool-card glass-panel p-8 rounded-[2.5rem] flex flex-col border-2 border-transparent group text-left">
-                <div class="icon-box w-14 h-14 rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-sm border border-gray-100">
-                    ⏱️
+            <!-- 3. Fiche de gamme de produits (CENTRÉE) -->
+            <a href="linecardFR.html" class="tool-banner featured group">
+                <div class="absolute top-6">
+                    <span class="bg-red-600 text-white text-[8px] font-black uppercase px-3 py-1 rounded-full tracking-widest">Nouveau</span>
                 </div>
-                <h3 class="text-xl font-bold mb-3 text-gray-900 leading-tight">Calculateur d'efficacité</h3>
-                <p class="text-gray-500 text-sm leading-relaxed mb-6">
-                    Calculez le temps requis pour terminer une tâche en fonction de sa taille et de la vitesse du numériseur. Comparez les modèles.
-                </p>
-                <div class="mt-auto flex items-center text-[10px] font-black uppercase tracking-widest text-gray-400 group-hover:text-red-600 transition-colors">
-                    Calculer le temps
-                    <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                <div class="banner-icon">📋</div>
+                <div class="banner-content">
+                    <h3 class="text-xl font-black text-gray-900 uppercase tracking-tight mb-2">Fiche de gamme</h3>
+                    <p class="text-[10px] text-red-600 font-black uppercase tracking-widest leading-tight">En savoir plus sur nos produits et récits</p>
                 </div>
             </a>
 
-            <!-- 4. Conseiller en numérisation -->
-            <a href="scanadvisorFR.html" class="tool-card glass-panel p-8 rounded-[2.5rem] flex flex-col border-2 border-transparent group text-left">
-                <div class="icon-box w-14 h-14 rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-sm border border-gray-100">
-                    💡
-                </div>
-                <h3 class="text-xl font-bold mb-3 text-gray-900 leading-tight">Conseiller en numérisation</h3>
-                <p class="text-gray-500 text-sm leading-relaxed mb-6">
-                    Une interface guidée pour affiner vos choix et trouver le numériseur idéal pour votre flux de travail.
-                </p>
-                <div class="mt-auto flex items-center text-[10px] font-black uppercase tracking-widest text-gray-400 group-hover:text-red-600 transition-colors">
-                    Démarrer l'assistant
-                    <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            <!-- 4. Calculateur d'efficacité -->
+            <a href="efficiencyFR.html" class="tool-banner group">
+                <div class="banner-icon">⏱️</div>
+                <div class="banner-content">
+                    <h3 class="text-lg font-black text-gray-900 uppercase tracking-tight mb-2">Calculateur d'efficacité</h3>
+                    <p class="text-xs text-gray-400 font-bold uppercase tracking-widest banner-label">Calculer le RCI</p>
                 </div>
             </a>
 
-            <!-- 5. Fiche de gamme de produits -->
-            <a href="linecardFR.html" class="tool-card glass-panel p-8 rounded-[2.5rem] flex flex-col border-2 border-transparent group text-left text-left">
-                <div class="icon-box w-14 h-14 rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-sm border border-gray-100 text-left">
-                    📋
-                </div>
-                <h3 class="text-xl font-bold mb-3 text-gray-900 leading-tight text-left">Fiche de gamme de produits</h3>
-                <p class="text-gray-500 text-sm leading-relaxed mb-6 text-left">
-                    Apprenez-en davantage sur nos produits. Visualisez la gamme complète organisée par catégorie avec des points saillants techniques.
-                </p>
-                <div class="mt-auto flex items-center text-[10px] font-black uppercase tracking-widest text-gray-400 group-hover:text-red-600 transition-colors text-left text-left">
-                    Voir le catalogue
-                    <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            <!-- 5. Conseiller en numérisation -->
+            <a href="scanadvisorFR.html" class="tool-banner group">
+                <div class="banner-icon">💡</div>
+                <div class="banner-content">
+                    <h3 class="text-lg font-black text-gray-900 uppercase tracking-tight mb-2">Conseiller numérique</h3>
+                    <p class="text-xs text-gray-400 font-bold uppercase tracking-widest banner-label">Correspondance guidée</p>
                 </div>
             </a>
 
@@ -172,9 +193,8 @@
 
     </main>
 
-    <!-- Global Footer -->
-    <footer class="w-full py-10 bg-white border-t border-gray-100 flex flex-col items-center justify-center mt-auto text-center">
-        <p class="text-[9px] text-gray-400 font-bold uppercase tracking-[0.3em] text-center">
+    <footer class="w-full py-6 bg-white border-t border-gray-50 flex justify-center">
+        <p class="text-[9px] text-gray-400 font-bold uppercase tracking-[0.3em]">
             &copy; 2026 Canon Canada Inc. Tous droits réservés.
         </p>
     </footer>

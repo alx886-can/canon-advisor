@@ -1,15 +1,9 @@
 {
   "last_updated": "2026-05-13",
-  "version": "1.5",
+  "version": "1.6",
   "config": {
     "currency": "CAD",
-    "region": "Canada",
-    "volume_tiers": {
-      "occasional": 1000,
-      "regular": 8000,
-      "high": 20000,
-      "mission_critical": 20001
-    }
+    "region": "Canada"
   },
   "products": [
     {
@@ -36,29 +30,15 @@
         "Financial": ["Mobile"],
         "Legal": ["Mobile"],
         "Logistics": ["Mobile"],
-        "Education": ["Mobile"],
         "Healthcare": ["Mobile"]
       },
       "content": {
         "en": {
           "why": "Ultra-compact and USB-powered, this unit provides professional-grade capture for field professionals where a desktop isn't an option.",
-          "features": [
-            "Ultra-Compact & Mobile Design",
-            "USB-Powered (No AC outlet needed)",
-            "Single-Pass Duplex Scanning",
-            "Automatic Page Size Detection",
-            "Plug-and-Scan Utility Built-in"
-          ]
-        },
-        "fr": {
-          "why": "Ultra-compact et alimenté par USB, cet appareil offre une capture de qualité professionnelle pour les experts sur le terrain.",
-          "features": [
-            "Conception ultra-compacte et mobile",
-            "Alimenté par USB (sans prise CA)",
-            "Numérisation recto-verso en un passage",
-            "Détection automatique du format",
-            "Utilitaire Plug-and-Scan intégré"
-          ]
+          "description": "An ultra-compact mobile scanner featuring an 8 ppm / 16 ipm scan speed and a 10-sheet ADF. It utilizes built-in CaptureOnTouch Lite for driverless 'plug-and-scan' operation and is entirely bus-powered via USB.",
+          "workflow_value": "Eliminates the need for external power sources or software installation, making it the perfect tool for secure, on-the-go data capture.",
+          "perfect_for": "Caseworkers, investigators, and auditors working in fieldwork or mobile offices.",
+          "features": ["Ultra-Compact Design", "USB-Powered", "Single-Pass Duplex", "Auto Page Size Detection", "Plug-and-Scan Utility"]
         }
       }
     },
@@ -82,39 +62,24 @@
         "video": "https://www.youtube.com/watch?v=mYwJ1_h0iKU"
       },
       "verticals": {
-        "Government": ["Mobile", "Office"],
-        "Financial": ["Mobile", "Reception"],
-        "Legal": ["Mobile", "Office"],
-        "Logistics": ["Mobile"],
-        "Education": ["Mobile"],
-        "Healthcare": ["Mobile", "Reception"]
+        "Government": ["Mobile"],
+        "Financial": ["Mobile"],
+        "Legal": ["Mobile"],
+        "Healthcare": ["Mobile"]
       },
       "content": {
         "en": {
           "why": "The mobile workhorse for high-stakes environments. Features a dedicated card scanner for processing IDs and licenses instantly.",
-          "features": [
-            "Integrated Dedicated Card Scanner",
-            "High-Speed 15ppm Mobile Capture",
-            "No Software Installation Required",
-            "USB 3.0 Bus Powered Performance",
-            "Advanced OCR for Searchable Files"
-          ]
-        },
-        "fr": {
-          "why": "Le moteur de travail mobile pour les environnements exigeants. Comprend un numériseur de cartes dédié pour traiter les pièces d'identité.",
-          "features": [
-            "Numériseur de cartes intégré",
-            "Capture mobile rapide (15 ppm)",
-            "Aucune installation logicielle requise",
-            "Performance USB 3.0 alimentée par bus",
-            "OCR avancé pour fichiers recherchables"
-          ]
+          "description": "A portable 'workhorse' delivering 15 ppm / 30 ipm speeds with a 20-sheet ADF. It includes a built-in card scanner for plastic or embossed ID cards.",
+          "workflow_value": "Combines speed with specialized ID capture, enabling immediate on-site identity verification and document digitizing in a single device.",
+          "perfect_for": "Law enforcement, compliance agents, and legal professionals working beyond the office walls.",
+          "features": ["Integrated Card Scanner", "Fast Duplex Performance", "No Software Install Required", "Bus Powered", "High-Quality OCR"]
         }
       }
     },
     {
       "sku": "3258C002",
-      "model": "DR-C225II",
+      "model": "DR-C225 II",
       "series": "Workgroup",
       "category": "Desktop/Workgroup",
       "specs": {
@@ -132,33 +97,16 @@
         "video": "https://www.youtube.com/watch?v=Ia90Khl0JMM"
       },
       "verticals": {
-        "Government": ["Reception", "Office"],
-        "Healthcare": ["Reception", "Office"],
-        "Financial": ["Reception", "Office"],
-        "Legal": ["Reception", "Office"],
-        "Logistics": ["Reception", "Office"],
-        "Education": ["Reception", "Office"]
+        "Healthcare": ["Reception"],
+        "Financial": ["Reception"]
       },
       "content": {
         "en": {
-          "why": "Optimized for tight spaces, the J-Path design allows for high-quality scanning on narrow reception counters and reception desks.",
-          "features": [
-            "Space-Saving J-Path Paper Path",
-            "Top-Feeding / Top-Ejecting Design",
-            "Handles Embossed Plastic Cards",
-            "Full Duplex 25ppm Speed",
-            "Built-in Folio Mode for A3 Scanning"
-          ]
-        },
-        "fr": {
-          "why": "Optimisé pour les espaces restreints, la conception J-Path permet une numérisation de haute qualité sur les comptoirs de réception étroits.",
-          "features": [
-            "Chemin de papier J-Path compact",
-            "Conception à alimentation par le haut",
-            "Gère les cartes plastifiées gaufrées",
-            "Vitesse recto-verso de 25 ppm",
-            "Mode Folio intégré pour documents A3"
-          ]
+          "why": "Optimized for tight spaces, the J-Path design allows for high-quality scanning on narrow reception counters.",
+          "description": "A space-saving desktop scanner with a unique upright U-turn path design. It scans at 25 ppm / 50 ipm and is equipped with a 30-sheet ADF.",
+          "workflow_value": "The front-loading design allows it to sit flush against walls or on crowded triage desks, freeing up essential workspace.",
+          "perfect_for": "Healthcare reception, pharmacies, and small workgroups modernizing paper-based processes.",
+          "features": ["Space-Saving J-Path", "Top-Feeding Design", "Handles Embossed Cards", "Full Duplex", "A3 Folio Mode"]
         }
       }
     },
@@ -178,37 +126,20 @@
       },
       "assets": {
         "image": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Personal---Workgroup/DR-C340/CB_001.png",
-        "brochure": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Personal---Workgroup/DR-C340/imageFORMULA-DR-C340-Office-Document-Scanner-Brochure-FINAL.pdf",
-        "video": "https://www.youtube.com/watch?v=klkKoFVfSzg"
+        "brochure": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Personal---Workgroup/DR-C340/imageFORMULA-DR-C340-Office-Document-Scanner-Brochure-FINAL.pdf"
       },
       "verticals": {
         "Government": ["Office"],
-        "Healthcare": ["Office"],
         "Financial": ["Office"],
-        "Legal": ["Office"],
-        "Logistics": ["Office"],
-        "Education": ["Office"]
+        "Logistics": ["Office"]
       },
       "content": {
         "en": {
-          "why": "A versatile office scanner designed for reliable batch processing of mixed documents, from thin paper to heavy cards.",
-          "features": [
-            "High-Capacity 100-Sheet ADF",
-            "Reliable Heavy-Duty Feeding",
-            "40ppm High-Throughput Speed",
-            "Support for Embossed Cards",
-            "CaptureOnTouch Software Bundle"
-          ]
-        },
-        "fr": {
-          "why": "Un numériseur de bureau polyvalent conçu pour le traitement par lots fiable de documents mixtes.",
-          "features": [
-            "CAD haute capacité de 100 feuilles",
-            "Alimentation robuste et fiable",
-            "Vitesse à haut débit de 40 ppm",
-            "Support pour cartes gaufrées",
-            "Logiciel CaptureOnTouch inclus"
-          ]
+          "why": "A versatile office scanner designed for reliable batch processing of mixed documents.",
+          "description": "A versatile office scanner featuring a robust 100-sheet ADF and scanning speeds of 40 ppm / 80 ipm. It utilizes a Hi-Speed USB 2.0 Type-C interface for modern connectivity.",
+          "workflow_value": "The high-capacity feeder minimizes manual reloading, allowing teams to handle consistent daily paperwork efficiently.",
+          "perfect_for": "Government, finance, and transportation sectors requiring streamlined digital workflows.",
+          "features": ["100-Sheet ADF", "Reliable Heavy Feeding", "Hi-Speed Type-C", "Mixed Media Support", "CaptureOnTouch Bundle"]
         }
       }
     },
@@ -228,37 +159,19 @@
       },
       "assets": {
         "image": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Personal---Workgroup/DR-C350/CA_001.png",
-        "brochure": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Personal---Workgroup/DR-C350/imageFORMULA-DR-C350-Office-Document-Scanner-Brochure-FINAL.pdf",
-        "video": "https://www.youtube.com/watch?v=klkKoFVfSzg"
+        "brochure": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Personal---Workgroup/DR-C350/imageFORMULA-DR-C350-Office-Document-Scanner-Brochure-FINAL.pdf"
       },
       "verticals": {
-        "Government": ["Office"],
-        "Healthcare": ["Office"],
-        "Financial": ["Office"],
         "Legal": ["Office"],
-        "Logistics": ["Office"],
-        "Education": ["Office"]
+        "Financial": ["Office"]
       },
       "content": {
         "en": {
-          "why": "Delivers superior image quality and speed for office environments needing to digitize high volumes of standardized documents.",
-          "features": [
-            "Rapid 50ppm Document Capture",
-            "Robust 100-Sheet Feeder Tray",
-            "EPEAT Gold Eco-Certification",
-            "Advanced Image Cleanup Tech",
-            "Optimized for Form Processing"
-          ]
-        },
-        "fr": {
-          "why": "Offre une qualité d'image et une vitesse supérieures pour les environnements de bureau traitant de gros volumes.",
-          "features": [
-            "Capture rapide à 50 ppm",
-            "Plateau d'alimentation de 100 f.",
-            "Certification Éco EPEAT Or",
-            "Traitement d'image avancé",
-            "Optimisé pour les formulaires"
-          ]
+          "why": "Delivers superior image quality and speed for high-output administrative environments.",
+          "description": "A step up in performance, this model delivers 50 ppm / 100 ipm while maintaining the 100-sheet ADF. It is designed for higher-volume daily environments.",
+          "workflow_value": "High-speed capture that integrates information directly into Digital Workflows and automation processes.",
+          "perfect_for": "Insurance, legal services, and high-output administrative environments.",
+          "features": ["Rapid 50ppm Capture", "100-Sheet ADF", "EPEAT Gold Certified", "Image Processing Chip", "Intake Optimization"]
         }
       }
     },
@@ -272,44 +185,25 @@
         "daily_volume": 6000,
         "adf_capacity": 60,
         "max_size": "A4",
-        "connectivity": ["USB 3.2", "Ethernet"],
+        "connectivity": ["Ethernet", "USB 3.2"],
         "flatbed_compatible": true,
         "duplex": true
       },
       "assets": {
         "image": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Personal---Workgroup/DR-S250N/DR-S250N-Front-V2.png",
-        "brochure": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Personal---Workgroup/DR-S250N/Canon---imageFORMULA_Scanner_DRS250N_EN.pdf",
-        "video": "https://www.youtube.com/watch?v=QUdwawjg8KU"
+        "brochure": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Personal---Workgroup/DR-S250N/Canon---imageFORMULA_Scanner_DRS250N_EN.pdf"
       },
       "verticals": {
-        "Government": ["Reception", "Office"],
-        "Healthcare": ["Reception", "Office"],
-        "Financial": ["Reception", "Office"],
-        "Legal": ["Reception", "Office"],
-        "Logistics": ["Reception", "Office"],
-        "Education": ["Reception", "Office"],
-        "BPO": ["Reception", "Office"]
+        "Healthcare": ["Reception"],
+        "Government": ["Office"]
       },
       "content": {
         "en": {
-          "why": "Eliminates the need for a host PC. Scan directly to network folders, cloud, or email using the built-in Ethernet connectivity.",
-          "features": [
-            "PC-Less Network Scanning",
-            "High-Speed Wired Ethernet",
-            "Direct Capture to Cloud/Email",
-            "OLED Operation Status Screen",
-            "Enterprise-Grade Security"
-          ]
-        },
-        "fr": {
-          "why": "Élimine le besoin d'un PC hôte. Numérisez vers des dossiers réseau ou courriels via Ethernet.",
-          "features": [
-            "Numérisation réseau sans PC",
-            "Connectivité Ethernet rapide",
-            "Capture directe vers le nuage",
-            "Écran d'état OLED intuitif",
-            "Sécurité de classe entreprise"
-          ]
+          "why": "A network-exclusive scanner offering flexible, driverless scanning through a web interface.",
+          "description": "A network-exclusive scanner offering flexible, driverless scanning through a web interface. It provides 50 ppm / 100 ipm scanning and a 60-sheet ADF.",
+          "workflow_value": "Supports multi-platform environments (Windows, Mac, Chrome) and allows scanning from any browser-enabled device via QR code.",
+          "perfect_for": "Shared intake areas, hybrid offices, and environments where dedicated workstations are not available.",
+          "features": ["Web Interface Scanning", "PC-Less Capability", "Multi-Platform Support", "QR Code Scan Trigger", "Wired Connectivity"]
         }
       }
     },
@@ -323,50 +217,31 @@
         "daily_volume": 6000,
         "adf_capacity": 60,
         "max_size": "A4",
-        "connectivity": ["USB 3.2", "Ethernet", "WIFI"],
+        "connectivity": ["Ethernet", "WIFI", "USB 3.2"],
         "flatbed_compatible": true,
         "duplex": true
       },
       "assets": {
         "image": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ITCG/Scanners/imageFORMULA-DR-S350NW/imageFORMULA-DR-S350NW-1.png",
-        "brochure": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ITCG/Scanners/imageFORMULA-DR-S350NW/EN-imageFORMULA-DR-S350NW-Brochure.pdf",
-        "video": "https://www.youtube.com/watch?v=tiI1DbR9YUw"
+        "brochure": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ITCG/Scanners/imageFORMULA-DR-S350NW/EN-imageFORMULA-DR-S350NW-Brochure.pdf"
       },
       "verticals": {
-        "Government": ["Reception", "Office"],
-        "Healthcare": ["Reception", "Office"],
-        "Financial": ["Reception", "Office"],
-        "Legal": ["Reception", "Office"],
-        "Logistics": ["Reception", "Office"],
-        "Education": ["Reception", "Office"],
-        "BPO": ["Reception", "Office"]
+        "Education": ["Reception"],
+        "Government": ["Reception"]
       },
       "content": {
         "en": {
-          "why": "The ultimate in shared connectivity. The large touchscreen provides a smartphone-like experience for easy, secure user interaction.",
-          "features": [
-            "Built-in Wi-Fi & Ethernet",
-            "Large 4.3\" Color Touchscreen",
-            "User Profile & PIN Security",
-            "Triple-Path Connectivity",
-            "uniFLOW Software Compatible"
-          ]
-        },
-        "fr": {
-          "why": "Le summum de la connectivité partagée. Le grand écran tactile offre une expérience conviviale et sécurisée.",
-          "features": [
-            "Wi-Fi et Ethernet intégrés",
-            "Grand écran tactile de 4,3 po",
-            "Sécurité par profil et NIP",
-            "Connectivité à triple voie",
-            "Compatible avec uniFLOW"
-          ]
+          "why": "A powerful shared hub with 4.3” color touchscreen operation.",
+          "description": "A powerful shared hub with 4.3” color touchscreen operation. It supports Wi-Fi, Ethernet, and USB connectivity with speeds of 50 ppm / 100 ipm and a 60-sheet ADF.",
+          "workflow_value": "Features customizable touchscreen 'Job Buttons' for one-tap routing to email, folders, or the cloud without a connected PC.",
+          "perfect_for": "Decentralized government sites, educational front offices, and high-traffic reception desks.",
+          "features": ["4.3\" Color Touchscreen", "Custom Job Buttons", "Wi-Fi & Ethernet", "Secure Login", "PC-Free Hub"]
         }
       }
     },
     {
       "sku": "6050C002",
-      "model": "DR-M140II",
+      "model": "DR-M140 II",
       "series": "Departmental",
       "category": "Departmental",
       "specs": {
@@ -380,38 +255,51 @@
       },
       "assets": {
         "image": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/DR-M140II/DR-M140II-front.png",
-        "brochure": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/DR-M140II/Canon---imageFORMULA_Scanner_DRM140II_FA.pdf",
-        "video": "https://www.youtube.com/watch?v=0FOok_lQQaI"
+        "brochure": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/DR-M140II/Canon---imageFORMULA_Scanner_DRM140II_FA.pdf"
       },
       "verticals": {
-        "Government": ["Office", "Back"],
-        "Healthcare": ["Office", "Back"],
-        "Financial": ["Office", "Back"],
-        "Legal": ["Office", "Back"],
-        "Logistics": ["Office", "Back"],
-        "Education": ["Office", "Back"],
-        "BPO": ["Office", "Back"]
+        "Legal": ["Office"],
+        "Healthcare": ["Office"]
       },
       "content": {
         "en": {
-          "why": "Unique dual-path (U-turn and Straight) allows this compact departmental unit to scan delicate receipts and thick cardstocks with ease.",
-          "features": [
-            "Dual-Path Media Handling",
-            "High-Durability ADF System",
-            "U-Turn Path for Tight Desks",
-            "Straight Path for Thick Cards",
-            "Superior Character Cleaning"
-          ]
-        },
-        "fr": {
-          "why": "Le double chemin (U-turn et droit) permet de numériser des reçus fragiles ou des cartons épais avec facilité.",
-          "features": [
-            "Gestion des médias à double voie",
-            "Système CAD haute durabilité",
-            "Voie en U pour bureaux étroits",
-            "Voie droite pour supports épais",
-            "Nettoyage de caractères supérieur"
-          ]
+          "why": "Compact departmental power with a dual paper path (U-turn and straight).",
+          "description": "A compact departmental scanner with a dual paper path (U-turn and straight). It features an 80-sheet ADF and scans at 40 ppm / 80 ipm.",
+          "workflow_value": "Provides the flexibility to handle everything from standard mail (U-turn) to thick or fragile documents like rigid cards (straight).",
+          "perfect_for": "Administrative workspaces in legal, healthcare, and finance where desk space is limited.",
+          "features": ["Dual Paper Path", "U-Turn for Space", "Straight for Rigid Cards", "Reliable Roller Feed", "Character Cleaning"]
+        }
+      }
+    },
+    {
+      "sku": "6049C002",
+      "model": "DR-M1060 II",
+      "series": "Departmental",
+      "category": "Departmental",
+      "specs": {
+        "speed": "60 ppm / 120 ipm",
+        "daily_volume": 13000,
+        "adf_capacity": 80,
+        "max_size": "A3",
+        "connectivity": ["USB 2.0"],
+        "flatbed_compatible": true,
+        "duplex": true
+      },
+      "assets": {
+        "image": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/DR-M1060II/DR-M1060II-front.png",
+        "brochure": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/DR-M1060II/Canon---imageFORMULA_Scanner_DRM1060II_FA.pdf"
+      },
+      "verticals": {
+        "Logistics": ["Back"],
+        "Legal": ["Office"]
+      },
+      "content": {
+        "en": {
+          "why": "Delivers oversized document capture (up to 11\" x 17\") without the massive bulk of an A3 flatbed unit.",
+          "description": "A high-speed, A3-compatible scanner in a space-saving desktop footprint. It scans at 60 ppm / 120 ipm and includes an 80-sheet ADF.",
+          "workflow_value": "Delivers oversized document capture (up to 11\" x 17\") without the massive bulk of an A3 flatbed unit.",
+          "perfect_for": "Planning files, blueprints, and oversized legal exhibits.",
+          "features": ["Compact A3 Solution", "Versatile Paper Path", "Mixed Document Handling", "Straight Path Toggle", "Record Optimization"]
         }
       }
     },
@@ -431,101 +319,31 @@
       },
       "assets": {
         "image": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/DR-M260/Canon_iF-DR-M260-Thumbnail_580X580.png",
-        "brochure": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/DR-M260/ImageFORMULA-DR-M260-Product-Brochure--EN--CA-.pdf",
-        "video": "https://www.youtube.com/watch?v=YUz8sjjYJyA"
+        "brochure": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/DR-M260/ImageFORMULA-DR-M260-Product-Brochure--EN--CA-.pdf"
       },
       "verticals": {
-        "Government": ["Office", "Back"],
-        "Healthcare": ["Office", "Back"],
-        "Financial": ["Office", "Back"],
-        "Legal": ["Office", "Back"],
-        "Logistics": ["Office", "Back"],
-        "Education": ["Office", "Back"],
-        "BPO": ["Office", "Back"]
+        "Government": ["Back"],
+        "Financial": ["Back"]
       },
       "content": {
         "en": {
-          "why": "Powered by an onboard processing chip, the DR-M260 maintains blazing speeds while cleaning up complex image background noise.",
-          "features": [
-            "Dedicated Image Processor CPU",
-            "USB 3.1 High-Speed Data Bus",
-            "Industrial-Grade Roller System",
-            "Precise Color Correction Tech",
-            "Secure File Archival Ready"
-          ]
-        },
-        "fr": {
-          "why": "Propulsé par une puce de traitement intégrée, il maintient des vitesses élevées tout en nettoyant les bruits d'arrière-plan.",
-          "features": [
-            "Processeur d'image dédié",
-            "Bus de données USB 3.1 rapide",
-            "Système de rouleaux industriel",
-            "Correction des couleurs précise",
-            "Prêt pour l'archivage sécurisé"
-          ]
-        }
-      }
-    },
-    {
-      "sku": "6049C002",
-      "model": "DR-M1060II",
-      "series": "Departmental",
-      "category": "Departmental",
-      "specs": {
-        "speed": "60 ppm / 120 ipm",
-        "daily_volume": 13000,
-        "adf_capacity": 80,
-        "max_size": "A3",
-        "connectivity": ["USB 2.0"],
-        "flatbed_compatible": true,
-        "duplex": true
-      },
-      "assets": {
-        "image": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/DR-M1060II/DR-M1060II-front.png",
-        "brochure": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/DR-M1060II/Canon---imageFORMULA_Scanner_DRM1060II_FA.pdf",
-        "video": "https://www.youtube.com/watch?v=5PSaOmwCwmo"
-      },
-      "verticals": {
-        "Government": ["Office", "Back"],
-        "Healthcare": ["Office", "Back"],
-        "Financial": ["Office", "Back"],
-        "Legal": ["Office", "Back"],
-        "Logistics": ["Office", "Back"],
-        "Education": ["Office", "Back"],
-        "BPO": ["Office", "Back"]
-      },
-      "content": {
-        "en": {
-          "why": "Provides A3/Ledger scanning in a desktop-sized chassis. Ideal for legal firms and hospitals that need occasional large-format support.",
-          "features": [
-            "Versatile A3 Hybrid Scanning",
-            "Space-Saving Desktop Footprint",
-            "Mixed Batch Media Handling",
-            "Straight-Path Media Support",
-            "Optimized for Medical Records"
-          ]
-        },
-        "fr": {
-          "why": "Offre une numérisation A3 dans un format de bureau. Idéal pour les firmes juridiques et les hôpitaux.",
-          "features": [
-            "Numérisation hybride A3",
-            "Format de bureau compact",
-            "Gestion de supports mixtes",
-            "Support pour supports épais",
-            "Optimisé pour dossiers médicaux"
-          ]
+          "why": "Heavy-duty departmental performer with an onboard image processing chip and 5-year warranty.",
+          "description": "A heavy-duty departmental performer with an onboard image processing chip. It scans at 60 ppm / 120 ipm, features a 90-sheet ADF, and comes with a 5-year warranty.",
+          "workflow_value": "Maximizes OCR accuracy and offloads PC strain, ensuring audit-ready image quality and enterprise-grade reliability.",
+          "perfect_for": "High-volume case management, audit preparation, and mission-critical record centers.",
+          "features": ["Onboard Image CPU", "Industrial Duty Cycle", "90-Sheet ADF", "High OCR Accuracy", "5-Year Warranty"]
         }
       }
     },
     {
       "sku": "1255C002",
-      "model": "Scanfront 400",
+      "model": "ScanFront 400",
       "series": "Workgroup",
       "category": "Departmental",
       "specs": {
         "speed": "45 ppm / 90 ipm",
-        "daily_volume": 8500,
-        "adf_capacity": 60,
+        "daily_volume": 6000,
+        "adf_capacity": 85,
         "max_size": "A4",
         "connectivity": ["Ethernet"],
         "flatbed_compatible": true,
@@ -533,49 +351,30 @@
       },
       "assets": {
         "image": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Personal---Workgroup/Scanfront-400/Canon_iF-ScanFront400_Thumbnail_580x580.png",
-        "brochure": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Personal---Workgroup/Scanfront-400/BROCHURE_SCANFRONT400_01_EN.pdf",
-        "video": "https://www.youtube.com/watch?v=qUU3w7sv2R4"
+        "brochure": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Personal---Workgroup/Scanfront-400/BROCHURE_SCANFRONT400_01_EN.pdf"
       },
       "verticals": {
-        "Government": ["Reception", "Office"],
-        "Healthcare": ["Reception", "Office"],
-        "Financial": ["Reception", "Office"],
-        "Legal": ["Reception", "Office"],
-        "Logistics": ["Reception", "Office"],
-        "Education": ["Reception", "Office"],
-        "BPO": ["Reception", "Office"]
+        "Government": ["Reception"],
+        "Logistics": ["Office"]
       },
       "content": {
         "en": {
-          "why": "A standalone network scanner with a large 10.1\" screen. No PC required for high-security document routing.",
-          "features": [
-            "Large 10.1\" Wide Touchscreen",
-            "Standalone PC-Free Operation",
-            "High-Security User Login/PIN",
-            "LDAP Directory Integration",
-            "One-Touch Task Customization"
-          ]
-        },
-        "fr": {
-          "why": "Un numériseur réseau autonome avec un écran de 10,1 po. Aucun PC requis pour l'acheminement sécurisé.",
-          "features": [
-            "Écran tactile large de 10,1 po",
-            "Opération autonome sans PC",
-            "Sécurité de connexion par NIP",
-            "Intégration d'annuaire LDAP",
-            "Personnalisation des tâches"
-          ]
+          "why": "Our flagship completely PC-free standalone scanner featuring a large 10.1” touchscreen.",
+          "description": "Our flagship completely PC-free standalone scanner featuring a large 10.1” touchscreen. It scans at 45 ppm / 90 ipm with an 85-sheet ADF.",
+          "workflow_value": "Ideal for locked-down IT environments; supports LDAP authentication and secure encrypted file delivery directly to various network destinations.",
+          "perfect_for": "Secure kiosks, centralized mailrooms, and remote field offices with limited IT support.",
+          "features": ["10.1\" Touchscreen", "PC-Free Standalone", "LDAP Support", "Encrypted Delivery", "Locked-Down Security"]
         }
       }
     },
     {
       "sku": "3151C002",
-      "model": "DR-G2090",
+      "model": "DR-G2090 USB",
       "series": "Production",
       "category": "Production",
       "specs": {
         "speed": "90 ppm / 180 ipm",
-        "daily_volume": 60000,
+        "daily_volume": 55000,
         "adf_capacity": 300,
         "max_size": "A3",
         "connectivity": ["USB 3.1"],
@@ -584,38 +383,19 @@
       },
       "assets": {
         "image": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/DR-G2110/Canon_iF-DR-G2110_Thumbnail_580x580.png",
-        "brochure": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/DR-G2090/ImageFORMULA-DR-G2090-USB-Product-Brochure--EN--CA-.pdf.pdf",
-        "video": "https://www.youtube.com/watch?v=PxwRVly8_2A"
+        "brochure": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/DR-G2090/ImageFORMULA-DR-G2090-USB-Product-Brochure--EN--CA-.pdf.pdf"
       },
       "verticals": {
         "Government": ["Back"],
-        "Healthcare": ["Back"],
-        "Financial": ["Back"],
-        "Legal": ["Back"],
-        "Logistics": ["Back"],
-        "Education": ["Back"],
-        "BPO": ["Back"]
+        "Logistics": ["Back"]
       },
       "content": {
         "en": {
-          "why": "The entry point for high-volume production. Features a heavy-duty roller system for sustained back-office performance.",
-          "features": [
-            "Production-Grade Throughput",
-            "Heavy-Duty 300-Sheet ADF",
-            "Reliable High-Volume Rollers",
-            "Precision Skew Correction",
-            "Cost-Effective Back-Office Power"
-          ]
-        },
-        "fr": {
-          "why": "Le point d'entrée pour la production de gros volumes. Comprend un système de rouleaux robuste.",
-          "features": [
-            "Débit de classe production",
-            "CAD robuste de 300 feuilles",
-            "Rouleaux haute performance",
-            "Correction précise du biais",
-            "Puissance de bureau rentable"
-          ]
+          "why": "Entry production model providing production-level throughput and a flat paper path.",
+          "description": "The entry production model scans at 90 ppm / 180 ipm with a 300-sheet ADF. It is rated for heavy-duty use of up to 55,000 pages per day.",
+          "workflow_value": "Provides production-level throughput and a flat, straight paper path for oversized or fragile documents in mission-critical environments.",
+          "perfect_for": "Mailroom digitization, courthouse archives, and warehouse admin.",
+          "features": ["300-Sheet ADF", "Production Duty Cycle", "Flat Paper Path", "Skew Correction", "Oversized Document Ready"]
         }
       }
     },
@@ -629,44 +409,25 @@
         "daily_volume": 100000,
         "adf_capacity": 500,
         "max_size": "A3",
-        "connectivity": ["USB 3.1", "Ethernet"],
+        "connectivity": ["Ethernet", "USB 3.1"],
         "flatbed_compatible": true,
         "duplex": true
       },
       "assets": {
         "image": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/DR-G2110/Canon_iF-DR-G2110_Thumbnail_580x580.png",
-        "brochure": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/DR-G2110/ImageFORMULA-DR-G2110-Product-Brochure--EN--CA-.pdf",
-        "video": "https://www.youtube.com/watch?v=PxwRVly8_2A"
+        "brochure": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/DR-G2110/ImageFORMULA-DR-G2110-Product-Brochure--EN--CA-.pdf"
       },
       "verticals": {
-        "Government": ["Back"],
         "Healthcare": ["Back"],
-        "Financial": ["Back"],
-        "Legal": ["Back"],
-        "Logistics": ["Back"],
-        "Education": ["Back"],
-        "BPO": ["Back"]
+        "Government": ["Back"]
       },
       "content": {
         "en": {
-          "why": "Industrial-grade production capture with built-in LAN. Allows multiple workstations to share a powerful production resource.",
-          "features": [
-            "Shared LAN Production Resource",
-            "Massive 500-Sheet ADF Loading",
-            "Ultra-Precision CIS Optics",
-            "Centralized Departmental Power",
-            "Barcode-Triggered Separation"
-          ]
-        },
-        "fr": {
-          "why": "Capture de production industrielle avec LAN intégré. Permet à plusieurs postes de partager une ressource puissante.",
-          "features": [
-            "Ressource de production LAN",
-            "CAD massif de 500 feuilles",
-            "Optique CIS de haute précision",
-            "Puissance centralisée",
-            "Séparation par codes à barres"
-          ]
+          "why": "Mid-tier production hub featuring built-in Gigabit Ethernet for shared back-office environments.",
+          "description": "A mid-tier production hub featuring built-in Gigabit Ethernet. It scans at 110 ppm / 220 ipm and utilizes a 500-sheet ADF.",
+          "workflow_value": "Built for shared network back-office environments processing up to 100,000 pages per day.",
+          "perfect_for": "Large-scale digitization efforts in hospitals, registrar hubs, and regional BPOs.",
+          "features": ["Gigabit Ethernet", "500-Sheet ADF", "100k Daily Volume", "Shared Network Hub", "Industrial Optics"]
         }
       }
     },
@@ -677,47 +438,28 @@
       "category": "Production",
       "specs": {
         "speed": "140 ppm / 280 ipm",
-        "daily_volume": 70000,
+        "daily_volume": 150000,
         "adf_capacity": 500,
         "max_size": "A3",
-        "connectivity": ["USB 3.1", "Ethernet"],
+        "connectivity": ["Ethernet", "USB 3.1"],
         "flatbed_compatible": true,
         "duplex": true
       },
       "assets": {
         "image": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/DR-G2110/Canon_iF-DR-G2110_Thumbnail_580x580.png",
-        "brochure": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/DR-G2140/ImageFORMULA-DR-G2140-Product-Brochure--EN--CA-.pdf",
-        "video": "https://www.youtube.com/watch?v=yEu4-nByNsk"
+        "brochure": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/DR-G2140/ImageFORMULA-DR-G2140-Product-Brochure--EN--CA-.pdf"
       },
       "verticals": {
-        "Government": ["Back"],
-        "Healthcare": ["Back"],
         "Financial": ["Back"],
-        "Legal": ["Back"],
-        "Logistics": ["Back"],
-        "Education": ["Back"],
-        "BPO": ["Back"]
+        "Government": ["Back"]
       },
       "content": {
         "en": {
-          "why": "Canon's fastest production scanner, designed for high-integrity capture and mission-critical backfile conversion.",
-          "features": [
-            "Extreme Industrial 140ppm Speed",
-            "Intelligent 500-Sheet Auto-Feeder",
-            "Production-Class Core Durability",
-            "High-Speed Gigabit LAN Port",
-            "Ultrasonic Multifeed Prevention"
-          ]
-        },
-        "fr": {
-          "why": "Le numériseur de production le plus rapide de Canon, conçu pour la capture d'intégrité supérieure.",
-          "features": [
-            "Vitesse industrielle de 140 ppm",
-            "CAD intelligent de 500 f.",
-            "Durabilité de classe production",
-            "Port LAN Gigabit haute vitesse",
-            "Prévention ultrasonique d'alimentation"
-          ]
+          "why": "Canon’s fastest production model, designed to eliminate paper bottlenecks.",
+          "description": "Our flagship production workhorse, delivering a massive 140 ppm / 280 ipm and a 500-sheet ADF. It is engineered for industrial-scale operations.",
+          "workflow_value": "Canon’s fastest production model, designed to eliminate paper bottlenecks in environments requiring nonstop high-volume scanning.",
+          "perfect_for": "Centralized digitization hubs, election offices, and enterprise-level financial processing centers.",
+          "features": ["Massive 140ppm Speed", "500-Sheet ADF", "150k Daily Duty", "Industrial Reliability", "Bottleneck Elimination"]
         }
       }
     },
@@ -737,34 +479,19 @@
       },
       "assets": {
         "image": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/DR-X10CII/Canon_iF-DR-X10C-II_Thumbnail_230x230.png",
-        "brochure": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/DR-X10CII/ImageFORMULA-DR-X10C-II-Product-Brochure--EN--CA-.pdf",
-        "video": ""
+        "brochure": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Departmental---Production/DR-X10CII/ImageFORMULA-DR-X10C-II-Product-Brochure--EN--CA-.pdf"
       },
       "verticals": {
         "Government": ["Back"],
-        "Healthcare": ["Back"],
-        "BPO": ["Back"]
+        "Healthcare": ["Back"]
       },
       "content": {
         "en": {
-          "why": "Archival-grade production capture with precision optics and a Kofax CGA board for dedicated high-speed image processing that handles complex jobs without slowing down your PC.",
-          "features": [
-            "Integrated Kofax CGA Processing Board",
-            "True 600dpi Precision Capture",
-            "High-Volume Durability Core",
-            "Active Logic Background Control",
-            "Archival Quality Image Cleanup"
-          ]
-        },
-        "fr": {
-          "why": "Capture de production avec optique de précision et carte Kofax CGA pour un traitement d'image haute vitesse dédié.",
-          "features": [
-            "Carte de traitement Kofax CGA intégrée",
-            "Capture de précision à 600 ppp",
-            "Durabilité pour gros volumes",
-            "Contrôle d'arrière-plan actif",
-            "Nettoyage de qualité archivistique"
-          ]
+          "why": "Archival gold standard featuring a Kofax CGA hardware VRS board for elite image enhancement.",
+          "description": "The archival gold standard featuring a Kofax CGA hardware VRS board for elite image enhancement. It scans at 130 ppm / 260 ipm with a 500-sheet ADF.",
+          "workflow_value": "Provides precision 600 dpi optical fidelity and real-time hardware correction, perfect for preserving vital documents or high-stakes discovery.",
+          "perfect_for": "Government archives, clinical research centers, and legal e-discovery.",
+          "features": ["Kofax CGA Board", "600dpi Precision", "Hardware Correction", "Archival Fidelity", "Durable Steel Frame"]
         }
       }
     },
@@ -784,122 +511,49 @@
       },
       "assets": {
         "image": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Cheque/CR-L1/Canon_iF-CR-L1_Side_580x580.png",
-        "brochure": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Cheque/CR-L1/ImageFORMULA-CR-L1-Product-Brochure--EN--CA-.pdf",
-        "video": "https://www.youtube.com/watch?v=yiyVvf-OVR8"
+        "brochure": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Cheque/CR-L1/ImageFORMULA-CR-L1-Product-Brochure--EN--CA-.pdf"
       },
       "verticals": {
         "Financial": ["Reception"]
       },
       "content": {
         "en": {
-          "why": "The entry-level standard for branch capture. Combines a small footprint with precision MICR reading for accurate accounting.",
-          "features": [
-            "Precision MICR Accounting Tech",
-            "Space-Saving Teller Footprint",
-            "Tool-Free Maintenance Path",
-            "Reliable Cheque Document Flow",
-            "Financial App Compatibility"
-          ]
-        },
-        "fr": {
-          "why": "La norme d'entrée de gamme pour la capture en succursale. Allie compacité et précision de lecture MICR.",
-          "features": [
-            "Technologie MICR de précision",
-            "Format compact pour guichet",
-            "Entretien facile sans outils",
-            "Flux de documents fiable",
-            "Compatible applications financières"
-          ]
+          "why": "Brings professional MICR reading and one-touch validation to small business counters.",
+          "description": "A compact, entry-level cheque scanner for Remote Deposit Capture (RDC). It processes at 45 cpm and features a 50-sheet ADF.",
+          "workflow_value": "Brings professional MICR reading and one-touch validation to small business counters or home offices.",
+          "perfect_for": "Small business RDC, credit unions, and retail customer service desks.",
+          "features": ["Precision MICR", "Entry-Level RDC", "50-Sheet Feeder", "Small Footprint", "Easy Validation"]
         }
       }
     },
     {
       "sku": "1722C001",
-      "model": "CR-120",
+      "model": "CR-120 / CR-120N",
       "series": "Cheque",
       "category": "Cheque",
       "specs": {
         "speed": "120 cpm",
         "daily_volume": 12000,
-        "adf_capacity": 100,
+        "adf_capacity": 150,
         "max_size": "Cheque",
-        "connectivity": ["USB 2.0"],
+        "connectivity": ["Ethernet", "USB 2.0"],
         "flatbed_compatible": false,
         "duplex": true
       },
       "assets": {
         "image": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Cheque/CR-120-CR-150/Canon_iF-CR-120-CR-150_Side_580x580.png",
-        "brochure": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Cheque/CR-120-CR-150/ImageFORMULA-CR-120-Product-Brochure--EN--CA-.pdf",
-        "video": ""
+        "brochure": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Cheque/CR-120-CR-150/ImageFORMULA-CR-120-Product-Brochure--EN--CA-.pdf"
       },
       "verticals": {
-        "Financial": ["Reception", "Back"]
+        "Financial": ["Reception"]
       },
       "content": {
         "en": {
-          "why": "Delivers high-speed precision capture for busy financial counters. Features a robust feeder to handle large daily volumes.",
-          "features": [
-            "120 Items Per Minute Flow",
-            "Reliable 100-Item Auto Feeder",
-            "Superior MICR Read Integrity",
-            "High-Speed USB Connection",
-            "Compact Desktop Design"
-          ]
-        },
-        "fr": {
-          "why": "Offre une capture de précision haute vitesse. Comprend un chargeur robuste pour les volumes quotidiens.",
-          "features": [
-            "Débit de 120 articles par min.",
-            "CAD fiable de 100 articles",
-            "Intégrité de lecture MICR",
-            "Connexion USB haute vitesse",
-            "Châssis de bureau compact"
-          ]
-        }
-      }
-    },
-    {
-      "sku": "2693C001",
-      "model": "CR-120N",
-      "series": "Cheque",
-      "category": "Cheque",
-      "specs": {
-        "speed": "120 cpm",
-        "daily_volume": 12000,
-        "adf_capacity": 100,
-        "max_size": "Cheque",
-        "connectivity": ["USB 2.0", "Ethernet"],
-        "flatbed_compatible": false,
-        "duplex": true
-      },
-      "assets": {
-        "image": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Cheque/CR-120-CR-150/Canon_iF-CR-120-CR-150_Side_580x580.png",
-        "brochure": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ITCG/Scanners/CR-120N/ImageFORMULA-CR-120N-Product-Brochure--EN--CA----Copy.pdf",
-        "video": ""
-      },
-      "verticals": {
-        "Financial": ["Reception", "Back"]
-      },
-      "content": {
-        "en": {
-          "why": "Network-attached cheque scanning for branch transformation. Allows multiple tellers to share a single high-speed capture device.",
-          "features": [
-            "Network-Ready Ethernet Port",
-            "Built-In MSR Verification",
-            "Secure Financial Data Link",
-            "Resource-Sharing Optimization",
-            "Rapid Item Processing"
-          ]
-        },
-        "fr": {
-          "why": "Numérisation de chèques réseau pour succursales. Plusieurs guichetiers partagent un seul appareil.",
-          "features": [
-            "Port Ethernet prêt réseau",
-            "Vérification MSR intégrée",
-            "Lien de données sécurisé",
-            "Optimisation des ressources",
-            "Traitement rapide des articles"
-          ]
+          "why": "Enhances teller efficiency with high-precision MICR reading.",
+          "description": "Built for branch counters, these units process 120 cpm with a 150-item ADF. The CR-120N includes direct network connectivity.",
+          "workflow_value": "Enhances teller efficiency with high-precision MICR reading and an optional magnetic swipe reader for onboarding.",
+          "perfect_for": "Bank branches, credit union frontlines, and decentralized check processing.",
+          "features": ["120 cpm Throughput", "150-Item ADF", "Optional MSR", "Network Ready (N)", "Branch Optimization"]
         }
       }
     },
@@ -919,32 +573,18 @@
       },
       "assets": {
         "image": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Cheque/CR-120-CR-150/Canon_iF-CR-120-CR-150_Side_580x580.png",
-        "brochure": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Cheque/CR-120-CR-150/ImageFORMULA-CR-150-Product-Brochure--EN--CA-.pdf.pdf",
-        "video": ""
+        "brochure": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Cheque/CR-120-CR-150/ImageFORMULA-CR-150-Product-Brochure--EN--CA-.pdf.pdf"
       },
       "verticals": {
         "Financial": ["Reception", "Back"]
       },
       "content": {
         "en": {
-          "why": "High-performance cheque capture with built-in imprinter for endorsing items during the scanning workflow.",
-          "features": [
-            "150 Items High-Speed Intake",
-            "150-Item Auto Feeder Capacity",
-            "Built-in Endorsement Imprinter",
-            "UV Scanning Support Options",
-            "Advanced OCR/MICR Logic"
-          ]
-        },
-        "fr": {
-          "why": "Capture de chèques haute performance avec imprimante intégrée pour l'endossement.",
-          "features": [
-            "Entrée rapide (150 articles)",
-            "CAD de 150 articles",
-            "Imprimante d'endos intégrée",
-            "Options de numérisation UV",
-            "Logique OCR/MICR avancée"
-          ]
+          "why": "Branch companion processing 150 cpm with extreme durability rating of 19 million scans.",
+          "description": "A high-speed branch companion processing 150 cpm with a 150-item ADF. It is built for durability with a rating of 19 million scans.",
+          "workflow_value": "Delivers the high-frequency stamina required for commercial batch deposits at the teller station.",
+          "perfect_for": "High-traffic bank branches and small business deposit centers.",
+          "features": ["150 cpm Speed", "19M Scan Rating", "Commercial Grade", "150-Cheque ADF", "Stamina Hub"]
         }
       }
     },
@@ -964,33 +604,18 @@
       },
       "assets": {
         "image": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Cheque/CR-190i-II/Canon_iF-CR-190i-II_Thumbnail_230x230.png",
-        "brochure": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Cheque/CR-190i-II/imageFORMULA-CR-190i-II---Product-Brochure--EN--CA----V2.pdf",
-        "video": ""
+        "brochure": "https://www.canon.ca/dam/products/BUSINESS-UNIT/ISG/Scanners/Cheque/CR-190i-II/imageFORMULA-CR-190i-II---Product-Brochure--EN--CA----V2.pdf"
       },
       "verticals": {
-        "Financial": ["Back"],
-        "BPO": ["Back"]
+        "Financial": ["Back"]
       },
       "content": {
         "en": {
-          "why": "The industrial standard for high-volume lockbox operations. Features dual-pocket physical sorting for real-time document separation.",
-          "features": [
-            "Extreme 190 Items Per Minute",
-            "Massive 250-Item Feed Intake",
-            "Dual-Pocket Physical Sorting",
-            "8-Line Built-in Endorser",
-            "Production-Grade Reliability"
-          ]
-        },
-        "fr": {
-          "why": "La norme industrielle pour le traitement de gros volumes. Tri physique à deux poches en temps réel.",
-          "features": [
-            "Vitesse extrême (190 art./min)",
-            "Chargeur massif de 250 art.",
-            "Tri physique à deux poches",
-            "Endosseur 8 lignes intégré",
-            "Fiabilité de classe production"
-          ]
+          "why": "Top-tier cheque transport featuring an 8-line programmable endorser and three sortir pockets.",
+          "description": "Our top-tier cheque transport workhorse processing 190 cpm with a 250-item input hopper and three sortir pockets.",
+          "workflow_value": "Features an 8-line programmable endorser and precision MICR reading for secure, high-volume back-office or lockbox applications.",
+          "perfect_for": "Large financial institutions, utility payment hubs, and cheque-heavy BPOs.",
+          "features": ["190 cpm Speed", "250-Item Hopper", "3 Sort Pockets", "8-Line Endorser", "Lockbox Ready"]
         }
       }
     }

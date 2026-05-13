@@ -1,6 +1,6 @@
 {
   "last_updated": "2026-05-13",
-  "version": "1.4",
+  "version": "1.5",
   "config": {
     "currency": "CAD",
     "region": "Canada",
@@ -37,8 +37,7 @@
         "Legal": ["Mobile"],
         "Logistics": ["Mobile"],
         "Education": ["Mobile"],
-        "Healthcare": ["Mobile"],
-        "Work-From-Home": ["Office"]
+        "Healthcare": ["Mobile"]
       },
       "content": {
         "en": {
@@ -88,8 +87,7 @@
         "Legal": ["Mobile", "Office"],
         "Logistics": ["Mobile"],
         "Education": ["Mobile"],
-        "Healthcare": ["Mobile", "Reception"],
-        "Work-From-Home": ["Office"]
+        "Healthcare": ["Mobile", "Reception"]
       },
       "content": {
         "en": {
@@ -139,9 +137,7 @@
         "Financial": ["Reception", "Office"],
         "Legal": ["Reception", "Office"],
         "Logistics": ["Reception", "Office"],
-        "Education": ["Reception", "Office"],
-        "BPO": ["Reception"],
-        "Work-From-Home": ["Office"]
+        "Education": ["Reception", "Office"]
       },
       "content": {
         "en": {
@@ -191,8 +187,7 @@
         "Financial": ["Office"],
         "Legal": ["Office"],
         "Logistics": ["Office"],
-        "Education": ["Office"],
-        "BPO": ["Office"]
+        "Education": ["Office"]
       },
       "content": {
         "en": {
@@ -242,8 +237,7 @@
         "Financial": ["Office"],
         "Legal": ["Office"],
         "Logistics": ["Office"],
-        "Education": ["Office"],
-        "BPO": ["Office"]
+        "Education": ["Office"]
       },
       "content": {
         "en": {
@@ -527,7 +521,7 @@
       "sku": "1255C002",
       "model": "Scanfront 400",
       "series": "Workgroup",
-      "category": "Desktop/Workgroup",
+      "category": "Departmental",
       "specs": {
         "speed": "45 ppm / 90 ipm",
         "daily_volume": 8500,

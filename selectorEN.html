@@ -24,7 +24,7 @@
         .banner-container {
             display: flex;
             width: 100%;
-            height: 60vh; 
+            height: 52vh; /* Adjusted from 60vh to elegantly accommodate compliance block */
             gap: 1.25rem;
             padding: 0 2rem;
         }
@@ -124,7 +124,6 @@
 </head>
 <body class="min-h-screen flex flex-col hero-bg">
 
-    <!-- Top Branding Bar -->
     <header class="w-full py-6 flex justify-center items-center bg-white border-b border-gray-100 z-50">
         <div class="w-full max-w-7xl px-6 flex justify-between items-center text-left">
             <a href="index.html" class="transition-opacity hover:opacity-80">
@@ -158,10 +157,8 @@
             </p>
         </div>
 
-        <!-- Vertical Banners (Equal width, no expansion) -->
         <div class="banner-container fade-in text-left" style="animation-delay: 0.2s;">
             
-            <!-- 1. Vertical Explorer -->
             <a href="verticalexEN.html" class="tool-banner group text-left">
                 <div class="banner-icon text-left">🏢</div>
                 <div class="banner-content text-left">
@@ -173,7 +170,6 @@
                 </div>
             </a>
 
-            <!-- 2. Scanner Selector -->
             <a href="scanselectEN.html" class="tool-banner group text-left">
                 <div class="banner-icon text-left">🔍</div>
                 <div class="banner-content text-left">
@@ -185,7 +181,6 @@
                 </div>
             </a>
 
-            <!-- 3. Line Card (CENTERED) -->
             <a href="linecardEN.html" class="tool-banner featured group text-left">
                 <div class="absolute top-6 text-left">
                     <span class="bg-red-600 text-white text-[8px] font-black uppercase px-3 py-1 rounded-full tracking-widest text-left">Info</span>
@@ -200,7 +195,6 @@
                 </div>
             </a>
 
-            <!-- 4. Efficiency Calculator -->
             <a href="efficiencyEN.html" class="tool-banner group text-left">
                 <div class="banner-icon text-left text-left">⏱️</div>
                 <div class="banner-content text-left text-left">
@@ -212,7 +206,6 @@
                 </div>
             </a>
 
-            <!-- 5. Scanner Advisor -->
             <a href="scanadvisorEN.html" class="tool-banner group text-left text-left">
                 <div class="banner-icon text-left text-left text-left">💡</div>
                 <div class="banner-content text-left text-left text-left">
@@ -228,10 +221,23 @@
 
     </main>
 
-    <footer class="w-full py-6 bg-white border-t border-gray-50 flex justify-center text-center text-left">
-        <p class="text-[9px] text-gray-400 font-bold uppercase tracking-[0.3em] text-left text-left">
-            &copy; 2026 Canon Canada Inc. All Rights Reserved.
-        </p>
+    <footer class="w-full bg-white border-t border-gray-100 flex flex-col items-center justify-center py-4 px-6 text-center z-50">
+        
+        <aside class="w-full max-w-6xl mb-3 text-[10px] text-gray-500 leading-relaxed text-center font-medium" role="note" aria-label="Legal Disclaimer and Compliance Context">
+            <p class="mb-1">
+                <strong>⚠️ Disclaimer &amp; Notice:</strong> While every effort has been made to ensure system parameter and asset configuration metric accuracy, specification criteria are subject to change without notice [cite: 1152, 1945, 4825]. interactive product calculations are intended for procurement discovery guidance only and do not establish formal legal advisory counsel[cite: 1947, 4833].
+            </p>
+            <p>
+                End-user enterprises assume full operational compliance tracking duties across all deployment architectures[cite: 1946, 4834]. Devices are equipped with active security features; volatile document data pathways are automatically flushed when system hardware is turned off[cite: 147, 4831].
+            </p>
+        </aside>
+
+        <div class="w-full border-t border-gray-50 pt-2">
+            <p class="text-[9px] text-gray-400 font-black uppercase tracking-[0.3em]">
+                &copy; 2026 Canon Canada Inc. All Rights Reserved.
+            </p>
+        </div>
+
     </footer>
 
 </body>

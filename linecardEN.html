@@ -39,13 +39,14 @@
         }
         .fade-in { animation: fadeIn 0.4s ease-out forwards; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-        
+
         .conn-icon { opacity: 0.2; filter: grayscale(1); }
         .conn-icon.active { opacity: 1; filter: none; color: var(--canon-red); }
     </style>
 </head>
 <body class="min-h-screen flex flex-col text-left">
 
+    <!-- Header -->
     <header class="w-full py-6 flex justify-center items-center bg-white border-b border-gray-100 shadow-sm sticky top-0 z-50">
         <div class="w-full max-w-7xl px-6 flex justify-between items-center text-left">
             <div class="flex items-center gap-8">
@@ -55,10 +56,10 @@
                     Back to Hub
                 </a>
             </div>
-            
+
             <div class="flex items-center gap-4 md:gap-10">
                 <img src="https://i.ibb.co/svcfqT91/image-FORMULA2.png" alt="imageFORMULA" class="hidden sm:block h-6 md:h-8 w-auto opacity-80">
-                
+
                 <div class="flex items-center gap-3 text-[10px] font-black uppercase tracking-[0.2em] border-l border-gray-200 pl-4 md:pl-10 text-right">
                     <span class="text-gray-400">Language:</span>
                     <div class="flex items-center gap-2">
@@ -72,47 +73,43 @@
     </header>
 
     <main class="w-full max-w-7xl px-6 py-12 mx-auto flex-grow text-left">
-        
+
+        <!-- Intro -->
         <div class="mb-16 fade-in text-left">
+            <p class="text-[10px] font-black text-red-600 uppercase tracking-[0.4em] mb-2">Full Fleet Overview</p>
             <p class="text-[10px] font-black text-red-600 uppercase tracking-[0.4em] mb-2">Portfolio Overview</p>
             <h1 class="text-4xl md:text-6xl font-black text-gray-900 tracking-tighter mb-4 uppercase">
                 imageFORMULA <span class="text-[#ED1C24]">Line Card</span>
             </h1>
             <p class="text-gray-500 font-medium text-lg max-w-2xl leading-tight">
+                Explore the complete lineup of Canon document and cheque scanners. Select a model to view compelling product stories and detailed hardware specifications.
                 Explore our comprehensive hardware lineup. Select a product to view technical profiles, targeted application areas, and specific workflow values.
             </p>
         </div>
 
+        <!-- Line Card Sections -->
         <div id="lineCardContainer" class="space-y-20 mb-20 fade-in" style="animation-delay: 0.1s;">
-            </div>
+            <!-- Categories dynamically injected -->
+        </div>
 
     </main>
 
+    <!-- Modal -->
     <div id="productModal" class="modal-overlay fixed inset-0 z-[100] hidden flex items-center justify-center p-4 text-left" onclick="closeModal()">
+        <div class="bg-white rounded-[2.5rem] shadow-2xl max-w-5xl w-full p-8 md:p-12 relative overflow-y-auto max-h-[90vh]" onclick="event.stopPropagation()">
         <div class="bg-white rounded-[2.5rem] shadow-2xl max-w-6xl w-full p-8 md:p-12 relative overflow-y-auto max-h-[90vh]" onclick="event.stopPropagation()">
             <button onclick="closeModal()" class="absolute top-6 right-6 text-gray-400 hover:text-gray-800 transition-colors focus:outline-none">
                 <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
             </button>
+            <div id="modalContent" class="text-left"></div>
             <div id="modalContent"></div>
         </div>
     </div>
 
-    <footer class="w-full bg-white border-t border-gray-100 flex flex-col items-center justify-center py-6 px-6 text-center mt-auto z-50">
-        
-        <aside class="w-full max-w-6xl mb-4 text-[10px] text-gray-500 leading-relaxed text-center font-medium" role="note" aria-label="Legal Disclaimer and Compliance Context">
-            <p class="mb-1">
-                <strong>⚠️ Disclaimer &amp; Notice:</strong> While every effort has been made to ensure system parameter and asset configuration metric accuracy, specification criteria are subject to change without notice. Interactive product calculations are intended for procurement discovery guidance only and do not establish formal legal advisory counsel.
-            </p>
-            <p>
-                End-user enterprises assume full operational compliance tracking duties across all deployment architectures. Devices are equipped with active security features; volatile document data pathways are automatically flushed when system hardware is turned off.
-            </p>
-        </aside>
-
-        <div class="w-full border-t border-gray-50 pt-3">
-            <p class="text-[9px] text-gray-400 font-bold uppercase tracking-[0.3em]">
-                &copy; 2026 Canon Canada Inc. All Rights Reserved.
-            </p>
-        </div>
+    <footer class="w-full py-10 bg-white border-t border-gray-100 flex flex-col items-center justify-center mt-auto text-center">
+        <p class="text-[9px] text-gray-400 font-bold uppercase tracking-[0.3em]">
+            &copy; 2026 Canon Canada Inc. All Rights Reserved.
+        </p>
     </footer>
 
     <script>
@@ -120,6 +117,7 @@
         const categories = [
             { id: "Personal", name: "Personal Scanners", desc: "Ultra-compact and portable solutions for professionals on the move." },
             { id: "Desktop/Workgroup", name: "Desktop & Workgroup", desc: "Space-saving, powerful scanners for front counters and busy office teams." },
+            { id: "Departmental", name: "Departmental Scanners", desc: "High-speed, high-durability machines for reliable batch processing." },
             { id: "Departmental", name: "Departmental Scanners", desc: "High-speed, high-durability machines for reliable departmental batch processing." },
             { id: "Production", name: "Production Scanners", desc: "Industrial-grade hardware for high-volume back office and archival projects." },
             { id: "Cheque", name: "Financial Cheque Scanners", desc: "Specialized MICR capture for banking, retail, and teller environments." }
@@ -134,7 +132,7 @@
             "Logistics": { icon: "📦", label: "Logistics" },
             "BPO": { icon: "🏢", label: "BPO" },
             "Work-From-Home": { icon: "🏠", label: "WFH" }
-        ];
+        };
 
         async function init() {
             try {
@@ -149,23 +147,29 @@
 
         function renderLineCard() {
             const container = document.getElementById('lineCardContainer');
-            
+
             container.innerHTML = categories.map(cat => {
                 const products = allProducts.filter(p => p.category === cat.id);
                 if (products.length === 0) return '';
 
                 return `
+                    <section id="cat-${cat.id}" class="text-left">
                     <section id="cat-${cat.id}">
                         <div class="mb-8 border-b-2 border-gray-100 pb-4 text-left">
+                            <h2 class="text-3xl font-black text-gray-900 uppercase tracking-tight text-left">${cat.name}</h2>
+                            <p class="text-gray-400 font-medium text-sm mt-1 text-left">${cat.desc}</p>
                             <h2 class="text-3xl font-black text-gray-900 uppercase tracking-tight">${cat.name}</h2>
                             <p class="text-gray-400 font-medium text-sm mt-1">${cat.desc}</p>
                         </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-left">
                         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                             ${products.map(p => `
                                 <div onclick="openModal('${p.sku}')" class="product-mini-card bg-white p-6 rounded-[2rem] border-2 border-transparent shadow-sm flex flex-col items-center text-center">
                                     <div class="h-32 w-full mb-6 flex items-center justify-center">
                                         <img src="${p.assets.image}" class="max-h-full object-contain" alt="${p.model}">
                                     </div>
+                                    <h3 class="text-lg font-black text-gray-900 leading-none mb-1 text-center">${p.model}</h3>
+                                    <p class="text-[10px] text-red-600 font-black uppercase tracking-widest mb-4 text-center">${p.specs.speed}</p>
                                     <h3 class="text-lg font-black text-gray-900 leading-none mb-1">${p.model}</h3>
                                     <p class="text-[10px] text-red-600 font-black uppercase tracking-widest mb-4">${p.specs.speed}</p>
                                     <div class="mt-auto pt-4 border-t border-gray-50 w-full flex justify-between items-center text-[9px] font-bold text-gray-400 uppercase tracking-tighter">
@@ -186,15 +190,25 @@
             const modal = document.getElementById('productModal');
             const content = document.getElementById('modalContent');
 
+            // pulling verified spec from JSON field
             const adfDisplay = p.specs.adf_capacity ? `${p.specs.adf_capacity}-Sheets` : "Manual / N/A";
 
             content.innerHTML = `
+                <div class="flex flex-col lg:flex-row gap-12 items-center lg:items-start text-left">
+                    <div class="w-full lg:w-2/5 text-center text-left">
                 <div class="flex flex-col lg:flex-row gap-10 items-center lg:items-start text-left">
+                    <!-- Left Visual Column -->
                     <div class="w-full lg:w-1/3 text-center">
                         <div class="bg-gray-50 rounded-[3rem] p-10 flex items-center justify-center border border-gray-100 shadow-inner">
                             <img src="${p.assets.image}" class="w-full h-auto object-contain max-h-80 mx-auto" alt="${p.model}">
                         </div>
                         
+                        <!-- Connectivity Bar -->
+                        <div class="mt-8 flex justify-center gap-6 p-6 bg-gray-50 rounded-2xl">
+                            <!-- Rule: All but Scanfront 400 support USB -->
+                            <div class="flex flex-col items-center gap-2 ${p.model !== 'Scanfront 400' ? 'active' : 'conn-icon'}">
+                                <span class="text-2xl">🔌</span>
+                        <!-- Mini Specs Grid -->
                         <div class="grid grid-cols-2 gap-3 mt-6">
                             <div class="bg-red-50 p-4 rounded-2xl border border-red-100 text-center">
                                 <p class="text-[8px] font-bold text-gray-400 uppercase tracking-tighter mb-1">Max Speed</p>
@@ -206,19 +220,25 @@
                             </div>
                         </div>
 
+                        <!-- Connectivity -->
                         <div class="mt-6 flex justify-center gap-6 p-5 bg-gray-50 rounded-2xl">
                             <div class="flex flex-col items-center gap-2 ${p.model !== 'ScanFront 400' ? 'active' : 'conn-icon'}">
                                 <span class="text-xl">🔌</span>
                                 <span class="text-[8px] font-black uppercase tracking-widest">USB</span>
                             </div>
                             <div class="flex flex-col items-center gap-2 ${p.specs.connectivity.includes('Ethernet') ? 'active' : 'conn-icon'}">
+                                <span class="text-2xl">🌐</span>
+                                <span class="text-[8px] font-black uppercase tracking-widest">Ethernet</span>
                                 <span class="text-xl">🌐</span>
                                 <span class="text-[8px] font-black uppercase tracking-widest">LAN</span>
                             </div>
                             <div class="flex flex-col items-center gap-2 ${p.specs.connectivity.includes('WIFI') ? 'active' : 'conn-icon'}">
+                                <span class="text-2xl">📶</span>
                                 <span class="text-xl">📶</span>
                                 <span class="text-[8px] font-black uppercase tracking-widest">Wi-Fi</span>
                             </div>
+                            <div class="flex flex-col items-center gap-2 ${p.model === 'Scanfront 400' ? 'active' : 'conn-icon'}">
+                                <span class="text-2xl">🖥️</span>
                             <div class="flex flex-col items-center gap-2 ${p.model === 'ScanFront 400' ? 'active' : 'conn-icon'}">
                                 <span class="text-xl">🖥️</span>
                                 <span class="text-[8px] font-black uppercase tracking-widest">Standalone</span>
@@ -226,6 +246,12 @@
                         </div>
                     </div>
 
+                    <div class="w-full lg:w-3/5 text-left">
+                        <div class="mb-8 text-left">
+                            <p class="text-red-600 font-black text-xs tracking-[0.4em] uppercase mb-1 text-left">${p.category}</p>
+                            <h2 class="text-5xl font-black text-gray-900 mb-2 leading-tight text-left">${p.model}</h2>
+                            <p class="text-gray-400 font-bold text-sm tracking-widest text-left">SKU: ${p.sku}</p>
+                    <!-- Right Detail Column -->
                     <div class="w-full lg:w-2/3 flex flex-col">
                         <div class="mb-6">
                             <p class="text-red-600 font-black text-[10px] tracking-[0.4em] uppercase mb-1">${p.category}</p>
@@ -233,6 +259,12 @@
                             <p class="text-gray-400 font-bold text-xs tracking-widest">SKU: ${p.sku} | Daily Vol: ${p.specs.daily_volume.toLocaleString()} pages</p>
                         </div>
 
+                        <!-- Hardware Highlights -->
+                        <div class="grid grid-cols-3 gap-4 mb-10 text-left">
+                            <div class="bg-red-50 p-5 rounded-2xl border border-red-100 text-center">
+                                <p class="text-[9px] font-bold text-gray-400 uppercase tracking-tighter">Speed</p>
+                                <p class="text-sm font-black text-gray-900 leading-none mt-1">${p.specs.speed.split('/')[0]}</p>
+                        <!-- Product Profile & Value (INCORPORATED FROM FILE) -->
                         <div class="space-y-6 mb-8">
                             <div class="bg-gray-50/80 p-5 rounded-2xl border-l-4 border-gray-900">
                                 <h4 class="text-[10px] font-black text-gray-900 uppercase tracking-widest mb-2 flex items-center gap-2">
@@ -240,6 +272,13 @@
                                 </h4>
                                 <p class="text-sm font-medium text-gray-700 leading-relaxed">${p.content.en.description}</p>
                             </div>
+                            <div class="bg-red-50 p-5 rounded-2xl border border-red-100 text-center">
+                                <p class="text-[9px] font-bold text-gray-400 uppercase tracking-tighter">ADF Size</p>
+                                <p class="text-sm font-black text-gray-900 leading-none mt-1">${adfDisplay}</p>
+                            </div>
+                            <div class="bg-red-50 p-5 rounded-2xl border border-red-100 text-center">
+                                <p class="text-[9px] font-bold text-gray-400 uppercase tracking-tighter">Max Format</p>
+                                <p class="text-sm font-black text-gray-900 leading-none mt-1">${p.specs.max_size}</p>
 
                             <div class="bg-red-50/50 p-5 rounded-2xl border-l-4 border-red-600">
                                 <h4 class="text-[10px] font-black text-red-600 uppercase tracking-widest mb-2 flex items-center gap-2">
@@ -247,7 +286,14 @@
                                 </h4>
                                 <p class="text-sm font-bold text-gray-800 leading-relaxed italic">"${p.content.en.workflow_value}"</p>
                             </div>
+                        </div>
 
+                        <!-- Competitive Story -->
+                        <div class="mb-10 text-left">
+                            <h4 class="text-[10px] font-black text-gray-400 uppercase tracking-[0.2em] mb-4 text-left uppercase">The Competitive Story</h4>
+                            <p class="text-lg font-medium text-gray-700 leading-relaxed italic border-l-4 border-red-600 pl-6 bg-gray-50/50 py-4 rounded-r-2xl text-left">
+                                "${p.content.en.why}"
+                            </p>
                             <div class="bg-gray-900 p-5 rounded-2xl border-l-4 border-gray-400 text-white">
                                 <h4 class="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2 flex items-center gap-2">
                                     <span>🎯</span> Perfect For
@@ -256,12 +302,20 @@
                             </div>
                         </div>
 
+                        <!-- Industry Success -->
+                        <div class="mb-10 text-left">
+                            <h4 class="text-[10px] font-black text-gray-400 uppercase tracking-[0.2em] mb-4 text-left uppercase">Best Fit For These Industries</h4>
+                            <div class="flex flex-wrap gap-3 text-left">
+                        <!-- Industry Icons -->
                         <div class="mb-8">
                             <h4 class="text-[10px] font-black text-gray-400 uppercase tracking-[0.2em] mb-4">Vertical Success Areas:</h4>
                             <div class="flex flex-wrap gap-2">
                                 ${Object.keys(p.verticals).map(v => {
                                     const info = verticalIcons[v] || { icon: '🏢', label: v };
                                     return `
+                                        <div class="flex items-center gap-2 bg-white border border-gray-200 px-4 py-2 rounded-xl shadow-sm">
+                                            <span class="text-lg">${info.icon}</span>
+                                            <span class="text-xs font-bold text-gray-800">${v}</span>
                                         <div class="flex items-center gap-2 bg-white border border-gray-200 px-3 py-1.5 rounded-lg shadow-sm">
                                             <span class="text-sm">${info.icon}</span>
                                             <span class="text-[10px] font-bold text-gray-800">${v}</span>
@@ -271,9 +325,12 @@
                             </div>
                         </div>
 
+                        <div class="flex flex-col sm:flex-row gap-4 text-left">
+                            ${p.assets.brochure ? `<a href="${p.assets.brochure}" target="_blank" class="flex-1 bg-red-600 text-white text-center py-5 rounded-2xl font-bold text-sm hover:bg-black transition-all shadow-lg uppercase tracking-widest">Download Brochure</a>` : ''}
                         <div class="flex flex-col sm:flex-row gap-4 mt-auto">
                             ${p.assets.brochure ? `<a href="${p.assets.brochure}" target="_blank" class="flex-1 bg-red-600 text-white text-center py-4 rounded-2xl font-bold text-xs hover:bg-black transition-all shadow-lg uppercase tracking-widest">Download Brochure</a>` : ''}
                             ${p.assets.video ? `
+                                <a href="${p.assets.video}" target="_blank" class="flex-1 border-2 border-gray-200 text-gray-600 text-center py-5 rounded-2xl font-bold text-sm hover:bg-gray-50 flex items-center justify-center gap-2 transition-all uppercase tracking-widest">
                                 <a href="${p.assets.video}" target="_blank" class="flex-1 border-2 border-gray-200 text-gray-600 text-center py-4 rounded-2xl font-bold text-xs hover:bg-gray-50 flex items-center justify-center gap-2 transition-all uppercase tracking-widest">
                                     <svg class="w-4 h-4 text-red-600" fill="currentColor" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 4-8 4z"/></svg>
                                     Watch Video

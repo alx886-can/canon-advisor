@@ -99,7 +99,6 @@
 </head>
 <body class="min-h-screen flex flex-col text-left">
 
-    <!-- Header -->
     <header class="w-full py-6 flex justify-center items-center bg-white border-b border-gray-100 shadow-sm sticky top-0 z-50">
         <div class="w-full max-w-7xl px-6 flex justify-between items-center">
             <a href="index.html" class="transition-opacity hover:opacity-80 text-left">
@@ -123,7 +122,6 @@
 
     <main class="w-full max-w-4xl px-6 py-10 mx-auto flex-grow text-left">
         
-        <!-- Navigation Back -->
         <div class="flex justify-start mb-6 text-left">
             <a href="selectorEN.html" class="flex items-center text-xs font-bold text-gray-400 uppercase tracking-widest hover:text-red-600 transition-colors group text-left">
                 <svg class="w-4 h-4 mr-2 transform group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M15 19l-7-7 7-7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"></path></svg>
@@ -140,17 +138,14 @@
             </p>
         </div>
 
-        <!-- Wizard Container -->
         <div class="glass-panel p-8 md:p-12 rounded-[3rem] shadow-2xl relative overflow-hidden text-left">
             
-            <!-- Progress Bar -->
             <div id="wizardProgress" class="absolute top-0 left-0 w-full h-1 bg-gray-100 text-left">
                 <div id="progressBar" class="h-full bg-red-600 transition-all duration-500" style="width: 33.3%;"></div>
             </div>
 
             <div id="stepContainer" class="min-h-[420px] flex flex-col text-left">
                 
-                <!-- Step 1: Volume -->
                 <div id="step1" class="fade-in text-left">
                     <span class="text-[10px] font-black text-red-600 uppercase tracking-widest mb-2 block text-left">Step 1 of 3</span>
                     <h2 class="text-3xl font-black text-gray-900 mb-4 leading-tight text-left">What is your estimated daily scan volume?</h2>
@@ -177,7 +172,6 @@
                     </div>
                 </div>
 
-                <!-- Step 2: Document Types (Checkboxes) -->
                 <div id="step2" class="hidden fade-in text-left">
                     <span class="text-[10px] font-black text-red-600 uppercase tracking-widest mb-2 block text-left">Step 2 of 3</span>
                     <h2 class="text-3xl font-black text-gray-900 mb-8 leading-tight text-left">What types of documents will you be scanning?</h2>
@@ -209,7 +203,6 @@
                     </div>
                 </div>
 
-                <!-- Step 3: Connectivity (Checkboxes) -->
                 <div id="step3" class="hidden fade-in text-left">
                     <span class="text-[10px] font-black text-red-600 uppercase tracking-widest mb-2 block text-left">Step 3 of 3</span>
                     <h2 class="text-3xl font-black text-gray-900 mb-8 leading-tight text-left">How do you prefer to connect the scanner?</h2>
@@ -247,7 +240,6 @@
                     </div>
                 </div>
 
-                <!-- Results -->
                 <div id="stepResults" class="hidden fade-in text-left">
                     <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4 text-left">
                         <div class="text-left">
@@ -258,8 +250,7 @@
                     </div>
 
                     <div id="matchList" class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
-                        <!-- Matches -->
-                    </div>
+                        </div>
                 </div>
             </div>
 
@@ -267,7 +258,6 @@
 
     </main>
 
-    <!-- Modal -->
     <div id="productModal" class="modal-overlay fixed inset-0 z-[100] hidden flex items-center justify-center p-4 text-left" onclick="closeModal()">
         <div class="bg-white rounded-[2.5rem] shadow-2xl max-w-4xl w-full p-8 md:p-12 relative overflow-y-auto max-h-[90vh]" onclick="event.stopPropagation()">
             <button onclick="closeModal()" class="absolute top-6 right-6 text-gray-400 hover:text-gray-800 transition-colors focus:outline-none text-left">
@@ -277,10 +267,22 @@
         </div>
     </div>
 
-    <footer class="w-full py-10 bg-white border-t border-gray-100 flex flex-col items-center justify-center mt-auto text-center text-left">
-        <p class="text-[9px] text-gray-400 font-bold uppercase tracking-[0.3em] text-left">
-            &copy; 2026 Canon Canada Inc. All Rights Reserved.
-        </p>
+    <footer class="w-full bg-white border-t border-gray-100 flex flex-col items-center justify-center py-6 px-6 text-center mt-auto z-50">
+        
+        <aside class="w-full max-w-6xl mb-4 text-[10px] text-gray-500 leading-relaxed text-center font-medium" role="note" aria-label="Legal Disclaimer and Compliance Context">
+            <p class="mb-1">
+                <strong>⚠️ Disclaimer &amp; Notice:</strong> While every effort has been made to ensure system parameter and asset configuration metric accuracy, specification criteria are subject to change without notice[cite: 258]. Interactive product calculations are intended for procurement discovery guidance only and do not establish formal legal advisory counsel.
+            </p>
+            <p>
+                End-user enterprises assume full operational compliance tracking duties across all deployment architectures. Devices are equipped with active security features; volatile document data pathways are automatically flushed when system hardware is turned off[cite: 32, 117].
+            </p>
+        </aside>
+
+        <div class="w-full border-t border-gray-50 pt-3">
+            <p class="text-[9px] text-gray-400 font-bold uppercase tracking-[0.3em] text-center">
+                &copy; 2026 Canon Canada Inc. All Rights Reserved.
+            </p>
+        </div>
     </footer>
 
     <script>

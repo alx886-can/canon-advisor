@@ -54,7 +54,6 @@
 </head>
 <body class="min-h-screen flex flex-col text-left">
 
-    <!-- Header -->
     <header class="w-full py-6 flex justify-center items-center bg-white border-b border-gray-100 shadow-sm sticky top-0 z-50">
         <div class="w-full max-w-7xl px-6 flex justify-between items-center text-left">
             <div class="flex items-center gap-8">
@@ -93,7 +92,6 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 fade-in" style="animation-delay: 0.1s;">
             
-            <!-- Block 1: Efficiency Proposal -->
             <div class="glass-panel p-8 rounded-[3rem] shadow-xl flex flex-col h-full text-left">
                 <div class="mb-8 text-left">
                     <h2 class="text-2xl font-black text-gray-900 mb-2 uppercase tracking-tight">Efficiency Proposal</h2>
@@ -134,7 +132,6 @@
                 </div>
             </div>
 
-            <!-- Block 2: Pick Your Own -->
             <div class="glass-panel p-8 rounded-[3rem] shadow-xl flex flex-col h-full text-left">
                 <div class="mb-8 text-left">
                     <h2 class="text-2xl font-black text-gray-900 mb-2 uppercase tracking-tight">Pick Your Own</h2>
@@ -146,15 +143,15 @@
                         <label class="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-3 ml-1 text-left">1. Select Document Type</label>
                         <div class="grid grid-cols-3 gap-3">
                             <label class="relative">
-                                <input type="radio" name="evalType" value="A4" class="type-radio hidden" checked onchange="populateSelect('evalScanner', 'evalType')">
+                                <input type="radio" name="evalType" value="A4" class="type-radio hidden" checked>
                                 <div class="type-btn p-3 rounded-xl text-center text-[10px] font-black uppercase tracking-tighter shadow-sm bg-white">A4/Letter</div>
                             </label>
                             <label class="relative">
-                                <input type="radio" name="evalType" value="A3" class="type-radio hidden" onchange="populateSelect('evalScanner', 'evalType')">
+                                <input type="radio" name="evalType" value="A3" class="type-radio hidden">
                                 <div class="type-btn p-3 rounded-xl text-center text-[10px] font-black uppercase tracking-tighter shadow-sm bg-white">A3 Support</div>
                             </label>
                             <label class="relative">
-                                <input type="radio" name="evalType" value="Cheque" class="type-radio hidden" onchange="populateSelect('evalScanner', 'evalType')">
+                                <input type="radio" name="evalType" value="Cheque" class="type-radio hidden">
                                 <div class="type-btn p-3 rounded-xl text-center text-[10px] font-black uppercase tracking-tighter shadow-sm bg-white">Cheques</div>
                             </label>
                         </div>
@@ -175,12 +172,10 @@
                     <button onclick="evaluateSuitability()" class="w-full bg-gray-900 text-white p-5 rounded-2xl font-bold text-sm hover:bg-black transition-all shadow-lg uppercase tracking-widest">Evaluate Suitability</button>
 
                     <div id="evalFeedback" class="hidden space-y-4 mt-6 animate-in fade-in slide-in-from-top-2 text-left">
-                        <!-- Result Box -->
-                    </div>
+                        </div>
                 </div>
             </div>
 
-            <!-- Block 3: Compare Models (New) -->
             <div class="glass-panel p-8 rounded-[3rem] shadow-xl flex flex-col h-full text-left">
                 <div class="mb-8 text-left">
                     <h2 class="text-2xl font-black text-gray-900 mb-2 uppercase tracking-tight">Compare Products</h2>
@@ -192,15 +187,15 @@
                         <label class="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-3 ml-1 text-left">1. Select Document Type</label>
                         <div class="grid grid-cols-3 gap-3">
                             <label class="relative">
-                                <input type="radio" name="compType" value="A4" class="type-radio hidden" checked onchange="populateSelect('compScanner1', 'compType'); populateSelect('compScanner2', 'compType')">
+                                <input type="radio" name="compType" value="A4" class="type-radio hidden" checked>
                                 <div class="type-btn p-3 rounded-xl text-center text-[10px] font-black uppercase tracking-tighter shadow-sm bg-white">A4/Letter</div>
                             </label>
                             <label class="relative">
-                                <input type="radio" name="compType" value="A3" class="type-radio hidden" onchange="populateSelect('compScanner1', 'compType'); populateSelect('compScanner2', 'compType')">
+                                <input type="radio" name="compType" value="A3" class="type-radio hidden">
                                 <div class="type-btn p-3 rounded-xl text-center text-[10px] font-black uppercase tracking-tighter shadow-sm bg-white">A3 Support</div>
                             </label>
                             <label class="relative">
-                                <input type="radio" name="compType" value="Cheque" class="type-radio hidden" onchange="populateSelect('compScanner1', 'compType'); populateSelect('compScanner2', 'compType')">
+                                <input type="radio" name="compType" value="Cheque" class="type-radio hidden">
                                 <div class="type-btn p-3 rounded-xl text-center text-[10px] font-black uppercase tracking-tighter shadow-sm bg-white">Cheques</div>
                             </label>
                         </div>
@@ -228,8 +223,7 @@
                     <button onclick="compareProducts()" class="w-full bg-[#ED1C24] text-white p-5 rounded-2xl font-bold text-sm hover:bg-black transition-all shadow-lg uppercase tracking-widest">Run Comparison</button>
 
                     <div id="compareResults" class="hidden space-y-4 mt-6 animate-in fade-in slide-in-from-top-2 text-left">
-                        <!-- Comparison UI -->
-                    </div>
+                        </div>
                 </div>
             </div>
 
@@ -237,7 +231,6 @@
 
     </main>
 
-    <!-- Modal -->
     <div id="productModal" class="modal-overlay fixed inset-0 z-[100] hidden flex items-center justify-center p-4 text-left" onclick="closeModal()">
         <div class="bg-white rounded-[2.5rem] shadow-2xl max-w-4xl w-full p-8 md:p-12 relative overflow-y-auto max-h-[90vh]" onclick="event.stopPropagation()">
             <button onclick="closeModal()" class="absolute top-6 right-6 text-gray-400 hover:text-gray-800 transition-colors focus:outline-none">
@@ -247,10 +240,22 @@
         </div>
     </div>
 
-    <footer class="w-full py-10 bg-white border-t border-gray-100 flex flex-col items-center justify-center mt-auto text-center">
-        <p class="text-[9px] text-gray-400 font-bold uppercase tracking-[0.3em]">
-            &copy; 2026 Canon Canada Inc. All Rights Reserved.
-        </p>
+    <footer class="w-full bg-white border-t border-gray-100 flex flex-col items-center justify-center py-6 px-6 text-center mt-auto z-50">
+        
+        <aside class="w-full max-w-6xl mb-4 text-[10px] text-gray-500 leading-relaxed text-center font-medium" role="note" aria-label="Legal Disclaimer and Compliance Context">
+            <p class="mb-1">
+                <strong>⚠️ Disclaimer &amp; Notice:</strong> While every effort has been made to ensure system parameter and asset configuration metric accuracy, specification criteria are subject to change without notice. Interactive product calculations are intended for procurement discovery guidance only and do not establish formal legal advisory counsel.
+            </p>
+            <p>
+                End-user enterprises assume full operational compliance tracking duties across all deployment architectures. Devices are equipped with active security features; volatile document data pathways are automatically flushed when system hardware is turned off.
+            </p>
+        </aside>
+
+        <div class="w-full border-t border-gray-50 pt-3">
+            <p class="text-[9px] text-gray-400 font-bold uppercase tracking-[0.3em]">
+                &copy; 2026 Canon Canada Inc. All Rights Reserved.
+            </p>
+        </div>
     </footer>
 
     <script>
@@ -266,6 +271,13 @@
                 populateSelect('evalScanner', 'evalType');
                 populateSelect('compScanner1', 'compType');
                 populateSelect('compScanner2', 'compType');
+
+                // Bind change events to radios to handle filter mutation dynamically
+                document.querySelectorAll('input[name="evalType"]').forEach(r => r.addEventListener('change', () => populateSelect('evalScanner', 'evalType')));
+                document.querySelectorAll('input[name="compType"]').forEach(r => r.addEventListener('change', () => {
+                    populateSelect('compScanner1', 'compType');
+                    populateSelect('compScanner2', 'compType');
+                }));
             } catch (error) {
                 console.error("Database load error:", error);
             }
@@ -322,7 +334,7 @@
                         const speedVal = getNumericSpeed(product.specs.speed);
                         const estMinutes = Math.ceil(vol / speedVal);
                         const tier = tierLabels[idx];
-                        const colors = { 'Good': 'text-gray-400 bg-gray-50 border-gray-100', 'Better': 'text-blue-600 bg-blue-50 border-blue-100', 'Best': 'text-red-600 bg-red-50 border-red-100' };
+                        const textColors = { 'Good': 'text-gray-400', 'Better': 'text-blue-600', 'Best': 'text-red-600' };
 
                         return `
                             <div onclick="openModal('${product.sku}')" class="suggestion-card bg-white p-5 rounded-[2rem] border-2 border-gray-50 flex items-center gap-6 shadow-sm hover:border-red-600">
@@ -330,7 +342,7 @@
                                     <img src="${product.assets.image}" class="max-h-full max-w-full object-contain">
                                 </div>
                                 <div class="flex-grow text-left">
-                                    <span class="text-[9px] font-black uppercase tracking-widest ${colors[tier].split(' ')[0]} mb-1 block">${tier} Proposal</span>
+                                    <span class="text-[9px] font-black uppercase tracking-widest ${textColors[tier]} mb-1 block">${tier} Proposal</span>
                                     <h4 class="text-lg font-black text-gray-900 leading-none">${product.model}</h4>
                                     <p class="text-[10px] text-gray-400 font-bold mt-1 uppercase tracking-tighter">${product.specs.speed}</p>
                                 </div>

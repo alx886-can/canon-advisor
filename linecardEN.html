@@ -8,7 +8,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Canon | Efficiency Calculator</title>
+    <title>Canon | Product Line Card</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -50,17 +50,17 @@
 
         }
 
-        .suggestion-card {
+        .product-mini-card {
 
-            transition: all 0.3s ease;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
             cursor: pointer;
 
         }
 
-        .suggestion-card:hover {
+        .product-mini-card:hover {
 
-            transform: scale(1.02);
+            transform: translateY(-5px);
 
             border-color: var(--canon-red);
 
@@ -76,31 +76,15 @@
 
         }
 
-        .fade-in { animation: fadeIn 0.5s ease-out forwards; }
+        .fade-in { animation: fadeIn 0.4s ease-out forwards; }
 
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
         
 
-        .type-btn {
+        .conn-icon { opacity: 0.2; filter: grayscale(1); }
 
-            border: 2px solid #e5e7eb;
-
-            transition: all 0.2s;
-
-            cursor: pointer;
-
-        }
-
-        .type-radio:checked + .type-btn {
-
-            border-color: var(--canon-red);
-
-            background-color: #fff1f2;
-
-            color: var(--canon-red);
-
-        }
+        .conn-icon.active { opacity: 1; filter: none; color: var(--canon-red); }
 
     </style>
 
@@ -118,11 +102,11 @@
 
             <div class="flex items-center gap-8">
 
-                <a href="index.html"><img src="https://i.ibb.co/YBMsYnYj/Canon-Logo-2.png" alt="Canon" class="h-8 w-auto"></a>
+                <a href="index.html"><img src="https://i.ibb.co/YBMsYnYj/Canon-Logo-2.png" alt="Canon" class="h-8 md:h-10 w-auto"></a>
 
                 <a href="selectorEN.html" class="hidden md:flex items-center text-xs font-bold text-gray-400 uppercase tracking-widest hover:text-red-600 transition-colors">
 
-                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M15 19l-7-7 7-7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"></path></svg>
+                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M15 19l-7-7 7-7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
 
                     Back to Hub
 
@@ -130,7 +114,7 @@
 
             </div>
 
-
+            
 
             <div class="flex items-center gap-4 md:gap-10">
 
@@ -138,17 +122,17 @@
 
                 
 
-                <div class="flex items-center gap-3 text-[10px] font-black uppercase tracking-[0.2em] border-l border-gray-200 pl-4 md:pl-10">
+                <div class="flex items-center gap-3 text-[10px] font-black uppercase tracking-[0.2em] border-l border-gray-200 pl-4 md:pl-10 text-right">
 
                     <span class="text-gray-400">Language:</span>
 
                     <div class="flex items-center gap-2">
 
-                        <span class="text-red-600 font-bold">EN</span>
+                        <span class="text-red-600 font-black">EN</span>
 
                         <span class="text-gray-300">|</span>
 
-                        <a href="efficiencyFR.html" class="text-gray-400 hover:text-red-600 transition-colors">FR</a>
+                        <a href="linecardFR.html" class="text-gray-400 hover:text-red-600 transition-colors">FR</a>
 
                     </div>
 
@@ -162,21 +146,25 @@
 
 
 
-    <main class="w-full max-w-[1400px] px-6 py-10 mx-auto flex-grow text-left">
+    <main class="w-full max-w-7xl px-6 py-12 mx-auto flex-grow text-left">
 
         
 
-        <div class="mb-10 fade-in">
+        <!-- Intro -->
 
-            <h1 class="text-3xl md:text-5xl font-black text-gray-900 tracking-tighter mb-4 uppercase">
+        <div class="mb-16 fade-in text-left">
 
-                Efficiency <span class="text-[#ED1C24]">Calculator</span>
+            <p class="text-[10px] font-black text-red-600 uppercase tracking-[0.4em] mb-2">Portfolio Overview</p>
+
+            <h1 class="text-4xl md:text-6xl font-black text-gray-900 tracking-tighter mb-4 uppercase">
+
+                imageFORMULA <span class="text-[#ED1C24]">Line Card</span>
 
             </h1>
 
-            <p class="text-gray-500 font-medium text-lg max-w-2xl text-left leading-tight">
+            <p class="text-gray-500 font-medium text-lg max-w-2xl leading-tight">
 
-                Evaluate hardware performance and compare models to optimize your document capture workflow.
+                Explore our comprehensive hardware lineup. Select a product to view technical profiles, targeted application areas, and specific workflow values.
 
             </p>
 
@@ -184,289 +172,11 @@
 
 
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 fade-in" style="animation-delay: 0.1s;">
+        <!-- Line Card Sections -->
 
-            
+        <div id="lineCardContainer" class="space-y-20 mb-20 fade-in" style="animation-delay: 0.1s;">
 
-            <!-- Block 1: Efficiency Proposal -->
-
-            <div class="glass-panel p-8 rounded-[3rem] shadow-xl flex flex-col h-full text-left">
-
-                <div class="mb-8 text-left">
-
-                    <h2 class="text-2xl font-black text-gray-900 mb-2 uppercase tracking-tight">Efficiency Proposal</h2>
-
-                    <p class="text-gray-400 text-sm font-medium leading-relaxed">Enter your daily volume and requirements for a recommendation.</p>
-
-                </div>
-
-
-
-                <div class="space-y-6 mb-10 text-left">
-
-                    <div>
-
-                        <label class="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-3 ml-1">1. Est. Daily Volume (Items)</label>
-
-                        <input type="number" id="proposalVol" placeholder="e.g. 5000" class="w-full bg-white border border-gray-200 rounded-2xl p-4 text-sm font-bold focus:ring-2 focus:ring-red-500 outline-none transition-all shadow-sm">
-
-                    </div>
-
-
-
-                    <div>
-
-                        <label class="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-3 ml-1">2. Select Document Type</label>
-
-                        <div class="grid grid-cols-3 gap-3">
-
-                            <label class="relative">
-
-                                <input type="radio" name="propType" value="A4" class="type-radio hidden" checked>
-
-                                <div class="type-btn p-3 rounded-xl text-center text-[10px] font-black uppercase tracking-tighter shadow-sm bg-white">A4/Letter</div>
-
-                            </label>
-
-                            <label class="relative">
-
-                                <input type="radio" name="propType" value="A3" class="type-radio hidden">
-
-                                <div class="type-btn p-3 rounded-xl text-center text-[10px] font-black uppercase tracking-tighter shadow-sm bg-white">A3 Support</div>
-
-                            </label>
-
-                            <label class="relative">
-
-                                <input type="radio" name="propType" value="Cheque" class="type-radio hidden">
-
-                                <div class="type-btn p-3 rounded-xl text-center text-[10px] font-black uppercase tracking-tighter shadow-sm bg-white">Cheques</div>
-
-                            </label>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <button onclick="calculateEfficiency()" class="w-full bg-red-600 text-white p-5 rounded-2xl font-bold text-sm hover:bg-black transition-all shadow-lg shadow-red-100 uppercase tracking-widest">Generate Proposal</button>
-
-                </div>
-
-
-
-                <div id="proposalResults" class="space-y-4 flex-grow min-h-[300px] text-left">
-
-                    <div class="h-full flex flex-col items-center justify-center border-2 border-dashed border-gray-100 rounded-[2rem] p-8 text-center text-gray-300">
-
-                        <p class="font-bold italic">Enter criteria to see tiers.</p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-
-            <!-- Block 2: Pick Your Own -->
-
-            <div class="glass-panel p-8 rounded-[3rem] shadow-xl flex flex-col h-full text-left">
-
-                <div class="mb-8 text-left">
-
-                    <h2 class="text-2xl font-black text-gray-900 mb-2 uppercase tracking-tight">Pick Your Own</h2>
-
-                    <p class="text-gray-400 text-sm font-medium leading-relaxed">Evaluate a specific scanner against your expected workload.</p>
-
-                </div>
-
-
-
-                <div class="space-y-6 flex-grow text-left">
-
-                    <div>
-
-                        <label class="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-3 ml-1 text-left">1. Select Document Type</label>
-
-                        <div class="grid grid-cols-3 gap-3">
-
-                            <label class="relative">
-
-                                <input type="radio" name="evalType" value="A4" class="type-radio hidden" checked onchange="populateSelect('evalScanner', 'evalType')">
-
-                                <div class="type-btn p-3 rounded-xl text-center text-[10px] font-black uppercase tracking-tighter shadow-sm bg-white">A4/Letter</div>
-
-                            </label>
-
-                            <label class="relative">
-
-                                <input type="radio" name="evalType" value="A3" class="type-radio hidden" onchange="populateSelect('evalScanner', 'evalType')">
-
-                                <div class="type-btn p-3 rounded-xl text-center text-[10px] font-black uppercase tracking-tighter shadow-sm bg-white">A3 Support</div>
-
-                            </label>
-
-                            <label class="relative">
-
-                                <input type="radio" name="evalType" value="Cheque" class="type-radio hidden" onchange="populateSelect('evalScanner', 'evalType')">
-
-                                <div class="type-btn p-3 rounded-xl text-center text-[10px] font-black uppercase tracking-tighter shadow-sm bg-white">Cheques</div>
-
-                            </label>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <div>
-
-                        <label class="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2 ml-1 text-left">2. Select Scanner</label>
-
-                        <select id="evalScanner" class="w-full bg-white border border-gray-200 rounded-2xl p-4 text-sm font-bold focus:ring-2 focus:ring-red-500 outline-none transition-all cursor-pointer shadow-sm">
-
-                            <option value="">-- Choose Hardware --</option>
-
-                        </select>
-
-                    </div>
-
-
-
-                    <div>
-
-                        <label class="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2 ml-1 text-left">3. Current Job Volume (Items)</label>
-
-                        <input type="number" id="evalVol" placeholder="e.g. 2500" class="w-full bg-white border border-gray-200 rounded-2xl p-4 text-sm font-bold focus:ring-2 focus:ring-red-500 outline-none transition-all shadow-sm">
-
-                    </div>
-
-
-
-                    <button onclick="evaluateSuitability()" class="w-full bg-gray-900 text-white p-5 rounded-2xl font-bold text-sm hover:bg-black transition-all shadow-lg uppercase tracking-widest">Evaluate Suitability</button>
-
-
-
-                    <div id="evalFeedback" class="hidden space-y-4 mt-6 animate-in fade-in slide-in-from-top-2 text-left">
-
-                        <!-- Result Box -->
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-
-            <!-- Block 3: Compare Models (New) -->
-
-            <div class="glass-panel p-8 rounded-[3rem] shadow-xl flex flex-col h-full text-left">
-
-                <div class="mb-8 text-left">
-
-                    <h2 class="text-2xl font-black text-gray-900 mb-2 uppercase tracking-tight">Compare Products</h2>
-
-                    <p class="text-gray-400 text-sm font-medium leading-relaxed">Select two models to compare efficiency and time savings.</p>
-
-                </div>
-
-
-
-                <div class="space-y-6 flex-grow text-left">
-
-                    <div>
-
-                        <label class="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-3 ml-1 text-left">1. Select Document Type</label>
-
-                        <div class="grid grid-cols-3 gap-3">
-
-                            <label class="relative">
-
-                                <input type="radio" name="compType" value="A4" class="type-radio hidden" checked onchange="populateSelect('compScanner1', 'compType'); populateSelect('compScanner2', 'compType')">
-
-                                <div class="type-btn p-3 rounded-xl text-center text-[10px] font-black uppercase tracking-tighter shadow-sm bg-white">A4/Letter</div>
-
-                            </label>
-
-                            <label class="relative">
-
-                                <input type="radio" name="compType" value="A3" class="type-radio hidden" onchange="populateSelect('compScanner1', 'compType'); populateSelect('compScanner2', 'compType')">
-
-                                <div class="type-btn p-3 rounded-xl text-center text-[10px] font-black uppercase tracking-tighter shadow-sm bg-white">A3 Support</div>
-
-                            </label>
-
-                            <label class="relative">
-
-                                <input type="radio" name="compType" value="Cheque" class="type-radio hidden" onchange="populateSelect('compScanner1', 'compType'); populateSelect('compScanner2', 'compType')">
-
-                                <div class="type-btn p-3 rounded-xl text-center text-[10px] font-black uppercase tracking-tighter shadow-sm bg-white">Cheques</div>
-
-                            </label>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <div>
-
-                        <label class="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2 ml-1 text-left">2. Select Choice #1</label>
-
-                        <select id="compScanner1" class="w-full bg-white border border-gray-200 rounded-2xl p-4 text-sm font-bold focus:ring-2 focus:ring-red-500 outline-none shadow-sm cursor-pointer">
-
-                            <option value="">-- Choose Choice 1 --</option>
-
-                        </select>
-
-                    </div>
-
-
-
-                    <div>
-
-                        <label class="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2 ml-1 text-left">3. Select Choice #2</label>
-
-                        <select id="compScanner2" class="w-full bg-white border border-gray-200 rounded-2xl p-4 text-sm font-bold focus:ring-2 focus:ring-red-500 outline-none shadow-sm cursor-pointer">
-
-                            <option value="">-- Choose Choice 2 --</option>
-
-                        </select>
-
-                    </div>
-
-
-
-                    <div>
-
-                        <label class="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2 ml-1 text-left">4. Comparison Volume (Items)</label>
-
-                        <input type="number" id="compVol" placeholder="e.g. 10000" class="w-full bg-white border border-gray-200 rounded-2xl p-4 text-sm font-bold focus:ring-2 focus:ring-red-500 outline-none transition-all shadow-sm">
-
-                    </div>
-
-
-
-                    <button onclick="compareProducts()" class="w-full bg-[#ED1C24] text-white p-5 rounded-2xl font-bold text-sm hover:bg-black transition-all shadow-lg uppercase tracking-widest">Run Comparison</button>
-
-
-
-                    <div id="compareResults" class="hidden space-y-4 mt-6 animate-in fade-in slide-in-from-top-2 text-left">
-
-                        <!-- Comparison UI -->
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
+            <!-- Categories dynamically injected -->
 
         </div>
 
@@ -480,7 +190,7 @@
 
     <div id="productModal" class="modal-overlay fixed inset-0 z-[100] hidden flex items-center justify-center p-4 text-left" onclick="closeModal()">
 
-        <div class="bg-white rounded-[2.5rem] shadow-2xl max-w-4xl w-full p-8 md:p-12 relative overflow-y-auto max-h-[90vh]" onclick="event.stopPropagation()">
+        <div class="bg-white rounded-[2.5rem] shadow-2xl max-w-6xl w-full p-8 md:p-12 relative overflow-y-auto max-h-[90vh]" onclick="event.stopPropagation()">
 
             <button onclick="closeModal()" class="absolute top-6 right-6 text-gray-400 hover:text-gray-800 transition-colors focus:outline-none">
 
@@ -488,7 +198,7 @@
 
             </button>
 
-            <div id="modalContent" class="text-left"></div>
+            <div id="modalContent"></div>
 
         </div>
 
@@ -512,6 +222,42 @@
 
         let allProducts = [];
 
+        const categories = [
+
+            { id: "Personal", name: "Personal Scanners", desc: "Ultra-compact and portable solutions for professionals on the move." },
+
+            { id: "Desktop/Workgroup", name: "Desktop & Workgroup", desc: "Space-saving, powerful scanners for front counters and busy office teams." },
+
+            { id: "Departmental", name: "Departmental Scanners", desc: "High-speed, high-durability machines for reliable departmental batch processing." },
+
+            { id: "Production", name: "Production Scanners", desc: "Industrial-grade hardware for high-volume back office and archival projects." },
+
+            { id: "Cheque", name: "Financial Cheque Scanners", desc: "Specialized MICR capture for banking, retail, and teller environments." }
+
+        ];
+
+
+
+        const verticalIcons = {
+
+            "Government": { icon: "🏛️", label: "Gov" },
+
+            "Healthcare": { icon: "🏥", label: "Health" },
+
+            "Financial": { icon: "💰", label: "Finance" },
+
+            "Legal": { icon: "⚖️", label: "Legal" },
+
+            "Education": { icon: "🎓", label: "Edu" },
+
+            "Logistics": { icon: "📦", label: "Logistics" },
+
+            "BPO": { icon: "🏢", label: "BPO" },
+
+            "Work-From-Home": { icon: "🏠", label: "WFH" }
+
+        };
+
 
 
         async function init() {
@@ -524,15 +270,7 @@
 
                 allProducts = data.products.filter(p => p.category !== 'Accessory');
 
-                
-
-                // Populate all selects initially
-
-                populateSelect('evalScanner', 'evalType');
-
-                populateSelect('compScanner1', 'compType');
-
-                populateSelect('compScanner2', 'compType');
+                renderLineCard();
 
             } catch (error) {
 
@@ -544,349 +282,67 @@
 
 
 
-        function populateSelect(targetId, radioName) {
+        function renderLineCard() {
 
-            const select = document.getElementById(targetId);
-
-            const docType = document.querySelector(`input[name="${radioName}"]:checked`).value;
-
-
-
-            select.innerHTML = `<option value="">-- Choose Hardware --</option>`;
-
-
-
-            const filtered = allProducts.filter(p => {
-
-                if (docType === 'Cheque') return p.category === 'Cheque';
-
-                if (docType === 'A3') return p.specs.max_size === 'A3';
-
-                return p.category !== 'Cheque' && p.specs.max_size === 'A4';
-
-            }).sort((a,b) => a.model.localeCompare(b.model));
-
-
-
-            filtered.forEach(p => {
-
-                const opt = document.createElement('option');
-
-                opt.value = p.sku;
-
-                opt.textContent = p.model;
-
-                select.appendChild(opt);
-
-            });
-
-        }
-
-
-
-        function getNumericSpeed(speedStr) {
-
-            const match = speedStr.match(/(\d+)/);
-
-            return match ? parseInt(match[1]) : 1;
-
-        }
-
-
-
-        function calculateEfficiency() {
-
-            const vol = parseInt(document.getElementById('proposalVol').value);
-
-            const docType = document.querySelector('input[name="propType"]:checked').value;
-
-            const container = document.getElementById('proposalResults');
+            const container = document.getElementById('lineCardContainer');
 
             
 
-            if (!vol || isNaN(vol)) return;
+            container.innerHTML = categories.map(cat => {
 
+                const products = allProducts.filter(p => p.category === cat.id);
 
+                if (products.length === 0) return '';
 
-            let pool = allProducts.filter(p => {
 
-                if (docType === 'Cheque') return p.category === 'Cheque';
 
-                if (docType === 'A3') return p.specs.max_size === 'A3';
+                return `
 
-                return p.category !== 'Cheque' && p.specs.max_size === 'A4';
+                    <section id="cat-${cat.id}">
 
-            });
+                        <div class="mb-8 border-b-2 border-gray-100 pb-4 text-left">
 
+                            <h2 class="text-3xl font-black text-gray-900 uppercase tracking-tight">${cat.name}</h2>
 
-
-            pool.sort((a, b) => a.specs.daily_volume - b.specs.daily_volume);
-
-            let startIndex = pool.findIndex(p => p.specs.daily_volume >= vol);
-
-            if (startIndex === -1 || startIndex > pool.length - 3) startIndex = Math.max(0, pool.length - 3);
-
-
-
-            const selection = pool.slice(startIndex, startIndex + 3);
-
-            const tierLabels = ['Good', 'Better', 'Best'];
-
-
-
-            container.innerHTML = `
-
-                <div class="space-y-4">
-
-                    ${selection.map((product, idx) => {
-
-                        const speedVal = getNumericSpeed(product.specs.speed);
-
-                        const estMinutes = Math.ceil(vol / speedVal);
-
-                        const tier = tierLabels[idx];
-
-                        const colors = { 'Good': 'text-gray-400 bg-gray-50 border-gray-100', 'Better': 'text-blue-600 bg-blue-50 border-blue-100', 'Best': 'text-red-600 bg-red-50 border-red-100' };
-
-
-
-                        return `
-
-                            <div onclick="openModal('${product.sku}')" class="suggestion-card bg-white p-5 rounded-[2rem] border-2 border-gray-50 flex items-center gap-6 shadow-sm hover:border-red-600">
-
-                                <div class="w-16 h-16 shrink-0 flex items-center justify-center">
-
-                                    <img src="${product.assets.image}" class="max-h-full max-w-full object-contain">
-
-                                </div>
-
-                                <div class="flex-grow text-left">
-
-                                    <span class="text-[9px] font-black uppercase tracking-widest ${colors[tier].split(' ')[0]} mb-1 block">${tier} Proposal</span>
-
-                                    <h4 class="text-lg font-black text-gray-900 leading-none">${product.model}</h4>
-
-                                    <p class="text-[10px] text-gray-400 font-bold mt-1 uppercase tracking-tighter">${product.specs.speed}</p>
-
-                                </div>
-
-                                <div class="text-right shrink-0">
-
-                                    <p class="text-[9px] font-black text-gray-400 uppercase tracking-widest mb-1">Time to Scan</p>
-
-                                    <p class="text-lg font-black text-gray-900">~${estMinutes}<span class="text-[10px] ml-1">min</span></p>
-
-                                </div>
-
-                            </div>
-
-                        `;
-
-                    }).join('')}
-
-                </div>
-
-            `;
-
-        }
-
-
-
-        function evaluateSuitability() {
-
-            const sku = document.getElementById('evalScanner').value;
-
-            const vol = parseInt(document.getElementById('evalVol').value);
-
-            const feedback = document.getElementById('evalFeedback');
-
-
-
-            if (!sku || !vol) return;
-
-
-
-            const p = allProducts.find(x => x.sku === sku);
-
-            const limit = p.specs.daily_volume;
-
-            const speed = getNumericSpeed(p.specs.speed);
-
-            const estMinutes = Math.ceil(vol / speed);
-
-
-
-            let status = "Great Match"; let color = "green"; let icon = "✅";
-
-            let desc = "This model is perfectly suited for your scanning volume.";
-
-
-
-            if (vol > limit) {
-
-                status = "Underpowered"; color = "red"; icon = "⚠️";
-
-                desc = `Caution: This workload exceeds the suggested daily volume of ${limit.toLocaleString()} items.`;
-
-            } else if (vol < (limit * 0.10) && limit > 20000) {
-
-                status = "Overkill"; color = "amber"; icon = "⚙️";
-
-                desc = `This industrial unit is rated for ${limit.toLocaleString()} items. A smaller model may be more cost-effective.`;
-
-            }
-
-
-
-            const bgColors = { green: "bg-green-50 border-green-100 text-green-900", red: "bg-red-50 border-red-100 text-red-900", amber: "bg-amber-50 border-yellow-100 text-amber-900" };
-
-
-
-            feedback.innerHTML = `
-
-                <div class="p-6 rounded-[2rem] border-2 ${bgColors[color]} shadow-sm text-left">
-
-                    <div class="flex items-center gap-3 mb-3 text-left">
-
-                        <span class="text-xl text-left">${icon}</span>
-
-                        <h3 class="text-lg font-black uppercase tracking-tight text-left">${status}</h3>
-
-                    </div>
-
-                    <p class="text-sm font-medium leading-relaxed opacity-80 mb-6 text-left">${desc}</p>
-
-                    <div class="bg-white/60 rounded-2xl p-5 border border-white text-left">
-
-                        <p class="text-[10px] font-black uppercase text-gray-400 tracking-widest mb-1 text-left">Job Performance</p>
-
-                        <div class="flex justify-between items-end text-left">
-
-                            <span class="text-sm font-bold text-left">Est. completion time:</span>
-
-                            <span class="text-2xl font-black text-gray-900 text-left">~${estMinutes} <span class="text-xs font-bold text-gray-400 uppercase text-left">Mins</span></span>
+                            <p class="text-gray-400 font-medium text-sm mt-1">${cat.desc}</p>
 
                         </div>
 
-                    </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
-                </div>
+                            ${products.map(p => `
 
-            `;
+                                <div onclick="openModal('${p.sku}')" class="product-mini-card bg-white p-6 rounded-[2rem] border-2 border-transparent shadow-sm flex flex-col items-center text-center">
 
-            feedback.classList.remove('hidden');
+                                    <div class="h-32 w-full mb-6 flex items-center justify-center">
 
-        }
+                                        <img src="${p.assets.image}" class="max-h-full object-contain" alt="${p.model}">
 
+                                    </div>
 
+                                    <h3 class="text-lg font-black text-gray-900 leading-none mb-1">${p.model}</h3>
 
-        function compareProducts() {
+                                    <p class="text-[10px] text-red-600 font-black uppercase tracking-widest mb-4">${p.specs.speed}</p>
 
-            const sku1 = document.getElementById('compScanner1').value;
+                                    <div class="mt-auto pt-4 border-t border-gray-50 w-full flex justify-between items-center text-[9px] font-bold text-gray-400 uppercase tracking-tighter">
 
-            const sku2 = document.getElementById('compScanner2').value;
+                                        <span>SKU: ${p.sku}</span>
 
-            const vol = parseInt(document.getElementById('compVol').value);
+                                        <span class="text-gray-900">Details →</span>
 
-            const container = document.getElementById('compareResults');
+                                    </div>
 
+                                </div>
 
-
-            if (!sku1 || !sku2 || !vol) return;
-
-
-
-            const p1 = allProducts.find(x => x.sku === sku1);
-
-            const p2 = allProducts.find(x => x.sku === sku2);
-
-
-
-            const t1 = Math.ceil(vol / getNumericSpeed(p1.specs.speed));
-
-            const t2 = Math.ceil(vol / getNumericSpeed(p2.specs.speed));
-
-
-
-            const faster = t1 < t2 ? p1 : p2;
-
-            const slower = t1 < t2 ? p2 : p1;
-
-            const fasterTime = t1 < t2 ? t1 : t2;
-
-            const slowerTime = t1 < t2 ? t2 : t1;
-
-            const savings = slowerTime - fasterTime;
-
-
-
-            let advice = "";
-
-            if (vol > p1.specs.daily_volume || vol > p2.specs.daily_volume) {
-
-                advice = `Caution: This volume exceeds the suggested limits for ${vol > p1.specs.daily_volume ? p1.model : p2.model}. For long-term durability, ensure the hardware category matches the workload.`;
-
-            } else if (p1.specs.max_size !== p2.specs.max_size) {
-
-                advice = `Note the media flexibility. While speed is critical, the ${p1.specs.max_size === 'A3' ? p1.model : p2.model} provides A3 support which may be required for specific oversized forms.`;
-
-            } else {
-
-                advice = `Both models are compatible. The ${faster.model} provides a significantly more efficient workflow for this specific volume size.`;
-
-            }
-
-
-
-            container.innerHTML = `
-
-                <div class="p-6 rounded-[2.5rem] bg-gray-900 text-white shadow-2xl text-left">
-
-                    <div class="grid grid-cols-2 gap-4 mb-6">
-
-                        <div class="text-center p-4 bg-white/10 rounded-2xl">
-
-                            <p class="text-[9px] font-bold text-gray-400 uppercase mb-1">${p1.model}</p>
-
-                            <p class="text-xl font-black">~${t1} min</p>
+                            `).join('')}
 
                         </div>
 
-                        <div class="text-center p-4 bg-white/10 rounded-2xl">
+                    </section>
 
-                            <p class="text-[9px] font-bold text-gray-400 uppercase mb-1">${p2.model}</p>
+                `;
 
-                            <p class="text-xl font-black">~${t2} min</p>
-
-                        </div>
-
-                    </div>
-
-                    
-
-                    <div class="bg-red-600 rounded-2xl p-5 mb-6 text-center">
-
-                        <p class="text-[10px] font-black uppercase tracking-widest mb-1">Efficiency Winner: ${faster.model}</p>
-
-                        <p class="text-2xl font-black">Save ${savings} Minutes</p>
-
-                    </div>
-
-
-
-                    <div class="bg-white/5 p-4 rounded-xl border border-white/10">
-
-                        <p class="text-[10px] font-black uppercase text-gray-400 mb-2">Expert Advice</p>
-
-                        <p class="text-xs font-medium leading-relaxed italic">${advice}</p>
-
-                    </div>
-
-                </div>
-
-            `;
-
-            container.classList.remove('hidden');
+            }).join('');
 
         }
 
@@ -904,33 +360,83 @@
 
 
 
+            const adfDisplay = p.specs.adf_capacity ? `${p.specs.adf_capacity}-Sheets` : "Manual / N/A";
+
+
+
             content.innerHTML = `
 
-                <div class="flex flex-col lg:flex-row gap-12 items-center lg:items-start text-left">
+                <div class="flex flex-col lg:flex-row gap-10 items-center lg:items-start text-left">
 
-                    <div class="w-full lg:w-2/5 text-center">
+                    <!-- Left Visual Column -->
 
-                        <div class="bg-gray-50 rounded-3xl p-8 flex items-center justify-center border border-gray-100">
+                    <div class="w-full lg:w-1/3 text-center">
 
-                            <img src="${p.assets.image}" class="w-full h-auto object-contain max-h-72" alt="${p.model}">
+                        <div class="bg-gray-50 rounded-[3rem] p-10 flex items-center justify-center border border-gray-100 shadow-inner">
+
+                            <img src="${p.assets.image}" class="w-full h-auto object-contain max-h-80 mx-auto" alt="${p.model}">
 
                         </div>
 
-                        <div class="grid grid-cols-2 gap-3 mt-8 text-left">
+                        
 
-                            <div class="bg-red-50 p-4 rounded-2xl text-center">
+                        <!-- Mini Specs Grid -->
 
-                                <p class="text-[9px] font-bold text-gray-400 uppercase tracking-tighter">Speed</p>
+                        <div class="grid grid-cols-2 gap-3 mt-6">
 
-                                <p class="text-xs font-black text-red-600 leading-none mt-1">${p.specs.speed}</p>
+                            <div class="bg-red-50 p-4 rounded-2xl border border-red-100 text-center">
+
+                                <p class="text-[8px] font-bold text-gray-400 uppercase tracking-tighter mb-1">Max Speed</p>
+
+                                <p class="text-xs font-black text-gray-900 leading-none">${p.specs.speed.split('/')[0]}</p>
 
                             </div>
 
-                            <div class="bg-red-50 p-4 rounded-2xl text-center">
+                            <div class="bg-red-50 p-4 rounded-2xl border border-red-100 text-center">
 
-                                <p class="text-[9px] font-bold text-gray-400 uppercase tracking-tighter">Daily Vol</p>
+                                <p class="text-[8px] font-bold text-gray-400 uppercase tracking-tighter mb-1">ADF Size</p>
 
-                                <p class="text-xs font-black text-red-600 leading-none mt-1">${p.specs.daily_volume.toLocaleString()}</p>
+                                <p class="text-xs font-black text-gray-900 leading-none">${adfDisplay}</p>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- Connectivity -->
+
+                        <div class="mt-6 flex justify-center gap-6 p-5 bg-gray-50 rounded-2xl">
+
+                            <div class="flex flex-col items-center gap-2 ${p.model !== 'ScanFront 400' ? 'active' : 'conn-icon'}">
+
+                                <span class="text-xl">🔌</span>
+
+                                <span class="text-[8px] font-black uppercase tracking-widest">USB</span>
+
+                            </div>
+
+                            <div class="flex flex-col items-center gap-2 ${p.specs.connectivity.includes('Ethernet') ? 'active' : 'conn-icon'}">
+
+                                <span class="text-xl">🌐</span>
+
+                                <span class="text-[8px] font-black uppercase tracking-widest">LAN</span>
+
+                            </div>
+
+                            <div class="flex flex-col items-center gap-2 ${p.specs.connectivity.includes('WIFI') ? 'active' : 'conn-icon'}">
+
+                                <span class="text-xl">📶</span>
+
+                                <span class="text-[8px] font-black uppercase tracking-widest">Wi-Fi</span>
+
+                            </div>
+
+                            <div class="flex flex-col items-center gap-2 ${p.model === 'ScanFront 400' ? 'active' : 'conn-icon'}">
+
+                                <span class="text-xl">🖥️</span>
+
+                                <span class="text-[8px] font-black uppercase tracking-widest">Standalone</span>
 
                             </div>
 
@@ -938,39 +444,117 @@
 
                     </div>
 
-                    <div class="w-full lg:w-3/5 text-left">
 
-                        <h2 class="text-4xl font-black text-gray-900 mb-1 leading-tight">${p.model}</h2>
 
-                        <p class="text-red-600 font-bold text-xs tracking-[0.3em] uppercase mb-6 text-left">SKU: ${p.sku}</p>
+                    <!-- Right Detail Column -->
 
-                        <div class="bg-gray-50/50 rounded-2xl p-6 mb-8 border-l-4 border-red-600 text-sm">
+                    <div class="w-full lg:w-2/3 flex flex-col">
 
-                            <p class="text-gray-600 font-medium italic leading-relaxed text-left">${p.content.en.why}</p>
+                        <div class="mb-6">
+
+                            <p class="text-red-600 font-black text-[10px] tracking-[0.4em] uppercase mb-1">${p.category}</p>
+
+                            <h2 class="text-4xl font-black text-gray-900 mb-1 leading-tight">${p.model}</h2>
+
+                            <p class="text-gray-400 font-bold text-xs tracking-widest">SKU: ${p.sku} | Daily Vol: ${p.specs.daily_volume.toLocaleString()} pages</p>
 
                         </div>
 
-                        <h4 class="text-[10px] font-black text-gray-900 uppercase tracking-[0.2em] mb-4 text-left">Key Advantages:</h4>
 
-                        <ul class="space-y-3 mb-10 text-left">
 
-                            ${p.content.en.features.map(f => `
+                        <!-- Product Profile & Value (INCORPORATED FROM FILE) -->
 
-                                <li class="flex items-start gap-3 text-sm text-gray-700 font-medium leading-tight text-left">
+                        <div class="space-y-6 mb-8">
 
-                                    <svg class="w-5 h-5 text-red-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            <div class="bg-gray-50/80 p-5 rounded-2xl border-l-4 border-gray-900">
 
-                                    ${f}
+                                <h4 class="text-[10px] font-black text-gray-900 uppercase tracking-widest mb-2 flex items-center gap-2">
 
-                                </li>
+                                    <span>📄</span> Product Profile
 
-                            `).join('')}
+                                </h4>
 
-                        </ul>
+                                <p class="text-sm font-medium text-gray-700 leading-relaxed">${p.content.en.description}</p>
 
-                        <div class="flex flex-col sm:flex-row gap-4">
+                            </div>
 
-                            ${p.assets.brochure ? `<a href="${p.assets.brochure}" target="_blank" class="flex-1 bg-red-600 text-white text-center py-4 rounded-2xl font-bold text-sm hover:bg-black transition-all shadow-lg uppercase tracking-widest">Download PDF</a>` : ''}
+
+
+                            <div class="bg-red-50/50 p-5 rounded-2xl border-l-4 border-red-600">
+
+                                <h4 class="text-[10px] font-black text-red-600 uppercase tracking-widest mb-2 flex items-center gap-2">
+
+                                    <span>⚙️</span> Workflow Value
+
+                                </h4>
+
+                                <p class="text-sm font-bold text-gray-800 leading-relaxed italic">"${p.content.en.workflow_value}"</p>
+
+                            </div>
+
+
+
+                            <div class="bg-gray-900 p-5 rounded-2xl border-l-4 border-gray-400 text-white">
+
+                                <h4 class="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2 flex items-center gap-2">
+
+                                    <span>🎯</span> Perfect For
+
+                                </h4>
+
+                                <p class="text-xs font-medium leading-relaxed text-gray-100">${p.content.en.perfect_for}</p>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- Industry Icons -->
+
+                        <div class="mb-8">
+
+                            <h4 class="text-[10px] font-black text-gray-400 uppercase tracking-[0.2em] mb-4">Vertical Success Areas:</h4>
+
+                            <div class="flex flex-wrap gap-2">
+
+                                ${Object.keys(p.verticals).map(v => {
+
+                                    const info = verticalIcons[v] || { icon: '🏢', label: v };
+
+                                    return `
+
+                                        <div class="flex items-center gap-2 bg-white border border-gray-200 px-3 py-1.5 rounded-lg shadow-sm">
+
+                                            <span class="text-sm">${info.icon}</span>
+
+                                            <span class="text-[10px] font-bold text-gray-800">${v}</span>
+
+                                        </div>
+
+                                    `;
+
+                                }).join('')}
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="flex flex-col sm:flex-row gap-4 mt-auto">
+
+                            ${p.assets.brochure ? `<a href="${p.assets.brochure}" target="_blank" class="flex-1 bg-red-600 text-white text-center py-4 rounded-2xl font-bold text-xs hover:bg-black transition-all shadow-lg uppercase tracking-widest">Download Brochure</a>` : ''}
+
+                            ${p.assets.video ? `
+
+                                <a href="${p.assets.video}" target="_blank" class="flex-1 border-2 border-gray-200 text-gray-600 text-center py-4 rounded-2xl font-bold text-xs hover:bg-gray-50 flex items-center justify-center gap-2 transition-all uppercase tracking-widest">
+
+                                    <svg class="w-4 h-4 text-red-600" fill="currentColor" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 4-8 4z"/></svg>
+
+                                    Watch Video
+
+                                </a>` : ''}
 
                         </div>
 
@@ -1011,3 +595,4 @@
 </body>
 
 </html> 
+
